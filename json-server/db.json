@@ -1,7 +1,13 @@
 {
+  "movies": [
+    { "id": 1, "title": "猿の惑星 聖戦記" },
+    { "id": 2, "title": "キングコング 髑髏島の巨神" },
+    { "id": 3, "title": "パディントン２" }
+  ],
   "trailers": [
-    { "id": 1, "title": "猿の惑星 聖戦記", "video_id": "_facqBILO28" },
-    { "id": 2, "title": "キングコング 髑髏島の巨神", "video_id": "rIItwZJQqoE" },
-    { "id": 3, "title": "パディントン２", "video_id": "5jAq0jpxIbU" }
+    { "id": 1, "videoId": "_facqBILO28", "movieId": 1, "isTop": true },
+    { "id": 2, "videoId": "rIItwZJQqoE", "movieId": 2, "isTop": true },
+    { "id": 3, "videoId": "5jAq0jpxIbU", "movieId": 3, "isTop": true },
+    { "id": 4, "videoId": "Sa7zjStS5-Y", "movieId": 3, "isTop": false }
   ]
 }

@@ -1,24 +1,24 @@
 {
   "directors": [
-    { "id": 1, "nameJa": "マット・リーヴス", "nameEn": "Matt Reeves" },
-    { "id": 2, "nameJa": "ジョーダン・ヴォート＝ロバーツ", "nameEn": "Jordan Vogt-Roberts" },
-    { "id": 3, "nameJa": "ポール・キング", "nameEn": "Paul king" }
+    { "id": 1, "nameJa": "マット・リーヴス", "nameEn": "Matt Reeves", "movieId": 1 },
+    { "id": 2, "nameJa": "ジョーダン・ヴォート＝ロバーツ", "nameEn": "Jordan Vogt-Roberts", "movieId": 2 },
+    { "id": 3, "nameJa": "ポール・キング", "nameEn": "Paul king", "movieId": 3 }
   ],
   "casts": [
-    { "id": 1, "nameJa": "アンディー・サーキス", "nameEn": "Andy Serkis" },
-    { "id": 2, "nameJa": "サミュエル・L・ジャクソン", "nameEn": "Samuel L. Jackson" },
-    { "id": 3, "nameJa": "ヒュー・グラント", "nameEn": "Hugh Grant" }
+    { "id": 1, "nameJa": "アンディー・サーキス", "nameEn": "Andy Serkis", "movieId": 1 },
+    { "id": 2, "nameJa": "サミュエル・L・ジャクソン", "nameEn": "Samuel L. Jackson", "movieId": 2 },
+    { "id": 3, "nameJa": "ヒュー・グラント", "nameEn": "Hugh Grant", "movieId": 3 }
   ],
   "genres": [
-    { "id": 1, "nameJa": "アクション", "nameEn": "Action" },
-    { "id": 2, "nameJa": "SF", "nameEn": "SF" },
-    { "id": 3, "nameJa": "コメディ", "nameEn": "Comedy" },
-    { "id": 4, "nameJa": "サスペンス", "nameEn": "Suspense" }
+    { "id": 1, "nameJa": "アクション", "nameEn": "Action", "movieId": 1 },
+    { "id": 2, "nameJa": "SF", "nameEn": "SF", "movieId": 1 },
+    { "id": 3, "nameJa": "コメディ", "nameEn": "Comedy", "movieId": 3 },
+    { "id": 4, "nameJa": "サスペンス", "nameEn": "Suspense", "movieId": 2 }
   ],
   "movies": [
-    { "id": 1, "title": "猿の惑星 聖戦記", "directors":[ 1 ], "casts": [ 1 ], "genres": [ 1 ] },
-    { "id": 2, "title": "キングコング 髑髏島の巨神", "directors": [ 2 ], "casts": [ 2 ], "genres": [ 1 ] },
-    { "id": 3, "title": "パディントン２", "directors": [ 3 ], "casts": [ 3 ], "genres": [ 3 ] }
+    { "id": 1, "title": "猿の惑星 聖戦記" },
+    { "id": 2, "title": "キングコング 髑髏島の巨神" },
+    { "id": 3, "title": "パディントン２" }
   ],
   "trailers": [
     { "id": 1, "videoId": "_facqBILO28", "movieId": 1, "isTop": true },

@@ -15,6 +15,7 @@
     "json-server": "json-server --watch json-server/db.json"
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },

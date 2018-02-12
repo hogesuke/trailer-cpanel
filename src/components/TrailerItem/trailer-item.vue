@@ -42,6 +42,7 @@
         position: absolute;
         bottom: 5px;
         box-sizing: border-box;
+        width: calc(100% - 20px); // FIXME: calcを使わずに済む方法がないか調べること
 
         .text {
           text-shadow: 1px 1px 1px #000;
@@ -57,7 +58,8 @@
 
         .bottom {
           display: flex;
-          justify-content: flex-end;
+          justify-content: flex-start;
+          width: 100%;
 
           .release {
             font-size: 10px;
@@ -73,6 +75,7 @@
           }
 
           .like {
+            margin-left: auto;
 
             .icon {
               color: #fff;

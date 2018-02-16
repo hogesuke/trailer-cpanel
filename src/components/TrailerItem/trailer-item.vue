@@ -8,7 +8,7 @@
             </div>
             <div class="bottom">
               <div class="release">公開中</div>
-              <div class="director text">{{item.casts[0].nameJa}}</div>
+              <div class="director text">{{item.genres[0].nameJa}}</div>
               <div class="like">
                 <span class="icon"></span>
                 <span class="count text">210</span>

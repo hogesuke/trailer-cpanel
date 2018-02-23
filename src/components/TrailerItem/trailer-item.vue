@@ -31,7 +31,8 @@
   .information {
     box-sizing: border-box;
     margin-top: 5px;
-    width: calc(100% - 20px); // FIXME: calcを使わずに済む方法がないか調べること
+    padding: 5px;
+    width: 100%;
 
     .text {
       text-align: left;

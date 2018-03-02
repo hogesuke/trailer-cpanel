@@ -17,7 +17,7 @@
       list-style: none;
 
       + li {
-        margin-left: 10px;
+        margin-left: 5px;
       }
     }
   }

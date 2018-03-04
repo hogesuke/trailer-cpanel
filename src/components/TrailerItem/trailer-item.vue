@@ -10,7 +10,7 @@
         <div class="release">公開中</div>
         <div class="director text">{{item.genres[0].nameJa}}</div>
         <div class="like">
-          <span class="icon"></span>
+          <i class="far fa-heart"></i>
           <span class="count text">210</span>
         </div>
       </div>
@@ -68,10 +68,6 @@
 
         .icon {
           color: #333;
-
-          &::before {
-            content: '\2665'
-          }
         }
 
         .count {

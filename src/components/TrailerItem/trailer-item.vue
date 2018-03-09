@@ -40,8 +40,9 @@
 
     .top {
       .title {
+        margin-bottom: 10px;
         color: #333;
-        font-size: 14px;
+        font-size: 16px;
       }
     }
 
@@ -51,9 +52,9 @@
       width: 100%;
 
       .release {
-        font-size: 10px;
+        font-size: 11px;
         margin-right: 10px;
-        padding: 3px;
+        padding: 5px;
         background-color: #ce0f0f;
         color: #fff;
       }

@@ -32,5 +32,10 @@ export default Vue.extend({
     border-bottom: solid 1px #ccc;
     font-size: 22px;
   }
+
+  #main {
+    width: 1200px;
+    margin: 0 auto;
+  }
 }
 </style>

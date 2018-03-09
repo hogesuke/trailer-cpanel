@@ -13,17 +13,26 @@
     { "id": 1, "nameJa": "アクション", "nameEn": "Action", "movieId": 1 },
     { "id": 2, "nameJa": "SF", "nameEn": "SF", "movieId": 1 },
     { "id": 3, "nameJa": "コメディ", "nameEn": "Comedy", "movieId": 3 },
-    { "id": 4, "nameJa": "サスペンス", "nameEn": "Suspense", "movieId": 2 }
+    { "id": 4, "nameJa": "サスペンス", "nameEn": "Suspense", "movieId": 2 },
+    { "id": 5, "nameJa": "サスペンス", "nameEn": "Suspense", "movieId": 4 },
+    { "id": 6, "nameJa": "SF", "nameEn": "SF", "movieId": 5 },
+    { "id": 7, "nameJa": "クライムサスペンス", "nameEn": "Crime suspense", "movieId": 6 }
   ],
   "movies": [
     { "id": 1, "title": "猿の惑星 聖戦記" },
     { "id": 2, "title": "キングコング 髑髏島の巨神" },
-    { "id": 3, "title": "パディントン２" }
+    { "id": 3, "title": "パディントン２" },
+    { "id": 4, "title": "アルゴ" },
+    { "id": 5, "title": "アルマゲドン" },
+    { "id": 6, "title": "ランナーランナー" }
   ],
   "trailers": [
     { "id": 1, "videoId": "_facqBILO28", "movieId": 1, "isTop": true },
     { "id": 2, "videoId": "rIItwZJQqoE", "movieId": 2, "isTop": true },
     { "id": 3, "videoId": "5jAq0jpxIbU", "movieId": 3, "isTop": true },
-    { "id": 4, "videoId": "Sa7zjStS5-Y", "movieId": 3, "isTop": false }
+    { "id": 4, "videoId": "Sa7zjStS5-Y", "movieId": 3, "isTop": false },
+    { "id": 5, "videoId": "4nnXOfc1-zo", "movieId": 4, "isTop": true },
+    { "id": 6, "videoId": "C8TN_hilQGY", "movieId": 5, "isTop": true },
+    { "id": 7, "videoId": "fbV8yndDzYE", "movieId": 6, "isTop": true }
   ]
 }

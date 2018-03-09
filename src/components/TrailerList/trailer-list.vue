@@ -12,9 +12,12 @@
 <style scoped lang="scss">
   .trailer-list {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
     li {
       list-style: none;
+      margin-bottom: 20px;
 
       + li {
         margin-left: 5px;

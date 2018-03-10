@@ -1,10 +1,14 @@
 <template>
   <div class="trailer">
-    <div class="thumbnail" :style="{ backgroundImage: `url(${thumbnailURL})` }">
-    </div>
+    <router-link :to="{ name: 'MovieDetail', params: { id: item.id }}">
+      <div class="thumbnail" :style="{ backgroundImage: `url(${thumbnailURL})` }">
+      </div>
+    </router-link>
     <div class="information">
       <div class="top">
-        <div class="title text">{{item.title}}</div>
+        <router-link :to="{ name: 'MovieDetail', params: { id: item.id }}">
+          <div class="title text">{{item.title}}</div>
+        </router-link>
       </div>
       <div class="bottom">
         <div class="release">
@@ -48,6 +52,7 @@
         color: #333;
         font-size: 16px;
         font-weight: 600;
+        text-decoration: none;
       }
     }
 

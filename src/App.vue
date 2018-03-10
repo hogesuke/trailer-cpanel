@@ -20,7 +20,8 @@ export default Vue.extend({
 
 <style lang="scss">
 #root {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: '-apple-system', 'BlinkMacSystemFont','Hiragino Sans','Hiragino Kaku Gothic ProN',
+  "segoe ui",'游ゴシック  Medium','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;

@@ -47,6 +47,7 @@
         margin-bottom: 8px;
         color: #333;
         font-size: 16px;
+        font-weight: 600;
       }
     }
 
@@ -58,7 +59,7 @@
       .release > span {
         font-size: 11px;
         margin-right: 8px;
-        padding: 3px 5px;
+        padding: 5px;
         background-color: rgba(225, 16, 16, 0.13);
         border-radius: 3px;
         color: #d81d1d;

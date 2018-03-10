@@ -1,7 +1,9 @@
 <template>
   <div id="root">
     <header id="header">
-      <div>moch.love</div>
+      <router-link to="/">
+        moch.love
+      </router-link>
     </header>
     <div id="main">
       <router-view/>

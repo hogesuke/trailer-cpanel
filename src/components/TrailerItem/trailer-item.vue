@@ -8,7 +8,7 @@
       </div>
       <div class="bottom">
         <div class="release">公開中</div>
-        <div class="director text">{{item.genres[0].nameJa}}</div>
+        <div class="genre text">{{item.genres[0].nameJa}}</div>
         <div class="like">
           <i class="far fa-heart"></i>
           <span class="count text">210</span>
@@ -55,12 +55,13 @@
         font-size: 11px;
         margin-right: 10px;
         padding: 5px;
-        background-color: #ce0f0f;
-        color: #fff;
+        background-color: rgba(225, 16, 16, 0.13);
+        border-radius: 5px;
+        color: #d81d1d;
       }
 
-      .director {
-        color: #333;
+      .genre {
+        color: #888;
         font-size: 12px;
       }
 

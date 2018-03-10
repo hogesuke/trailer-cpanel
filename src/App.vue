@@ -34,6 +34,7 @@ export default Vue.extend({
     #header {
       box-sizing: border-box;
       height: 60px;
+      margin-bottom: 20px;
       padding: 15px;
       border-bottom: solid 1px #ccc;
       font-size: 22px;

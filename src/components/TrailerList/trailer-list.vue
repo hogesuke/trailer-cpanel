@@ -14,6 +14,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 0;
     padding: 0;
 
     li {

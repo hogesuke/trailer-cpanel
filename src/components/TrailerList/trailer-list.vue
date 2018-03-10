@@ -14,6 +14,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 0;
 
     li {
       list-style: none;

@@ -34,8 +34,15 @@ export default Vue.extend({
   }
 
   #main {
-    width: 1200px;
     margin: 0 auto;
+
+    @media screen and (min-width: 1401px) {
+      width: 1400px;
+    }
+
+    @media screen and (max-width: 700px) {
+      width: 400px;
+    }
   }
 }
 </style>

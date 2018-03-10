@@ -7,8 +7,12 @@
         <div class="title text">{{item.title}}</div>
       </div>
       <div class="bottom">
-        <div class="release">公開中</div>
-        <div class="genre text">{{item.genres[0].nameJa}}</div>
+        <div class="release">
+          <span>公開中</span>
+        </div>
+        <div class="genre text">
+          <span>{{item.genres[0].nameJa}}</span>
+        </div>
         <div class="like">
           <i class="far fa-heart"></i>
           <span class="count text">210</span>
@@ -40,7 +44,7 @@
 
     .top {
       .title {
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         color: #333;
         font-size: 16px;
       }
@@ -51,16 +55,16 @@
       justify-content: flex-start;
       width: 100%;
 
-      .release {
+      .release > span {
         font-size: 11px;
-        margin-right: 10px;
-        padding: 5px;
+        margin-right: 8px;
+        padding: 3px 5px;
         background-color: rgba(225, 16, 16, 0.13);
-        border-radius: 5px;
+        border-radius: 3px;
         color: #d81d1d;
       }
 
-      .genre {
+      .genre > span {
         color: #888;
         font-size: 12px;
       }

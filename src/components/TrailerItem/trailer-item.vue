@@ -15,10 +15,10 @@
           <span>公開中</span>
         </div>
         <div class="genre text">
-          <span>{{item.genres[0].nameJa}}</span>
+          <span>#{{item.genres[0].nameJa}}</span>
         </div>
         <div class="like">
-          <i class="far fa-heart"></i>
+          <i class="far fa-heart icon"></i>
           <span class="count text">210</span>
         </div>
       </div>
@@ -30,61 +30,63 @@
 </script>
 
 <style scoped lang="scss">
-  .thumbnail {
-    position: relative;
-    height: 180px;
-    width: 320px;
-  }
+  .trailer {
+    background-color: #f9f7f7;
 
-  .information {
-    box-sizing: border-box;
-    margin-top: 5px;
-    padding: 5px;
-    width: 100%;
-
-    .text {
-      text-align: left;
+    .thumbnail {
+      position: relative;
+      height: 180px;
+      width: 320px;
     }
 
-    .top {
-      .title {
-        margin-bottom: 8px;
-        color: #333;
-        font-size: 16px;
-        font-weight: 600;
-        text-decoration: none;
-      }
-    }
-
-    .bottom {
-      display: flex;
-      justify-content: flex-start;
+    .information {
+      box-sizing: border-box;
+      padding: 14px 9px;
       width: 100%;
 
-      .release > span {
-        font-size: 11px;
-        margin-right: 8px;
-        padding: 5px;
-        background-color: rgba(225, 16, 16, 0.13);
-        border-radius: 3px;
-        color: #d81d1d;
+      .text {
+        text-align: left;
       }
 
-      .genre > span {
-        color: #888;
-        font-size: 12px;
+      .top {
+        .title {
+          margin-bottom: 8px;
+          color: rgba(0, 0, 0, 0.78);
+          font-size: 14px;
+          font-weight: 600;
+          text-decoration: none;
+        }
       }
 
-      .like {
-        margin-left: auto;
+      .bottom {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
 
-        .icon {
-          color: #333;
+        .release > span {
+          font-size: 11px;
+          margin-right: 8px;
+          border-radius: 3px;
+          color: #e42300d6;
+          font-weight: 600;
         }
 
-        .count {
-          color: #333;
+        .genre > span {
+          color: #888;
           font-size: 12px;
+        }
+
+        .like {
+          margin-left: auto;
+
+          [data-icon="heart"] {
+            color: rgba(230, 8, 51, 0.5);
+          }
+
+          .count {
+            color: #333;
+            font-size: 12px;
+          }
         }
       }
     }

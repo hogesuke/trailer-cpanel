@@ -19,11 +19,7 @@
 
     li {
       list-style: none;
-      margin-bottom: 20px;
-
-      + li {
-        margin-left: 5px;
-      }
+      margin: 0 5px 10px 5px;
     }
   }
 </style>

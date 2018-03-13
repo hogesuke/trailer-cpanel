@@ -2,6 +2,7 @@
   <div class="trailer">
     <router-link :to="{ name: 'MovieDetail', params: { id: item.id }}">
       <div class="thumbnail" :style="{ backgroundImage: `url(${thumbnailURL})` }">
+        <div class="overlay"></div>
       </div>
     </router-link>
     <div class="information">
@@ -37,6 +38,16 @@
       position: relative;
       height: 180px;
       width: 320px;
+
+      .overlay {
+        height: 100%;
+        width: 100%;
+        transition: background-color .15s linear;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, .2);
+        }
+      }
     }
 
     .information {

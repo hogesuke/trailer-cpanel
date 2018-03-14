@@ -1,9 +1,11 @@
 <template>
   <div id="root">
     <header id="header">
-      <router-link to="/" class="logo">
-        TrailerTrailer
-      </router-link>
+      <div class="container">
+        <router-link to="/" class="logo">
+          TrailerTrailer
+        </router-link>
+      </div>
     </header>
     <div id="main">
       <router-view/>
@@ -39,19 +41,24 @@ export default Vue.extend({
       border-bottom: solid 1px #ddd;
       font-size: 22px;
 
-      .logo {
-        font-family: 'Raleway', sans-serif;
-        font-weight: 600;
-        letter-spacing: .05em;
-        color: #ef5757;
+      .container {
+        width: 1320px;
+        margin: 0 auto;
+
+        .logo {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 600;
+          letter-spacing: .05em;
+          color: #ef5757;
+        }
       }
     }
 
     #main {
       margin: 0 auto;
 
-      @media screen and (min-width: 1401px) {
-        width: 1400px;
+      @media screen and (min-width: 1321px) {
+        width: 1320px;
       }
 
       @media screen and (max-width: 700px) {

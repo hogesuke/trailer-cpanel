@@ -36,7 +36,7 @@ export default Vue.extend({
       height: 60px;
       margin-bottom: 20px;
       padding: 15px;
-      border-bottom: solid 1px #ccc;
+      border-bottom: solid 1px #ddd;
       font-size: 22px;
 
       .logo {

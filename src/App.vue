@@ -1,8 +1,8 @@
 <template>
   <div id="root">
     <header id="header">
-      <router-link to="/">
-        moch.love
+      <router-link to="/" class="logo">
+        TrailerTrailer
       </router-link>
     </header>
     <div id="main">
@@ -38,6 +38,13 @@ export default Vue.extend({
       padding: 15px;
       border-bottom: solid 1px #ccc;
       font-size: 22px;
+
+      .logo {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        letter-spacing: .05em;
+        color: #ef5757;
+      }
     }
 
     #main {

@@ -46,9 +46,9 @@ export default Vue.extend({
         margin: 0 auto;
 
         .logo {
-          font-family: 'Raleway', sans-serif;
+          font-family: 'Montserrat', sans-serif;
           font-weight: 600;
-          letter-spacing: .05em;
+          letter-spacing: .02em;
           color: #ef5757;
         }
       }

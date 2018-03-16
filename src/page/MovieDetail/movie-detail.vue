@@ -1,5 +1,5 @@
 <template>
-  <div class="movie">
+  <div class="movie" v-if="item">
     <div class="trailer">
       <iframe
         width="1000"

@@ -1,5 +1,5 @@
 <template>
-  <div class="movie" v-if="item">
+  <div v-if="item" class="movie" :class="{ 'theater-mode': item }">
     <div class="trailer">
       <iframe
         width="1000"
@@ -21,6 +21,8 @@
 
 <style scoped lang="scss">
   .movie {
+    height: 100%;
+
     .trailer {
       display: flex;
       justify-content: center;

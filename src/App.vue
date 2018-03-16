@@ -23,10 +23,16 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+  html, body {
+    height: 100%;
+  }
   a {
     text-decoration: none;
   }
   #root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     font-family: '-apple-system', 'BlinkMacSystemFont','Hiragino Sans','Hiragino Kaku Gothic ProN',
     "segoe ui",'游ゴシック  Medium','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -36,13 +42,15 @@ export default Vue.extend({
     #header {
       box-sizing: border-box;
       height: 60px;
-      margin-bottom: 20px;
       padding: 15px;
       border-bottom: solid 1px #ddd;
       font-size: 22px;
 
       .container {
-        width: 1320px;
+        @media screen and (min-width: 1321px) {
+          width: 1320px;
+        }
+
         margin: 0 auto;
 
         .logo {
@@ -55,15 +63,10 @@ export default Vue.extend({
     }
 
     #main {
-      margin: 0 auto;
-
-      @media screen and (min-width: 1321px) {
-        width: 1320px;
-      }
-
-      @media screen and (max-width: 700px) {
-        width: 400px;
-      }
+      overflow-y: scroll;
+      height: 100%;
+      width: 100%;
+      padding: 20px 0;
     }
   }
 </style>

@@ -14,8 +14,16 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+
+    @media screen and (min-width: 1321px) {
+      width: 1320px;
+    }
+
+    @media screen and (max-width: 700px) {
+      width: 320px;
+    }
 
     li {
       list-style: none;

@@ -57,7 +57,7 @@ export default Vue.extend({
           font-family: 'Montserrat', sans-serif;
           font-weight: 600;
           letter-spacing: .02em;
-          color: #ef5757;
+          color: #577cef;
         }
       }
     }

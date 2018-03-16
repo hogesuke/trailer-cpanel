@@ -19,7 +19,7 @@
           <span>#{{item.genres[0].nameJa}}</span>
         </div>
         <div class="like">
-          <i class="far fa-heart icon"></i>
+          <i class="far fa-star icon"></i>
           <span class="count text">210</span>
         </div>
       </div>
@@ -78,7 +78,7 @@
           font-size: 11px;
           margin-right: 8px;
           border-radius: 3px;
-          color: #e42300d6;
+          color: rgba(0, 130, 228, .85);
           font-weight: 600;
         }
 
@@ -90,8 +90,8 @@
         .like {
           margin-left: auto;
 
-          [data-icon="heart"] {
-            color: rgba(230, 8, 51, 0.5);
+          [data-icon="star"] {
+            color: rgba(0, 0, 0, .3);
           }
 
           .count {

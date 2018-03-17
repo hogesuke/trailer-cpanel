@@ -78,7 +78,7 @@
           font-size: 11px;
           margin-right: 8px;
           border-radius: 3px;
-          color: rgba(239, 87, 148, 0.9);
+          color: rgba(47, 144, 251, 0.95);
           font-weight: 600;
         }
 

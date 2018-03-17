@@ -10,6 +10,7 @@
         <router-link :to="{ name: 'MovieDetail', params: { id: item.id }}">
           <div class="title text">{{item.title}}</div>
         </router-link>
+        <div class="source">出典 YouTube</div>
       </div>
       <div class="bottom">
         <div class="release">
@@ -60,12 +61,23 @@
       }
 
       .top {
+        position: relative;
+        display: flex;
+
         .title {
           margin-bottom: 8px;
           color: rgba(0, 0, 0, 0.78);
           font-size: 14px;
           font-weight: 600;
           text-decoration: none;
+        }
+
+        .source {
+          position: absolute;
+          top: -10px;
+          right: -5px;
+          font-size: 10px;
+          color: rgba(0, 0, 0, .35);
         }
       }
 

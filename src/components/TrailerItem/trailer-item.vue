@@ -33,7 +33,7 @@
 
 <style scoped lang="scss">
   .trailer {
-    background-color: #f9f7f7;
+    background-color: rgba(210, 217, 220, 0.2);
 
     .thumbnail {
       position: relative;

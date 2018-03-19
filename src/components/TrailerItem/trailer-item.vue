@@ -107,7 +107,7 @@
 
             &:hover {
               cursor: pointer;
-              color: #e6c800;
+              color: #ffde03;
               transition: color .15s linear;
             }
           }

@@ -8,7 +8,9 @@
       </div>
     </header>
     <div id="main">
-      <router-view/>
+      <div class="container">
+        <router-view/>
+      </div>
     </div>
   </div>
 </template>
@@ -66,6 +68,14 @@ export default Vue.extend({
       height: 100%;
       width: 100%;
       padding: 20px 0;
+
+      .container {
+        margin: 0 auto;
+
+        @media screen and (min-width: 1321px) {
+          width: 1320px;
+        }
+      }
     }
   }
 </style>

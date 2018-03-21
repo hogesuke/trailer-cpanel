@@ -104,6 +104,12 @@
 
           [data-icon="star"] {
             color: rgba(0, 0, 0, .3);
+
+            &:hover {
+              cursor: pointer;
+              color: #e6c800;
+              transition: color .15s linear;
+            }
           }
 
           .count {

@@ -25,6 +25,11 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+  @mixin mq {
+    @media screen and (min-width: 1321px) {
+      width: 1320px;
+    }
+  }
   html, body {
     height: 100%;
   }
@@ -49,10 +54,7 @@ export default Vue.extend({
       font-size: 22px;
 
       .container {
-        @media screen and (min-width: 1321px) {
-          width: 1320px;
-        }
-
+        @include mq;
         margin: 0 auto;
 
         .logo {
@@ -70,11 +72,8 @@ export default Vue.extend({
       padding: 20px 0;
 
       .container {
+        @include mq;
         margin: 0 auto;
-
-        @media screen and (min-width: 1321px) {
-          width: 1320px;
-        }
       }
     }
   }

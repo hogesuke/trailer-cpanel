@@ -2,8 +2,6 @@
   <div v-if="item" class="movie" :class="{ 'theater-mode': item }">
     <div class="trailer">
       <iframe
-        width="1000"
-        height="562"
         :src=movieURL
         frameborder="0"
         allow="autoplay; encrypted-media"
@@ -20,16 +18,46 @@
 </script>
 
 <style scoped lang="scss">
+  $mq-width-threshold: 1040px;
+
+  @mixin mq-width {
+    @media screen and (min-width: $mq-width-threshold) {
+      width: 1000px;
+    }
+    @media screen and (max-width: $mq-width-threshold) {
+      width: auto;
+    }
+  }
+  @mixin mq-height {
+    @media screen and (min-width: $mq-width-threshold) {
+      height: 562px;
+    }
+    @media screen and (max-width: $mq-width-threshold) {
+      height: auto;
+    }
+  }
+
   .movie {
     height: 100%;
 
     .trailer {
       display: flex;
       justify-content: center;
+
+      iframe {
+        @include mq-width;
+        @include mq-height;
+        margin: 20px;
+      }
     }
 
     .description {
-      font-size: 24px;
+      @include mq-width;
+      margin: 0 auto;
+
+      .title {
+        font-size: 24px;
+      }
     }
   }
 </style>

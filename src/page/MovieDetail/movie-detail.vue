@@ -53,10 +53,10 @@
 
     .description {
       @include mq-width;
-      margin: 0 auto;
+      margin: 10px auto;
 
       .title {
-        font-size: 24px;
+        font-size: 22px;
       }
     }
   }

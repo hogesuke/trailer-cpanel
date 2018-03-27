@@ -46,6 +46,10 @@ export default Vue.extend({
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
 
+    &.theater {
+      background-color: #000;
+    }
+
     #header {
       box-sizing: border-box;
       height: 60px;

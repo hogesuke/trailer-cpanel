@@ -3,9 +3,10 @@ import axios from 'axios'
 
 export default Vue.extend({
   props: [],
-  data (): { item: any } {
+  data (): { item: any, isTheaterMode: boolean } {
     return {
-      item: null
+      item: null,
+      isTheaterMode: false
     }
   },
   computed: {
@@ -19,5 +20,10 @@ export default Vue.extend({
         // TODO: エラーハンドリング
         this.item = res.data;
       })
+  },
+  mounted () {
+    window.setTimeout(() => {
+      this.isTheaterMode = true;
+    },2000);
   }
 })

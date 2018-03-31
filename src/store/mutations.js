@@ -1,8 +1,7 @@
-// import * as types from './mutation-types';
+import * as types from './mutation-types'
 
 export default {
-  // TODO: あとで消す
-  // [types.HOGE] (state, { data }) {
-  //   state.plans = data;
-  // }
+  [types.TOGGLE_DARK] (state) {
+    state.isDark = !state.isDark
+  }
 }

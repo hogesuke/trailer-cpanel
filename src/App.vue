@@ -1,5 +1,5 @@
 <template>
-  <div id="root">
+  <div id="root" :class="{ 'theater-mode': isDark }">
     <header id="header">
       <div class="container">
         <router-link to="/" class="logo">
@@ -17,10 +17,16 @@
 
 <script>
 import Vue from 'vue'
+import { mapState } from 'vuex'
 import 'normalize.css'
 
 export default Vue.extend({
-  name: 'App'
+  name: 'App',
+  computed: {
+    ...mapState([
+      'isDark'
+    ])
+  }
 })
 </script>
 
@@ -40,13 +46,15 @@ export default Vue.extend({
     display: flex;
     flex-direction: column;
     height: 100%;
+    background-color: #fff;
+    transition: background-color .7s linear;
     font-family: '-apple-system', 'BlinkMacSystemFont','Hiragino Sans','Hiragino Kaku Gothic ProN',
     "segoe ui",'游ゴシック  Medium','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
 
-    &.theater {
+    &.theater-mode {
       background-color: #000;
     }
 

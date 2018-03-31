@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import axios from 'axios'
+import { mapMutations } from 'vuex'
+import * as types from '../../store/mutation-types'
 
 export default Vue.extend({
   props: [],
@@ -8,6 +10,11 @@ export default Vue.extend({
       item: null,
       isTheaterMode: false
     }
+  },
+  methods: {
+    ...mapMutations({
+      toggleDark: types.TOGGLE_DARK
+    })
   },
   computed: {
     movieURL () {
@@ -23,7 +30,10 @@ export default Vue.extend({
   },
   mounted () {
     window.setTimeout(() => {
-      this.isTheaterMode = true
+      this.toggleDark()
     }, 2000)
+  },
+  beforeDestroy () {
+    this.toggleDark()
   }
 })

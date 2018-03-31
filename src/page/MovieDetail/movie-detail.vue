@@ -1,5 +1,5 @@
 <template>
-  <div v-if="item" class="movie" :class="{ 'theater-mode': isTheaterMode }">
+  <div v-if="item" class="movie">
     <div class="trailer">
       <iframe
         :src=movieURL
@@ -39,12 +39,6 @@
 
   .movie {
     height: 100%;
-    background-color: #fff;
-    transition: background-color 1.2s linear;
-
-    &.theater-mode {
-      background-color: #000;
-    }
 
     .trailer {
       display: flex;

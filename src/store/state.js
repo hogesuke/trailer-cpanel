@@ -1,3 +1,4 @@
 export default {
-  items: null
+  items: null,
+  isDark: false
 }

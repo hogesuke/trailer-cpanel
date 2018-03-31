@@ -1,2 +1,1 @@
-// TODO: あとで消す
-export const HOGE = 'HOGE'
+export const TOGGLE_DARK = 'TOGGLE_DARK'

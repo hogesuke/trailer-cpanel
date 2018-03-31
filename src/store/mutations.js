@@ -1,7 +1,7 @@
 import * as types from './mutation-types'
 
 export default {
-  [types.TOGGLE_DARK] (state) {
-    state.isDark = !state.isDark
+  [types.SET_DARK] (state, isDark) {
+    state.isDark = isDark
   }
 }

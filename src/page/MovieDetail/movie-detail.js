@@ -13,7 +13,7 @@ export default Vue.extend({
   },
   methods: {
     ...mapMutations({
-      toggleDark: types.TOGGLE_DARK
+      setDark: types.SET_DARK
     })
   },
   computed: {
@@ -29,11 +29,12 @@ export default Vue.extend({
       })
   },
   mounted () {
-    window.setTimeout(() => {
-      this.toggleDark()
+    this.theaterModeTimeout = window.setTimeout(() => {
+      this.setDark(true)
     }, 2000)
   },
   beforeDestroy () {
-    this.toggleDark()
+    clearTimeout(this.theaterModeTimeout)
+    this.setDark(false)
   }
 })

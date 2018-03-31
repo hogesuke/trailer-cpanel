@@ -1,1 +1,1 @@
-export const TOGGLE_DARK = 'TOGGLE_DARK'
+export const SET_DARK = 'SET_DARK'

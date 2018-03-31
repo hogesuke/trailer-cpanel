@@ -81,7 +81,6 @@ export default Vue.extend({
       overflow-y: scroll;
       height: 100%;
       width: 100%;
-      padding: 20px 0;
 
       .container {
         @include mq;

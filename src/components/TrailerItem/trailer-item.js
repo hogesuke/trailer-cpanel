@@ -8,7 +8,7 @@ export default Vue.extend({
     }
   },
   computed: {
-    thumbnailURL (): string {
+    thumbnailURL () {
       return `https://i.ytimg.com/vi/${this.item.trailers[0].videoId}/mqdefault.jpg`
     }
   }

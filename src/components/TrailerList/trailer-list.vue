@@ -6,7 +6,7 @@
   </ul>
 </template>
 
-<script lang="ts" src="./trailer-list.ts">
+<script src="./trailer-list.js">
 </script>
 
 <style scoped lang="scss">

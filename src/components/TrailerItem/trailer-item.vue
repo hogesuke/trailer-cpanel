@@ -28,7 +28,7 @@
   </div>
 </template>
 
-<script lang="ts" src="./trailer-item.ts">
+<script src="./trailer-item.js">
 </script>
 
 <style scoped lang="scss">

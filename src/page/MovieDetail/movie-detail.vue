@@ -14,7 +14,7 @@
   </div>
 </template>
 
-<script lang="ts" src="./movie-detail.ts">
+<script src="./movie-detail.js">
 </script>
 
 <style scoped lang="scss">

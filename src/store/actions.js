@@ -1,5 +1,5 @@
-import * as api from '../api';
-import * as types from './mutation-types';
+// import * as api from '../api'
+// import * as types from './mutation-types'
 
 // TODO: あとで消す
 // export const fetch = ({ commit }) => {

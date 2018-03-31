@@ -8,7 +8,8 @@ export default Vue.extend({
   data () {
     return {
       item: null,
-      isTheaterMode: false
+      isTheaterMode: false,
+      isHide: true
     }
   },
   methods: {
@@ -31,7 +32,11 @@ export default Vue.extend({
   mounted () {
     this.theaterModeTimeout = window.setTimeout(() => {
       this.setDark(true)
-    }, 2000)
+
+      this.theaterModeTimeout = window.setTimeout(() => {
+        this.isHide = false
+      }, 800)
+    }, 800)
   },
   beforeDestroy () {
     clearTimeout(this.theaterModeTimeout)

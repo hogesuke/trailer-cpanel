@@ -3,6 +3,7 @@
     <div class="trailer">
       <iframe
         :src=movieURL
+        :class="{ 'hide': isHide }"
         frameborder="0"
         allow="autoplay; encrypted-media"
         allowfullscreen>
@@ -48,6 +49,10 @@
         @include mq-width;
         @include mq-height;
         margin: 20px;
+
+        &.hide {
+          opacity: 0;
+        }
       }
     }
 

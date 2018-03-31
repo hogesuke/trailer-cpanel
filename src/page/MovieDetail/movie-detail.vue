@@ -9,7 +9,7 @@
         allowfullscreen>
       </iframe>
     </div>
-    <div class="description">
+    <div class="description" :class="{ dark: isDark }">
       <div class="title">{{item.title}}</div>
     </div>
   </div>
@@ -59,6 +59,11 @@
     .description {
       @include mq-width;
       margin: 10px auto;
+      transition: color .7s linear;
+
+      &.dark {
+        color: #fff;
+      }
 
       .title {
         font-size: 22px;

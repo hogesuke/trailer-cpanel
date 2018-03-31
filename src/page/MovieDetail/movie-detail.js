@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import axios from 'axios'
-import { mapMutations } from 'vuex'
+import { mapMutations, mapState } from 'vuex'
 import * as types from '../../store/mutation-types'
 
 export default Vue.extend({
@@ -8,7 +8,6 @@ export default Vue.extend({
   data () {
     return {
       item: null,
-      isTheaterMode: false,
       isHide: true
     }
   },
@@ -18,6 +17,9 @@ export default Vue.extend({
     })
   },
   computed: {
+    ...mapState([
+      'isDark'
+    ]),
     movieURL () {
       return this.item ? `https://www.youtube.com/embed/${this.item.trailers[0].videoId}` : ''
     }

@@ -21,7 +21,7 @@ export default Vue.extend({
       'isDark'
     ]),
     movieURL () {
-      return this.item ? `https://www.youtube.com/embed/${this.item.trailers[0].videoId}` : ''
+      return this.item ? `https://www.youtube.com/embed/${this.item.trailers[0].videoId}?enablejsapi=1` : ''
     }
   },
   created () {

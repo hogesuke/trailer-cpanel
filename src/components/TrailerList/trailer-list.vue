@@ -20,8 +20,6 @@
     li {
       list-style: none;
       margin: 0 4px 10px 4px;
-      box-shadow: 0 1px 3px 0 #ececec;
-      border: solid 1px #e8e8e8;
     }
   }
 </style>

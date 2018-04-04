@@ -59,11 +59,16 @@ export default Vue.extend({
     }
 
     #header {
+      position: fixed;
+      top: 0;
+      overflow: hidden;
       box-sizing: border-box;
       height: 60px;
+      width: 100%;
       padding: 15px;
-      border-bottom: solid 1px #ddd;
+      background-color: #fff;
       font-size: 22px;
+      z-index: 1000;
 
       .container {
         @include mq;
@@ -81,9 +86,9 @@ export default Vue.extend({
     }
 
     #main {
-      overflow-y: scroll;
       height: 100%;
       width: 100%;
+      margin-top: 50px;
 
       .container {
         @include mq;

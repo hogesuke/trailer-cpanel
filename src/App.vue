@@ -1,6 +1,6 @@
 <template>
   <div id="root" :class="{ 'theater-mode': isDark }">
-    <header id="header">
+    <header id="header" :class="{ 'theater-mode': isDark }">
       <div class="container">
         <router-link to="/" class="logo">
           TrailerTrailer
@@ -36,6 +36,13 @@ export default Vue.extend({
       width: 1320px;
     }
   }
+  @mixin theater-mode {
+    transition: background-color .7s linear;
+
+    &.theater-mode {
+      background-color: #000;
+    }
+  }
   html, body {
     height: 100%;
   }
@@ -43,6 +50,7 @@ export default Vue.extend({
     text-decoration: none;
   }
   #root {
+    @include theater-mode;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -54,11 +62,8 @@ export default Vue.extend({
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
 
-    &.theater-mode {
-      background-color: #000;
-    }
-
     #header {
+      @include theater-mode;
       position: fixed;
       top: 0;
       overflow: hidden;

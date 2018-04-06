@@ -41,7 +41,6 @@ export default Vue.extend({
 
     &.theater-mode {
       background-color: #000;
-      border-bottom: none;
     }
   }
   html, body {
@@ -56,7 +55,6 @@ export default Vue.extend({
     flex-direction: column;
     height: 100%;
     background-color: #fff;
-    transition: background-color .7s linear;
     font-family: '-apple-system', 'BlinkMacSystemFont','Hiragino Sans','Hiragino Kaku Gothic ProN',
     "segoe ui",'游ゴシック  Medium','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -76,6 +74,10 @@ export default Vue.extend({
       border-bottom: solid 1px #efefef;
       font-size: 22px;
       z-index: 1000;
+
+      &.theater-mode {
+        border-bottom: none;
+      }
 
       .container {
         @include mq;

@@ -57,7 +57,8 @@
 
     .information {
       box-sizing: border-box;
-      padding: 14px 9px;
+      padding: 14px 12px;
+      height: 75px;
       width: 100%;
 
       .text {
@@ -69,7 +70,7 @@
         display: flex;
 
         .title {
-          margin-bottom: 8px;
+          margin: 4px 0 9px 0;
           color: rgba(0, 0, 0, 0.78);
           font-size: 14px;
           font-weight: 600;

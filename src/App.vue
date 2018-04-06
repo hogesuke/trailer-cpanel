@@ -41,6 +41,7 @@ export default Vue.extend({
 
     &.theater-mode {
       background-color: #000;
+      border-bottom: none;
     }
   }
   html, body {
@@ -72,6 +73,7 @@ export default Vue.extend({
       width: 100%;
       padding: 15px;
       background-color: #fff;
+      border-bottom: solid 1px #efefef;
       font-size: 22px;
       z-index: 1000;
 

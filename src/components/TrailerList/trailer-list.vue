@@ -1,9 +1,12 @@
 <template>
-  <ul class="trailer-list">
-    <li v-for="movie in movies" :key=movie.id>
-      <trailer-item :movie=movie></trailer-item>
-    </li>
-  </ul>
+  <div>
+    <trailer-tabs></trailer-tabs>
+    <ul class="trailer-list">
+      <li v-for="movie in movies" :key=movie.id>
+        <trailer-item :movie=movie></trailer-item>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script src="./trailer-list.js">

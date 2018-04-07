@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import axios from 'axios'
+import TrailerTabs from '@/components/TrailerTabs/trailer-tabs.vue'
 import TrailerItem from '@/components/TrailerItem/trailer-item.vue'
 
 export default Vue.extend({
   components: {
-    TrailerItem
+    TrailerItem,
+    TrailerTabs
   },
   data () {
     return {

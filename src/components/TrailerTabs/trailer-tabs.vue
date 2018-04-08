@@ -14,16 +14,18 @@
     padding: 10px 0;
 
     .tab {
-      width: 100px;
+      width: 80px;
       margin: 0;
-      padding: 13px 10px;
+      padding: 12px 10px;
       border: none;
-      color: rgba(0, 0, 0, 0.3);
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(0, 0, 0, .25);
 
       &.active {
-        border-bottom: solid 2px rgba(77, 114, 209, .7);
-        font-weight: 700;
-        color: rgba(0, 0, 0, 0.7);
+        border-bottom: solid 2px rgba(255, 0, 71, .65);
+        font-weight: 600;
+        color: rgba(0, 0, 0, .7);
       }
 
       &:hover {

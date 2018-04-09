@@ -23,9 +23,11 @@
       color: rgba(0, 0, 0, .25);
 
       &.active {
-        border-bottom: solid 2px rgba(255, 0, 71, .65);
+        $active-color: rgba(255, 0, 71, .65);
+
+        border-bottom: solid 2px $active-color;
         font-weight: 600;
-        color: rgba(0, 0, 0, .7);
+        color: $active-color;
       }
 
       &:hover {

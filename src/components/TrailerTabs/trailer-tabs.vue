@@ -1,8 +1,8 @@
 <template>
   <div class="trailer-tabs">
-    <button class="tab active">上映中</button>
-    <button class="tab">近日公開</button>
-    <button class="tab">過去作品</button>
+    <div class="tab active">上映中</div>
+    <div class="tab">近日公開</div>
+    <div class="tab">過去作品</div>
   </div>
 </template>
 
@@ -11,17 +11,20 @@
 
 <style scoped lang="scss">
   .trailer-tabs {
+    display: flex;
+    flex-direction: row;
     padding: 10px 0;
 
     .tab {
+      box-sizing: border-box;
       width: 80px;
       margin: 0;
       padding: 12px 10px;
       border: none;
       font-size: 13px;
       font-weight: 300;
+      text-align: center;
       color: rgba(0, 0, 0, .25);
-      outline: 0;
 
       &.active {
         $active-color: rgba(255, 0, 71, .65);

@@ -21,6 +21,7 @@
       font-size: 13px;
       font-weight: 300;
       color: rgba(0, 0, 0, .25);
+      outline: 0;
 
       &.active {
         $active-color: rgba(255, 0, 71, .65);

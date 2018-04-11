@@ -13,7 +13,9 @@
   .trailer-tabs {
     display: flex;
     flex-direction: row;
-    padding: 10px 0;
+    padding-top: 10px;
+    border-bottom: solid 1px #ddd;
+    box-shadow: 0 4px 4px -5px #ddd;
 
     .tab {
       box-sizing: border-box;

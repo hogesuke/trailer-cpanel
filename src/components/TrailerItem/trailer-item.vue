@@ -35,9 +35,6 @@
   .trailer {
     overflow: hidden;
     background-color: rgba(210, 217, 220, 0.2);
-    box-shadow: 0 1px 3px 0 #ececec;
-    border: solid 1px #e8e8e8;
-    border-radius: 6px;
 
     .thumbnail {
       position: relative;

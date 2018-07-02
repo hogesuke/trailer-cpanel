@@ -13,6 +13,8 @@
 </script>
 
 <style scoped lang="scss">
+  @import '../../assets/scss/global';
+
   .trailer-list {
     display: flex;
     justify-content: center;
@@ -22,7 +24,11 @@
 
     li {
       list-style: none;
-      margin: 0 4px 10px 4px;
+      margin: 0 10px 10px 10px;
+
+      @include mq(sm) {
+        width: 100%;
+      }
     }
   }
 </style>

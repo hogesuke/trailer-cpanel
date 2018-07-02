@@ -32,14 +32,36 @@
 </script>
 
 <style scoped lang="scss">
+  @import '../../assets/scss/global';
+
   .trailer {
     overflow: hidden;
     background-color: rgba(210, 217, 220, 0.2);
 
+    @include mq(sm) {
+      display: flex;
+      width: 100%;
+    }
+
     .thumbnail {
       position: relative;
-      height: 180px;
-      width: 320px;
+      flex-grow: 1;
+
+      @include mq() {
+        $height: 180px;
+        $width: 320px;
+        height: $height;
+        width: $width;
+        background-size: $width $height;
+      }
+
+      @include mq(sm) {
+        $height: 90px;
+        $width: 160px;
+        height: $height;
+        width: $width;
+        background-size: $width $height;
+      }
 
       .overlay {
         height: 100%;
@@ -55,8 +77,17 @@
     .information {
       box-sizing: border-box;
       padding: 14px 12px;
-      height: 75px;
-      width: 100%;
+
+      @include mq() {
+        height: 75px;
+        width: 100%;
+      }
+
+      @include mq(sm) {
+        flex-grow: 2;
+        align-self: stretch;
+        width: calc(100% - 160px);
+      }
 
       .text {
         text-align: left;

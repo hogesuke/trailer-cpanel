@@ -18,6 +18,7 @@
     box-shadow: 0 4px 4px -5px #ddd;
 
     .tab {
+      flex-grow: 1;
       box-sizing: border-box;
       width: 80px;
       margin: 0;

@@ -13,16 +13,18 @@
         <div class="source">出典 YouTube</div>
       </div>
       <div class="bottom">
-        <div class="release">
-          <span>公開中</span>
-        </div>
+        <!--<div class="release">-->
+          <!--<span>公開中</span>-->
+        <!--</div>-->
         <div class="genre text">
           <span>#{{item.genres[0].nameJa}}</span>
+          <span>#{{item.genres[0].nameJa}}</span>
+          <span>#{{item.genres[0].nameJa}}</span>
         </div>
-        <div class="like">
-          <i class="far fa-star icon"></i>
-          <span class="count text">210</span>
-        </div>
+        <!--<div class="like">-->
+          <!--<i class="far fa-star icon"></i>-->
+          <!--<span class="count text">210</span>-->
+        <!--</div>-->
       </div>
     </div>
   </div>
@@ -75,6 +77,9 @@
     }
 
     .information {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       box-sizing: border-box;
       padding: 14px 12px;
 

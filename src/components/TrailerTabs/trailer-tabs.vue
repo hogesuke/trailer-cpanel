@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: row;
     padding-top: 10px;
-    border-bottom: solid 1px #ddd;
+    border-bottom: solid 1px #ececec;
     box-shadow: 0 4px 4px -5px #ddd;
 
     .tab {

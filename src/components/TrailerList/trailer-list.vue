@@ -21,6 +21,7 @@
     flex-wrap: wrap;
     margin: 0;
     padding: 20px 0;
+    background: #efefef;
 
     li {
       list-style: none;

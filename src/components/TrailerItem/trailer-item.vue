@@ -10,17 +10,17 @@
         <router-link :to="{ name: 'MovieDetail', params: { id: item.id }}">
           <div class="title text">{{item.title}}</div>
         </router-link>
-        <div class="source">出典 YouTube</div>
+        <!--<div class="source">出典 YouTube</div>-->
       </div>
       <div class="bottom">
         <!--<div class="release">-->
           <!--<span>公開中</span>-->
         <!--</div>-->
-        <div class="genre text">
-          <span>#{{item.genres[0].nameJa}}</span>
-          <span>#{{item.genres[0].nameJa}}</span>
-          <span>#{{item.genres[0].nameJa}}</span>
-        </div>
+        <ul class="genre text">
+          <li>#{{item.genres[0].nameJa}}</li>
+          <li>#{{item.genres[0].nameJa}}</li>
+          <li>#{{item.genres[0].nameJa}}</li>
+        </ul>
         <!--<div class="like">-->
           <!--<i class="far fa-star icon"></i>-->
           <!--<span class="count text">210</span>-->
@@ -38,7 +38,7 @@
 
   .trailer {
     overflow: hidden;
-    background-color: rgba(210, 217, 220, 0.2);
+    background: #fff;
 
     @include mq(sm) {
       display: flex;
@@ -79,9 +79,8 @@
     .information {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       box-sizing: border-box;
-      padding: 14px 12px;
+      padding: 4px 12px;
 
       @include mq() {
         height: 75px;
@@ -103,10 +102,12 @@
         display: flex;
 
         .title {
-          margin: 4px 0 9px 0;
-          color: rgba(0, 0, 0, 0.78);
+          margin: 4px 0 6px 0;
+          color: rgba(222, 64, 120, 0.85);
           font-size: 14px;
           font-weight: 600;
+          white-space: nowrap;
+          text-overflow: ellipsis;
           text-decoration: none;
         }
 
@@ -132,9 +133,15 @@
           font-weight: 600;
         }
 
-        .genre > span {
-          color: #888;
-          font-size: 12px;
+        .genre {
+          padding: 0;
+          list-style: none;
+
+          > li {
+            padding: 2px 0;
+            color: rgba(64, 153, 208, 0.8);
+            font-size: 12px;
+          }
         }
 
         .like {

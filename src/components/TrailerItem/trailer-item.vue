@@ -38,6 +38,7 @@
 
   .trailer {
     overflow: hidden;
+    padding: 5px;
     background: #fff;
 
     @include mq(sm) {
@@ -58,8 +59,8 @@
       }
 
       @include mq(sm) {
-        $height: 90px;
-        $width: 160px;
+        $height: 85px;
+        $width: (16 * $height) / 9;
         height: $height;
         width: $width;
         background-size: $width $height;
@@ -80,7 +81,7 @@
       display: flex;
       flex-direction: column;
       box-sizing: border-box;
-      padding: 4px 12px;
+      padding: 2px 12px;
 
       @include mq() {
         height: 75px;
@@ -102,7 +103,7 @@
         display: flex;
 
         .title {
-          margin: 4px 0 6px 0;
+          margin-bottom: 4px;
           color: rgba(222, 64, 120, 0.85);
           font-size: 14px;
           font-weight: 600;
@@ -138,7 +139,7 @@
           list-style: none;
 
           > li {
-            padding: 2px 0;
+            padding: 3px 0;
             color: rgba(64, 153, 208, 0.8);
             font-size: 12px;
           }

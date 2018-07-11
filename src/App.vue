@@ -85,10 +85,7 @@ export default Vue.extend({
         .logo {
           font-family: 'Pacifico', cursive;
           letter-spacing: .02em;
-          color: #ef5794;
-          background: -webkit-linear-gradient(-45deg, rgb(241, 43, 229) 0%, rgb(239, 120, 27) 100%);
-          -webkit-text-fill-color: transparent;
-          -webkit-background-clip: text;
+          color: #3d9fd2;
         }
       }
     }

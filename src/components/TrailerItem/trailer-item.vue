@@ -40,6 +40,7 @@
     overflow: hidden;
     padding: 5px;
     background: #fff;
+    border-radius: 5px;
 
     @include mq(sm) {
       display: flex;
@@ -49,6 +50,7 @@
     .thumbnail {
       position: relative;
       flex-grow: 1;
+      border-radius: 5px;
 
       @include mq() {
         $height: 180px;
@@ -104,7 +106,7 @@
 
         .title {
           margin-bottom: 4px;
-          color: rgba(222, 64, 120, 0.85);
+          color: rgba(35, 42, 51, 0.85);
           font-size: 14px;
           font-weight: 600;
           white-space: nowrap;
@@ -140,7 +142,7 @@
 
           > li {
             padding: 3px 0;
-            color: rgba(64, 153, 208, 0.8);
+            color: rgba(52, 154, 187, 0.9);
             font-size: 12px;
           }
         }

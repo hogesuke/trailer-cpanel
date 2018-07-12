@@ -10,7 +10,6 @@
         <router-link :to="{ name: 'MovieDetail', params: { id: item.id }}">
           <div class="title text">{{item.title}}</div>
         </router-link>
-        <!--<div class="source">出典 YouTube</div>-->
       </div>
       <div class="bottom">
         <!--<div class="release">-->
@@ -38,6 +37,7 @@
 
   .trailer {
     overflow: hidden;
+    box-sizing: border-box;
     padding: 5px;
     background: #fff;
     border-radius: 5px;
@@ -102,7 +102,6 @@
 
       .top {
         position: relative;
-        display: flex;
 
         .title {
           margin-bottom: 4px;

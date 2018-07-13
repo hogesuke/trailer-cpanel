@@ -70,7 +70,7 @@ export default Vue.extend({
       height: 60px;
       width: 100%;
       padding: 15px;
-      background-color: #fff;
+      background-color: #33220f;
       font-size: 22px;
       z-index: 1000;
 
@@ -85,7 +85,7 @@ export default Vue.extend({
         .logo {
           font-family: 'Pacifico', cursive;
           letter-spacing: .02em;
-          color: #3d9fd2;
+          color: #fff;
         }
       }
     }

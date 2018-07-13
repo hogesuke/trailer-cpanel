@@ -3,6 +3,7 @@
     <router-link :to="{ name: 'MovieDetail', params: { id: item.id }}">
       <div class="thumbnail" :style="{ backgroundImage: `url(${thumbnailURL})` }">
         <div class="overlay"></div>
+        <div class="now-showing">上映中</div>
       </div>
     </router-link>
     <div class="information">
@@ -33,7 +34,6 @@
     box-sizing: border-box;
     padding: 5px;
     background: #fff;
-    border-radius: 5px;
 
     @include mq(sm) {
       display: flex;
@@ -43,7 +43,6 @@
     .thumbnail {
       position: relative;
       flex-grow: 1;
-      border-radius: 5px;
 
       @include mq() {
         $height: 180px;
@@ -69,6 +68,16 @@
         &:hover {
           background-color: rgba(255, 255, 255, .2);
         }
+      }
+
+      .now-showing {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 4px;
+        background-color: rgb(216, 163, 8);
+        font-size: 12px;
+        color: #fff;
       }
     }
 
@@ -126,7 +135,7 @@
 
           > li {
             padding: 3px 0;
-            color: rgba(52, 154, 187, 0.9);
+            color: rgba(25, 130, 132, 0.9);
             font-size: 12px;
           }
         }

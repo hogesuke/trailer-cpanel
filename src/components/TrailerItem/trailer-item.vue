@@ -12,18 +12,11 @@
         </router-link>
       </div>
       <div class="bottom">
-        <!--<div class="release">-->
-          <!--<span>公開中</span>-->
-        <!--</div>-->
         <ul class="genre text">
           <li>#{{item.genres[0].nameJa}}</li>
           <li>#{{item.genres[0].nameJa}}</li>
           <li>#{{item.genres[0].nameJa}}</li>
         </ul>
-        <!--<div class="like">-->
-          <!--<i class="far fa-star icon"></i>-->
-          <!--<span class="count text">210</span>-->
-        <!--</div>-->
       </div>
     </div>
   </div>
@@ -127,14 +120,6 @@
         justify-content: flex-start;
         width: 100%;
 
-        .release > span {
-          font-size: 11px;
-          margin-right: 8px;
-          border-radius: 3px;
-          color: rgba(47, 144, 251, 0.95);
-          font-weight: 600;
-        }
-
         .genre {
           padding: 0;
           list-style: none;
@@ -142,25 +127,6 @@
           > li {
             padding: 3px 0;
             color: rgba(52, 154, 187, 0.9);
-            font-size: 12px;
-          }
-        }
-
-        .like {
-          margin-left: auto;
-
-          [data-icon="star"] {
-            color: rgba(0, 0, 0, .3);
-
-            &:hover {
-              cursor: pointer;
-              color: #ffde03;
-              transition: color .15s linear;
-            }
-          }
-
-          .count {
-            color: #333;
             font-size: 12px;
           }
         }

@@ -70,7 +70,7 @@ export default Vue.extend({
       height: 60px;
       width: 100%;
       padding: 15px;
-      background-color: #33220f;
+      background: linear-gradient(125deg, #210003, #510105, #210003);
       font-size: 22px;
       z-index: 1000;
 
@@ -85,7 +85,10 @@ export default Vue.extend({
         .logo {
           font-family: 'Pacifico', cursive;
           letter-spacing: .02em;
-          color: #fff;
+          color: #e1c039;
+          background: linear-gradient(125deg, #734118, #e1c039, #734118);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
       }
     }

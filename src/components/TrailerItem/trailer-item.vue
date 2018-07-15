@@ -107,7 +107,7 @@
 
         .title {
           margin-bottom: 4px;
-          color: rgba(35, 42, 51, 0.85);
+          color: #000;
           font-size: 14px;
           font-weight: 600;
           white-space: nowrap;

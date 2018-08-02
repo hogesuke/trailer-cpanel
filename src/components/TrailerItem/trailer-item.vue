@@ -3,7 +3,6 @@
     <router-link :to="{ name: 'MovieDetail', params: { id: item.id }}">
       <div class="thumbnail" :style="{ backgroundImage: `url(${thumbnailURL})` }">
         <div class="overlay"></div>
-        <div class="now-showing">上映中</div>
       </div>
     </router-link>
     <div class="information">
@@ -68,16 +67,6 @@
         &:hover {
           background-color: rgba(255, 255, 255, .2);
         }
-      }
-
-      .now-showing {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 4px;
-        background-color: rgb(216, 163, 8);
-        font-size: 12px;
-        color: #fff;
       }
     }
 

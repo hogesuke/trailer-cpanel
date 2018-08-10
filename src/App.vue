@@ -73,7 +73,7 @@ export default Vue.extend({
       background-image: url(./assets/header-background.jpg);
       background-size: auto 100%;
       font-size: 22px;
-      z-index: 1000;
+      z-index: 1001;
 
       &.theater-mode {
         border-bottom: none;

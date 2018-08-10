@@ -30,7 +30,7 @@
       color: rgba(0, 0, 0, .25);
 
       &.active {
-        $active-color: rgb(52, 35, 15);
+        $active-color: #b11c1c;
 
         border-bottom: solid 2px $active-color;
         font-weight: 600;

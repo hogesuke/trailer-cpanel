@@ -31,12 +31,15 @@
       justify-content: center;
       flex-wrap: wrap;
       margin: 50px 0 0 0;
-      padding: 10px 0 0;
+      padding: 10px;
       background: #efefef;
 
       li {
         list-style: none;
-        margin: 0 10px 10px 10px;
+
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
 
         @include mq(sm) {
           width: 100%;

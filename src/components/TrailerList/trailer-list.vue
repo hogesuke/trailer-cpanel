@@ -41,7 +41,7 @@
           margin-bottom: 10px;
         }
 
-        @include mq(sm) {
+        @include mq((sm, md)) {
           width: 100%;
         }
       }

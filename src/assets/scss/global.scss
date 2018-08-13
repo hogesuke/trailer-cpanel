@@ -1,10 +1,19 @@
 $breakpoints: (
-  'sm': 'screen and (max-width: 480px)',
-  'md': 'screen and (min-width: 481px)'
+  'sm': 'screen and (max-width: 320px)',
+  'md': 'screen and (min-width: 375px) and (max-width: 767px)',
+  'lg': 'screen and (min-width: 768px)'
 );
 
 @mixin mq($breakpoint: md) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content
+  @if type-of($breakpoint) == list {
+    @each $bp in $breakpoint {
+      @media #{map-get($breakpoints, $bp)} {
+        @content
+      }
+    }
+  } @else {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content
+    }
   }
 }

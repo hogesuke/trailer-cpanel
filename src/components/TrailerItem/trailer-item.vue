@@ -34,7 +34,7 @@
     padding: 5px;
     background: #fff;
 
-    @include mq(sm) {
+    @include mq((sm, md)) {
       display: flex;
       width: 100%;
     }
@@ -43,7 +43,7 @@
       position: relative;
       flex-grow: 1;
 
-      @include mq() {
+      @include mq(lg) {
         $height: 180px;
         $width: 320px;
         height: $height;
@@ -51,7 +51,7 @@
         background-size: $width $height;
       }
 
-      @include mq(sm) {
+      @include mq((sm, md)) {
         $height: 85px;
         $width: (16 * $height) / 9;
         height: $height;
@@ -76,12 +76,12 @@
       box-sizing: border-box;
       padding: 2px 12px;
 
-      @include mq() {
+      @include mq(lg) {
         height: 75px;
         width: 100%;
       }
 
-      @include mq(sm) {
+      @include mq((sm, md)) {
         flex-grow: 2;
         align-self: stretch;
         width: calc(100% - 160px);
@@ -97,7 +97,7 @@
         .title {
           margin-bottom: 4px;
           color: #000;
-          font-size: 14px;
+          font-size: 1.2rem;
           font-weight: 600;
           white-space: nowrap;
           text-overflow: ellipsis;
@@ -108,7 +108,7 @@
           position: absolute;
           top: -10px;
           right: -5px;
-          font-size: 10px;
+          font-size: 1rem;
           color: rgba(0, 0, 0, .35);
         }
       }
@@ -125,7 +125,7 @@
           > li {
             padding: 3px 0;
             color: rgba(25, 130, 132, 0.9);
-            font-size: 12px;
+            font-size: 1.1rem;
           }
         }
       }

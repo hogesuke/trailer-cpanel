@@ -24,7 +24,7 @@
       margin: 0;
       padding: 12px 10px;
       border: none;
-      font-size: 13px;
+      font-size: 1.3rem;
       font-weight: 300;
       text-align: center;
       color: rgba(0, 0, 0, .25);

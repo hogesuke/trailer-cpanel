@@ -31,7 +31,10 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-  @mixin mq {
+  @import './assets/scss/global';
+
+  // TODO: 要見直し
+  @mixin mq-width {
     @media screen and (min-width: 1321px) {
       width: 1320px;
     }
@@ -41,6 +44,14 @@ export default Vue.extend({
 
     &.theater-mode {
       background-color: #000;
+    }
+  }
+  html {
+    @include mq(md) {
+      font-size: 62.5%;
+    }
+    @include mq(sm) {
+      font-size: 55%;
     }
   }
   html, body {
@@ -67,12 +78,12 @@ export default Vue.extend({
       top: 0;
       overflow: hidden;
       box-sizing: border-box;
-      height: 60px;
+      height: 6rem;
       width: 100%;
       padding: 15px;
       background-image: url(./assets/header-background.jpg);
       background-size: auto 100%;
-      font-size: 22px;
+      font-size: 2.2rem;
       z-index: 1001;
 
       &.theater-mode {
@@ -80,7 +91,7 @@ export default Vue.extend({
       }
 
       .container {
-        @include mq;
+        @include mq-width;
         margin: 0 auto;
 
         .logo {
@@ -97,7 +108,7 @@ export default Vue.extend({
       margin-top: 60px;
 
       .container {
-        @include mq;
+        @include mq-width;
         margin: 0 auto;
       }
     }

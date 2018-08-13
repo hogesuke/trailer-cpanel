@@ -66,7 +66,7 @@
       }
 
       .title {
-        font-size: 22px;
+        font-size: 2.2rem;
       }
     }
   }

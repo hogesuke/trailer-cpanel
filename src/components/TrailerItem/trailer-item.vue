@@ -44,16 +44,27 @@
       flex-grow: 1;
 
       @include mq(lg) {
-        $height: 180px;
-        $width: 320px;
+        $height: 18rem;
+        $width: 32rem;
+        // todo 繰り返しを解消する
         height: $height;
         width: $width;
         background-size: $width $height;
       }
 
-      @include mq((sm, md)) {
-        $height: 85px;
+      @include mq(md) {
+        $height: 8.5rem;
         $width: (16 * $height) / 9;
+        // todo 繰り返しを解消する
+        height: $height;
+        width: $width;
+        background-size: $width $height;
+      }
+
+      @include mq(sm) {
+        $height: 6.5rem;
+        $width: (16 * $height) / 9;
+        // todo 繰り返しを解消する
         height: $height;
         width: $width;
         background-size: $width $height;
@@ -77,7 +88,7 @@
       padding: 2px 12px;
 
       @include mq(lg) {
-        height: 75px;
+        height: 7.5rem;
         width: 100%;
       }
 
@@ -102,14 +113,6 @@
           white-space: nowrap;
           text-overflow: ellipsis;
           text-decoration: none;
-        }
-
-        .source {
-          position: absolute;
-          top: -10px;
-          right: -5px;
-          font-size: 1rem;
-          color: rgba(0, 0, 0, .35);
         }
       }
 

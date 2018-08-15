@@ -97,7 +97,7 @@
         .title {
           margin-bottom: 4px;
           color: #000;
-          font-size: 1.2rem;
+          font-size: 1.3rem;
           font-weight: 600;
           white-space: nowrap;
           text-overflow: ellipsis;
@@ -125,7 +125,7 @@
           > li {
             padding: 3px 0;
             color: rgba(25, 130, 132, 0.9);
-            font-size: 1.1rem;
+            font-size: 1.2rem;
           }
         }
       }

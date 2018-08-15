@@ -12,11 +12,11 @@
         </router-link>
       </div>
       <div class="bottom">
-        <ul class="genre text">
-          <li>#{{item.genres[0].nameJa}}</li>
-          <li>#{{item.genres[0].nameJa}}</li>
-          <li>#{{item.genres[0].nameJa}}</li>
-        </ul>
+        <p class="genre text">
+          <a>#{{item.genres[0].nameJa}}</a>
+          <a>#{{item.genres[0].nameJa}}</a>
+          <a>#{{item.genres[0].nameJa}}</a>
+        </p>
       </div>
     </div>
   </div>
@@ -125,8 +125,7 @@
           padding: 0;
           list-style: none;
 
-          > li {
-            padding: 3px 0;
+          > a {
             color: rgba(25, 130, 132, 0.9);
             font-size: 1.2rem;
           }

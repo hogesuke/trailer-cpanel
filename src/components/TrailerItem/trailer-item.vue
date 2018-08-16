@@ -22,7 +22,20 @@
   </div>
 </template>
 
-<script src="./trailer-item.js">
+<script>
+export default {
+  props: [ 'movie' ],
+  data () {
+    return {
+      item: this.movie
+    }
+  },
+  computed: {
+    thumbnailURL () {
+      return `https://i.ytimg.com/vi/${this.item.trailers[0].videoId}/mqdefault.jpg`
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">

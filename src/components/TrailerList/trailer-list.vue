@@ -1,8 +1,7 @@
 <template>
   <div id="trailer-list-container">
     <trailer-tabs
-      id="trailer-tabs"
-      :style="{ top: trailerTabsTopPx + 'px' }">
+      id="trailer-tabs">
     </trailer-tabs>
     <ul class="trailer-list">
       <li v-for="movie in movies" :key=movie.id>
@@ -24,8 +23,7 @@ export default {
   },
   data () {
     return {
-      movies: [],
-      trailerTabsTopPx: 0
+      movies: []
     }
   },
   created () {
@@ -34,10 +32,6 @@ export default {
         // TODO: エラーハンドリング
         this.movies = res.data
       })
-  },
-  mounted () {
-    // todo headerのheightを取得して設定する
-    this.trailerTabsTopPx = 60
   }
 }
 </script>
@@ -50,10 +44,19 @@ export default {
 
     #trailer-tabs {
       position: fixed;
-      top: 60px;
       width: 100%;
       background-color: #fff;
       z-index: 1000;
+
+      @include mq(sm) {
+        top: map-get($header-heights, sm);
+      }
+      @include mq(md) {
+        top: map-get($header-heights, md);
+      }
+      @include mq(lg) {
+        top: map-get($header-heights, lg);
+      }
     }
 
     .trailer-list {

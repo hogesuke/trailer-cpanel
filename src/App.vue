@@ -78,13 +78,22 @@ export default Vue.extend({
       top: 0;
       overflow: hidden;
       box-sizing: border-box;
-      height: 6rem;
       width: 100%;
       padding: 15px;
       background-image: url(./assets/header-background.jpg);
       background-size: auto 100%;
       font-size: 2.2rem;
       z-index: 1001;
+
+      @include mq(sm) {
+        height: map-get($header-heights, sm);
+      }
+      @include mq(md) {
+        height: map-get($header-heights, md);
+      }
+      @include mq(lg) {
+        height: map-get($header-heights, lg);
+      }
 
       &.theater-mode {
         border-bottom: none;
@@ -105,7 +114,16 @@ export default Vue.extend({
     #main {
       height: 100%;
       width: 100%;
-      margin-top: 60px;
+
+      @include mq(sm) {
+        margin-top: map-get($header-heights, sm);
+      }
+      @include mq(md) {
+        margin-top: map-get($header-heights, md);
+      }
+      @include mq(lg) {
+        margin-top: map-get($header-heights, lg);
+      }
 
       .container {
         @include mq-width;

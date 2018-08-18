@@ -4,6 +4,12 @@ $breakpoints: (
   'lg': 'screen and (min-width: 768px)'
 );
 
+$header-heights: (
+  'sm': 55px,
+  'md': 60px,
+  'lg': 65px
+);
+
 @mixin mq($breakpoint: md) {
   @if type-of($breakpoint) == list {
     @each $bp in $breakpoint {

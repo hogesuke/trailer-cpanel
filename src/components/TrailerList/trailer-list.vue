@@ -1,8 +1,6 @@
 <template>
   <div id="trailer-list-container">
-    <trailer-tabs
-      id="trailer-tabs">
-    </trailer-tabs>
+    <trailer-tabs ref="trailerTabs" id="trailer-tabs" />
     <ul class="trailer-list">
       <li v-for="movie in movies" :key=movie.id>
         <trailer-item :movie=movie></trailer-item>
@@ -23,7 +21,9 @@ export default {
   },
   data () {
     return {
-      movies: []
+      movies: [],
+      startPosition: 0,
+      trailerTabsTop: 0
     }
   },
   created () {
@@ -32,6 +32,20 @@ export default {
         // TODO: エラーハンドリング
         this.movies = res.data
       })
+  },
+  mounted () {
+    // todo 途中
+    // const currentPosition = pageYOffset
+    //
+    // if (currentPosition > this.startPosition) {
+    //   if(currentPosition >= 200) {
+    //     this.trailerTabsTop = this.$refs.trailerTabs.clientHeight
+    //   }
+    // } else {
+    //   $("#menu-wrap").css("top", 0 + "px");
+    // }
+    //
+    // this.startPosition = currentPosition
   }
 }
 </script>
@@ -47,6 +61,7 @@ export default {
       width: 100%;
       background-color: #fff;
       z-index: 1000;
+      transition: top 0.3s linear;
 
       @include mq(sm) {
         top: map-get($header-heights, sm);

@@ -36,7 +36,6 @@ export default {
   mounted () {
     // todo throttlingする
     // todo 勢いよく上にスクロールした場合に背景色の白が見えてしまう
-    // todo わずかな上下のスクロールは無視するようにする
     window.addEventListener('scroll', this.onScroll)
   },
   beforeDestroy () {
@@ -50,6 +49,11 @@ export default {
   methods: {
     onScroll () {
       const currentPosition = window.pageYOffset
+
+      // わずかなスクロールには反応させないようにする
+      if (Math.abs(currentPosition - this.startPosition) <= 15) {
+        return
+      }
 
       if (currentPosition > this.startPosition) {
         if (currentPosition >= 100) {

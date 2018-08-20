@@ -1,6 +1,6 @@
 <template>
   <div id="trailer-list-container">
-    <trailer-tabs ref="trailerTabs" id="trailer-tabs" />
+    <trailer-tabs ref="trailerTabs" id="trailer-tabs" :style="trailerTabsStyles" />
     <ul class="trailer-list">
       <li v-for="movie in movies" :key=movie.id>
         <trailer-item :movie=movie></trailer-item>
@@ -34,18 +34,28 @@ export default {
       })
   },
   mounted () {
-    // todo 途中
-    // const currentPosition = pageYOffset
-    //
-    // if (currentPosition > this.startPosition) {
-    //   if(currentPosition >= 200) {
-    //     this.trailerTabsTop = this.$refs.trailerTabs.clientHeight
-    //   }
-    // } else {
-    //   $("#menu-wrap").css("top", 0 + "px");
-    // }
-    //
-    // this.startPosition = currentPosition
+    // todo throttlingする
+    // todo $elの参照でエラーが出ている
+    // todo 勢いよく上にスクロールした場合に背景色の白が見えてしまう
+    // todo わずかな上下のスクロールは無視するようにする
+    window.addEventListener('scroll', () => {
+      const currentPosition = pageYOffset
+
+      if (currentPosition > this.startPosition) {
+        if (currentPosition >= 100) {
+          this.trailerTabsTop = this.$refs.trailerTabs.$el.clientHeight * -1
+        }
+      } else {
+        this.trailerTabsTop = 0
+      }
+
+      this.startPosition = currentPosition
+    })
+  },
+  computed: {
+    trailerTabsStyles () {
+      return this.trailerTabsTop ? { top: this.trailerTabsTop + 'px', opacity: 0 } : {}
+    }
   }
 }
 </script>
@@ -61,7 +71,8 @@ export default {
       width: 100%;
       background-color: #fff;
       z-index: 1000;
-      transition: top 0.3s linear;
+      opacity: 1;
+      transition: top 0.6s ease-in-out, opacity 0.6s ease-in-out;
 
       @include mq(sm) {
         top: map-get($header-heights, sm);

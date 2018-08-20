@@ -44,7 +44,7 @@ export default {
   },
   computed: {
     trailerTabsStyles () {
-      return this.trailerTabsTop ? { top: this.trailerTabsTop + 'px', opacity: 0 } : {}
+      return this.trailerTabsTop ? { top: this.trailerTabsTop + 'px' } : {}
     }
   },
   methods: {
@@ -76,8 +76,7 @@ export default {
       width: 100%;
       background-color: #fff;
       z-index: 1000;
-      opacity: 1;
-      transition: top 0.6s ease-in-out, opacity 0.6s ease-in-out;
+      transition: top 0.3s ease-in-out;
 
       @include mq(sm) {
         top: map-get($header-heights, sm);

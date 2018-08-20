@@ -35,11 +35,21 @@ export default {
   },
   mounted () {
     // todo throttlingする
-    // todo $elの参照でエラーが出ている
     // todo 勢いよく上にスクロールした場合に背景色の白が見えてしまう
     // todo わずかな上下のスクロールは無視するようにする
-    window.addEventListener('scroll', () => {
-      const currentPosition = pageYOffset
+    window.addEventListener('scroll', this.onScroll)
+  },
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.onScroll)
+  },
+  computed: {
+    trailerTabsStyles () {
+      return this.trailerTabsTop ? { top: this.trailerTabsTop + 'px', opacity: 0 } : {}
+    }
+  },
+  methods: {
+    onScroll () {
+      const currentPosition = window.pageYOffset
 
       if (currentPosition > this.startPosition) {
         if (currentPosition >= 100) {
@@ -50,11 +60,6 @@ export default {
       }
 
       this.startPosition = currentPosition
-    })
-  },
-  computed: {
-    trailerTabsStyles () {
-      return this.trailerTabsTop ? { top: this.trailerTabsTop + 'px', opacity: 0 } : {}
     }
   }
 }

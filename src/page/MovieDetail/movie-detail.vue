@@ -9,9 +9,6 @@
         allowfullscreen>
       </iframe>
     </div>
-    <div class="description" :class="{ dark: isDark }">
-      <div class="title">{{item.title}}</div>
-    </div>
   </div>
 </template>
 
@@ -65,54 +62,51 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  $mq-width-threshold: 1040px;
-
-  @mixin mq-width {
-    @media screen and (min-width: $mq-width-threshold) {
-      width: 1000px;
-    }
-    @media screen and (max-width: $mq-width-threshold) {
-      width: auto;
-    }
-  }
-  @mixin mq-height {
-    @media screen and (min-width: $mq-width-threshold) {
-      height: 562px;
-    }
-    @media screen and (max-width: $mq-width-threshold) {
-      height: auto;
-    }
-  }
+  // $mq-width-threshold: 1040px;
+  //
+  // @mixin mq-width {
+  //   @media screen and (min-width: $mq-width-threshold) {
+  //     width: 1000px;
+  //   }
+  //   @media screen and (max-width: $mq-width-threshold) {
+  //     width: auto;
+  //   }
+  // }
+  // @mixin mq-height {
+  //   @media screen and (min-width: $mq-width-threshold) {
+  //     height: 562px;
+  //   }
+  //   @media screen and (max-width: $mq-width-threshold) {
+  //     height: auto;
+  //   }
+  // }
 
   .movie {
     height: 100%;
 
     .trailer {
-      display: flex;
-      justify-content: center;
+      // todo 参考: https://design.webclips.jp/youtube-movie-size/
+      // todo header分幅を狭めるようにする
+      position: relative;
+      max-width: calc(100% - 10rem);
+      height: 0;
+      margin-top: 1rem;
+      padding-top: 56.25%;
+      overflow: hidden;
 
       iframe {
-        @include mq-width;
-        @include mq-height;
-        margin: 20px;
+        //@include mq-width;
+        //@include mq-height;
+        /*margin: 20px;*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 1rem);
 
         &.hide {
           opacity: 0;
         }
-      }
-    }
-
-    .description {
-      @include mq-width;
-      margin: 10px auto;
-      transition: color .7s linear;
-
-      &.dark {
-        color: #fff;
-      }
-
-      .title {
-        font-size: 2.2rem;
       }
     }
   }

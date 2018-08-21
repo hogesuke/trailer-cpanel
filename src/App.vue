@@ -127,6 +127,7 @@ export default Vue.extend({
 
       .container {
         @include mq-width;
+        height: 100%;
         margin: 0 auto;
       }
     }

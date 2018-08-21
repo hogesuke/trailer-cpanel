@@ -27,7 +27,6 @@ export default {
     display: flex;
     flex-direction: row;
     padding-top: 10px;
-    border-bottom: solid 1px #ececec;
     box-shadow: 0 4px 4px -5px #ddd;
 
     .tab {
@@ -43,9 +42,9 @@ export default {
       color: rgba(0, 0, 0, .25);
 
       &.active {
-        $active-color: #b11c1c;
+        $active-color: #c52f2f;
 
-        border-bottom: solid 2px $active-color;
+        border-bottom: solid 3px $active-color;
         font-weight: 600;
         color: $active-color;
       }

@@ -1,11 +1,24 @@
 <template>
-  <div id="trailer-list-container">
-    <trailer-tabs ref="trailerTabs" id="trailer-tabs" :style="trailerTabsStyles" />
-    <ul class="trailer-list">
-      <li v-for="movie in movies" :key=movie.id>
-        <trailer-item :movie=movie></trailer-item>
-      </li>
-    </ul>
+  <div>
+    <header id="header" :class="{ 'theater-mode': isDark }">
+      <div class="container">
+        <router-link to="/" class="logo">
+          TrailerTrailer
+        </router-link>
+      </div>
+    </header>
+    <div id="main">
+      <div class="container">
+        <div id="trailer-list-container">
+          <trailer-tabs ref="trailerTabs" id="trailer-tabs" :style="trailerTabsStyles" />
+          <ul class="trailer-list">
+            <li v-for="movie in movies" :key=movie.id>
+              <trailer-item :movie=movie></trailer-item>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -71,6 +84,66 @@ export default {
 
 <style scoped lang="scss">
   @import '../assets/scss/global';
+
+  #header {
+    @include theater-mode;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+    background-image: url(../assets/header-background.jpg);
+    background-size: auto 100%;
+    font-size: 2.2rem;
+    z-index: 1001;
+
+    @include mq(sm) {
+      height: map-get($header-heights, sm);
+    }
+    @include mq(md) {
+      height: map-get($header-heights, md);
+    }
+    @include mq(lg) {
+      height: map-get($header-heights, lg);
+    }
+
+    &.theater-mode {
+      border-bottom: none;
+    }
+
+    .container {
+      @include mq-width;
+      margin: 0 auto;
+
+      .logo {
+        font-family: 'Pacifico', cursive;
+        letter-spacing: .02em;
+        color: #fff;
+      }
+    }
+  }
+
+  #main {
+    height: 100%;
+    width: 100%;
+
+    @include mq(sm) {
+      margin-top: map-get($header-heights, sm);
+    }
+    @include mq(md) {
+      margin-top: map-get($header-heights, md);
+    }
+    @include mq(lg) {
+      margin-top: map-get($header-heights, lg);
+    }
+
+    .container {
+      @include mq-width;
+      height: 100%;
+      margin: 0 auto;
+    }
+  }
 
   #trailer-list-container {
     position: relative;

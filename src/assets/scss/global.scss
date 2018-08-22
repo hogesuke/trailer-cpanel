@@ -23,3 +23,18 @@ $header-heights: (
     }
   }
 }
+
+// TODO: 要見直し
+@mixin mq-width {
+  @media screen and (min-width: 1321px) {
+    width: 1320px;
+  }
+}
+
+@mixin theater-mode {
+  transition: background-color .7s linear;
+
+  &.theater-mode {
+    background-color: #000;
+  }
+}

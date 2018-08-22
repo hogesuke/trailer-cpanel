@@ -62,25 +62,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  // $mq-width-threshold: 1040px;
-  //
-  // @mixin mq-width {
-  //   @media screen and (min-width: $mq-width-threshold) {
-  //     width: 1000px;
-  //   }
-  //   @media screen and (max-width: $mq-width-threshold) {
-  //     width: auto;
-  //   }
-  // }
-  // @mixin mq-height {
-  //   @media screen and (min-width: $mq-width-threshold) {
-  //     height: 562px;
-  //   }
-  //   @media screen and (max-width: $mq-width-threshold) {
-  //     height: auto;
-  //   }
-  // }
-
   .movie {
     height: 100%;
 
@@ -95,8 +76,6 @@ export default {
       overflow: hidden;
 
       iframe {
-        //@include mq-width;
-        //@include mq-height;
         /*margin: 20px;*/
         position: absolute;
         top: 0;

@@ -1,23 +1,19 @@
 <template>
   <div>
-    <header id="header" :class="{ 'theater-mode': isDark }">
+    <header>
       <div class="container">
         <router-link to="/" class="logo">
           TrailerTrailer
         </router-link>
       </div>
     </header>
-    <div id="main">
-      <div class="container">
-        <div id="trailer-list-container">
-          <trailer-tabs ref="trailerTabs" id="trailer-tabs" :style="trailerTabsStyles" />
-          <ul class="trailer-list">
-            <li v-for="movie in movies" :key=movie.id>
-              <trailer-item :movie=movie></trailer-item>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <trailer-tabs ref="trailerTabs" id="trailer-tabs" :style="trailerTabsStyles" />
+    <div id="trailer-list">
+      <ul class="item-list">
+        <li v-for="movie in movies" :key=movie.id>
+          <trailer-item :movie=movie></trailer-item>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -85,7 +81,7 @@ export default {
 <style scoped lang="scss">
   @import '../assets/scss/global';
 
-  #header {
+  header {
     @include theater-mode;
     position: fixed;
     top: 0;
@@ -113,9 +109,6 @@ export default {
     }
 
     .container {
-      @include mq-width;
-      margin: 0 auto;
-
       .logo {
         font-family: 'Pacifico', cursive;
         letter-spacing: .02em;
@@ -124,7 +117,26 @@ export default {
     }
   }
 
-  #main {
+  #trailer-tabs {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
+
+    @include mq(sm) {
+      top: map-get($header-heights, sm);
+    }
+    @include mq(md) {
+      top: map-get($header-heights, md);
+    }
+    @include mq(lg) {
+      top: map-get($header-heights, lg);
+    }
+  }
+
+  #trailer-list {
+    position: relative;
     height: 100%;
     width: 100%;
 
@@ -138,35 +150,7 @@ export default {
       margin-top: map-get($header-heights, lg);
     }
 
-    .container {
-      @include mq-width;
-      height: 100%;
-      margin: 0 auto;
-    }
-  }
-
-  #trailer-list-container {
-    position: relative;
-
-    #trailer-tabs {
-      position: fixed;
-      width: 100%;
-      background-color: #fff;
-      z-index: 1000;
-      transition: top 0.3s ease-in-out;
-
-      @include mq(sm) {
-        top: map-get($header-heights, sm);
-      }
-      @include mq(md) {
-        top: map-get($header-heights, md);
-      }
-      @include mq(lg) {
-        top: map-get($header-heights, lg);
-      }
-    }
-
-    .trailer-list {
+    .item-list {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;

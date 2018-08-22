@@ -154,8 +154,8 @@ export default {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      margin: 50px 0 0 0;
-      padding: 10px;
+      margin: 0;
+      padding: 6rem 1rem 1rem;
       background: #efefef;
 
       li {

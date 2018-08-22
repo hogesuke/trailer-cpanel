@@ -15,7 +15,7 @@
 <script>
 import axios from 'axios'
 import { mapMutations, mapState } from 'vuex'
-import * as types from '../../store/mutation-types'
+import * as types from '../store/mutation-types'
 
 export default {
   props: [],

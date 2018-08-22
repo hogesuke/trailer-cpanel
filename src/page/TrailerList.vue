@@ -11,8 +11,8 @@
 
 <script>
 import axios from 'axios'
-import TrailerTabs from '@/components/TrailerTabs/trailer-tabs.vue'
-import TrailerItem from '@/components/TrailerItem/trailer-item.vue'
+import TrailerTabs from '@/components/TrailerTabs.vue'
+import TrailerItem from '@/components/TrailerItem.vue'
 
 export default {
   components: {
@@ -70,7 +70,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import '../../assets/scss/global';
+  @import '../assets/scss/global';
 
   #trailer-list-container {
     position: relative;

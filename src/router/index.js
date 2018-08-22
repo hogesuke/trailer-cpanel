@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import TrailerList from '@/components/TrailerList/trailer-list.vue'
-import MovieDetail from '@/page/MovieDetail/movie-detail.vue'
+import TrailerList from '@/page/TrailerList.vue'
+import MovieDetail from '@/page/MovieDetail.vue'
 
 Vue.use(Router)
 

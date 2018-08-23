@@ -1,14 +1,12 @@
 <template>
-  <div v-if="item" class="movie">
-    <div class="trailer">
-      <iframe
-        :src=movieURL
-        :class="{ 'hide': isHide }"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen>
-      </iframe>
-    </div>
+  <div class="trailer" v-if="item">
+    <iframe
+      :src=movieURL
+      :class="{ 'hide': isHide }"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
   </div>
 </template>
 
@@ -62,30 +60,23 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .movie {
-    height: 100%;
+  .trailer {
+    // todo 参考: https://design.webclips.jp/youtube-movie-size/
+    // todo header分幅を狭めるようにする
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
 
-    .trailer {
-      // todo 参考: https://design.webclips.jp/youtube-movie-size/
-      // todo header分幅を狭めるようにする
-      position: relative;
-      max-width: calc(100% - 10rem);
-      height: 0;
-      margin-top: 1rem;
-      padding-top: 56.25%;
-      overflow: hidden;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
 
-      iframe {
-        /*margin: 20px;*/
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: calc(100% - 1rem);
-
-        &.hide {
-          opacity: 0;
-        }
+      &.hide {
+        opacity: 0;
       }
     }
   }

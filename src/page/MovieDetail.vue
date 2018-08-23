@@ -66,6 +66,8 @@ export default {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
+    width: calc(100% - 10rem);
+    margin: 0 auto;
     overflow: hidden;
 
     iframe {

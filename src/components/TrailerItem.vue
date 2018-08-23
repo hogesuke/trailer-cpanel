@@ -135,11 +135,12 @@ export default {
         width: 100%;
 
         .genre {
+          margin: 0;
           padding: 0;
           list-style: none;
 
           > a {
-            color: rgba(25, 130, 132, 0.9);
+            color: rgba(33, 77, 185, 0.9);
             font-size: 1.2rem;
           }
         }

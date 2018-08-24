@@ -47,18 +47,16 @@ export default {
     padding: 5px;
     background: #fff;
 
-    @include mq((sm, md)) {
-      display: flex;
-      width: 100%;
-    }
+    display: flex;
+    width: 100%;
 
     .thumbnail {
       position: relative;
       flex-grow: 1;
 
       @include mq(lg) {
-        $height: 18rem;
-        $width: 32rem;
+        $height: 10rem;
+        $width: (16 * $height) / 9;
         // todo 繰り返しを解消する
         height: $height;
         width: $width;
@@ -108,7 +106,7 @@ export default {
       @include mq((sm, md)) {
         flex-grow: 2;
         align-self: stretch;
-        width: calc(100% - 160px);
+        width: 100%;
       }
 
       .text {

@@ -9,11 +9,7 @@
     </header>
     <trailer-tabs ref="trailerTabs" id="trailer-tabs" :style="trailerTabsStyles" />
     <div id="trailer-list">
-      <ul class="item-list">
-        <li v-for="movie in movies" :key=movie.id>
-          <trailer-item :movie=movie></trailer-item>
-        </li>
-      </ul>
+      <trailer-item v-for="movie in movies" :key=movie.id :movie=movie class="trailer-item" />
     </div>
   </div>
 </template>
@@ -137,9 +133,18 @@ export default {
 
   #trailer-list {
     position: relative;
+    box-sizing: border-box;
     height: 100%;
     width: 100%;
+    margin: 0;
+    padding: 6rem 0.3rem 0.3rem;
+    background: #efefef;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
+    @include mq((sm, md)) {
+    }
     @include mq(sm) {
       margin-top: map-get($header-heights, sm);
     }
@@ -150,24 +155,21 @@ export default {
       margin-top: map-get($header-heights, lg);
     }
 
-    .item-list {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 0;
-      padding: 6rem 1rem 1rem;
-      background: #efefef;
+    .trailer-item {
+      margin: 0 0.3rem;
 
-      li {
-        list-style: none;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
 
-        &:not(:last-child) {
-          margin-bottom: 10px;
-        }
+      @include mq(lg) {
+        // todo 下を参考に1行に2つのitemが入り切るようにする
+        // 参考: https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos/
+        width: 50%;
+      }
 
-        @include mq((sm, md)) {
-          width: 100%;
-        }
+      @include mq((sm, md)) {
+        width: 100%;
       }
     }
   }

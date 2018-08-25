@@ -137,7 +137,7 @@ export default {
     height: 100%;
     width: 100%;
     margin: 0;
-    padding: 6rem 0.3rem 0.3rem;
+    padding: 5.1rem 0.3rem 0.3rem;
     background: #efefef;
     display: flex;
     justify-content: center;
@@ -156,16 +156,12 @@ export default {
     }
 
     .trailer-item {
-      margin: 0 0.3rem;
+      $side-margin: 0.5rem;
 
-      &:not(:last-child) {
-        margin-bottom: 10px;
-      }
+      margin: $side-margin;
 
       @include mq(lg) {
-        // todo 下を参考に1行に2つのitemが入り切るようにする
-        // 参考: https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos/
-        width: 50%;
+        width: calc(50% - #{$side-margin} * 2);
       }
 
       @include mq((sm, md)) {

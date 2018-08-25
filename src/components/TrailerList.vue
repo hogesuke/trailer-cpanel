@@ -50,15 +50,18 @@ export default {
     }
 
     .trailer-item {
-      $side-margin: 0.5rem;
-
-      margin: $side-margin;
+      @include mq(xs) {
+        margin: 0.3rem;
+      }
+      @include mq((sm, md, lg)) {
+        margin: 0.5rem;
+      }
 
       @include mq((xs, sm)) {
         width: 100%;
       }
       @include mq((md, lg)) {
-        width: calc(50% - #{$side-margin} * 2);
+        width: calc(50% - 0.5rem * 2);
       }
     }
   }

@@ -90,14 +90,10 @@ export default {
     font-size: 2.2rem;
     z-index: 1001;
 
-    @include mq(sm) {
-      height: map-get($header-heights, sm);
-    }
-    @include mq(md) {
-      height: map-get($header-heights, md);
-    }
-    @include mq(lg) {
-      height: map-get($header-heights, lg);
+    @each $bp in (xs, sm, md, lg) {
+      @include mq($bp) {
+        height: #{map-get($header-heights, $bp)};
+      }
     }
 
     &.theater-mode {
@@ -120,14 +116,10 @@ export default {
     z-index: 1000;
     transition: top 0.3s ease-in-out;
 
-    @include mq(sm) {
-      top: map-get($header-heights, sm);
-    }
-    @include mq(md) {
-      top: map-get($header-heights, md);
-    }
-    @include mq(lg) {
-      top: map-get($header-heights, lg);
+    @each $bp in (xs, sm, md, lg) {
+      @include mq($bp) {
+        top: #{map-get($header-heights, $bp)};
+      }
     }
   }
 
@@ -143,16 +135,10 @@ export default {
     justify-content: center;
     flex-wrap: wrap;
 
-    @include mq((sm, md)) {
-    }
-    @include mq(sm) {
-      margin-top: map-get($header-heights, sm);
-    }
-    @include mq(md) {
-      margin-top: map-get($header-heights, md);
-    }
-    @include mq(lg) {
-      margin-top: map-get($header-heights, lg);
+    @each $bp in (xs, sm, md, lg) {
+      @include mq($bp) {
+        margin-top: #{map-get($header-heights, $bp)};
+      }
     }
 
     .trailer-item {
@@ -160,11 +146,11 @@ export default {
 
       margin: $side-margin;
 
-      @include mq(lg) {
+      @include mq((md, lg)) {
         width: calc(50% - #{$side-margin} * 2);
       }
 
-      @include mq((sm, md)) {
+      @include mq((xs, sm)) {
         width: 100%;
       }
     }

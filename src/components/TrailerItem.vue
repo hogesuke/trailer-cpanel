@@ -54,16 +54,15 @@ export default {
       position: relative;
       flex-grow: 1;
 
-      @include mq(lg) {
-        $height: 10rem;
+      @include mq(xs) {
+        $height: 6.5rem;
         $width: (16 * $height) / 9;
         // todo 繰り返しを解消する
         height: $height;
         width: $width;
         background-size: $width $height;
       }
-
-      @include mq(md) {
+      @include mq(sm) {
         $height: 8.5rem;
         $width: (16 * $height) / 9;
         // todo 繰り返しを解消する
@@ -71,9 +70,16 @@ export default {
         width: $width;
         background-size: $width $height;
       }
-
-      @include mq(sm) {
-        $height: 6.5rem;
+      @include mq(md) {
+        $height: 10rem;
+        $width: (16 * $height) / 9;
+        // todo 繰り返しを解消する
+        height: $height;
+        width: $width;
+        background-size: $width $height;
+      }
+      @include mq(lg) {
+        $height: 11rem;
         $width: (16 * $height) / 9;
         // todo 繰り返しを解消する
         height: $height;
@@ -98,12 +104,12 @@ export default {
       box-sizing: border-box;
       padding: 2px 12px;
 
-      @include mq(lg) {
+      @include mq(md) {
         height: 7.5rem;
         width: 100%;
       }
 
-      @include mq((sm, md)) {
+      @include mq((xs, sm)) {
         flex-grow: 2;
         align-self: stretch;
         width: 100%;

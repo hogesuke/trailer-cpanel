@@ -23,14 +23,17 @@ export default Vue.extend({
   @import './assets/scss/global';
 
   html {
-    @include mq(lg) {
-      font-size: 70%;
+    @include mq(xs) {
+      font-size: 55%;
+    }
+    @include mq(sm) {
+      font-size: 62.5%;
     }
     @include mq(md) {
       font-size: 62.5%;
     }
-    @include mq(sm) {
-      font-size: 55%;
+    @include mq(lg) {
+      font-size: 70%;
     }
   }
 

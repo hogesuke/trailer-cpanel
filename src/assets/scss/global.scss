@@ -1,16 +1,18 @@
 $breakpoints: (
-  'sm': 'screen and (max-width: 320px)',
-  'md': 'screen and (min-width: 375px) and (max-width: 767px)',
-  'lg': 'screen and (min-width: 768px)'
+  'xs': 'screen and (max-width: 374px)',
+  'sm': 'screen and (min-width: 375px) and (max-width: 767px)',
+  'md': 'screen and (min-width: 768px) and (max-width: 1023px)',
+  'lg': 'screen and (min-width: 1024px)'
 );
 
 $header-heights: (
-  'sm': 55px,
+  'xs': 55px,
+  'sm': 60px,
   'md': 60px,
-  'lg': 65px
+  'lg': 65px,
 );
 
-@mixin mq($breakpoint: md) {
+@mixin mq($breakpoint: sm) {
   @if type-of($breakpoint) == list {
     @each $bp in $breakpoint {
       @media #{map-get($breakpoints, $bp)} {

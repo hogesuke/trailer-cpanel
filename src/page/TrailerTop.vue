@@ -2,37 +2,26 @@
   <div>
     <app-header />
     <trailer-tabs ref="trailerTabs" id="trailer-tabs" :style="trailerTabsStyles" />
-    <div id="trailer-list">
-      <trailer-item v-for="movie in movies" :key=movie.id :movie=movie class="trailer-item" />
-    </div>
+    <trailer-list id="trailer-list" />
   </div>
 </template>
 
 <script>
-import axios from 'axios'
 import AppHeader from '@/components/AppHeader.vue'
 import TrailerTabs from '@/components/TrailerTabs.vue'
-import TrailerItem from '@/components/TrailerItem.vue'
+import TrailerList from '@/components/TrailerList.vue'
 
 export default {
   components: {
     AppHeader,
-    TrailerItem,
-    TrailerTabs
+    TrailerTabs,
+    TrailerList
   },
   data () {
     return {
-      movies: [],
       startPosition: 0,
       trailerTabsTop: 0
     }
-  },
-  created () {
-    axios.get('http://localhost:3000/movies/?_embed=directors&_embed=casts&_embed=trailers&_embed=genres')
-      .then((res) => {
-        // TODO: エラーハンドリング
-        this.movies = res.data
-      })
   },
   mounted () {
     // todo throttlingする
@@ -73,38 +62,6 @@ export default {
 <style scoped lang="scss">
   @import '../assets/scss/global';
 
-  header {
-    @include theater-mode;
-    position: fixed;
-    top: 0;
-    overflow: hidden;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 15px;
-    background-image: url(../assets/header-background.jpg);
-    background-size: auto 100%;
-    font-size: 2.2rem;
-    z-index: 1001;
-
-    @each $bp in (xs, sm, md, lg) {
-      @include mq($bp) {
-        height: #{map-get($header-heights, $bp)};
-      }
-    }
-
-    &.theater-mode {
-      border-bottom: none;
-    }
-
-    .header-container {
-      .logo {
-        font-family: 'Pacifico', cursive;
-        letter-spacing: .02em;
-        color: #fff;
-      }
-    }
-  }
-
   #trailer-tabs {
     position: fixed;
     width: 100%;
@@ -120,34 +77,9 @@ export default {
   }
 
   #trailer-list {
-    position: relative;
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 5.1rem 0.3rem 0.3rem;
-    background: #efefef;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
     @each $bp in (xs, sm, md, lg) {
       @include mq($bp) {
         margin-top: #{map-get($header-heights, $bp)};
-      }
-    }
-
-    .trailer-item {
-      $side-margin: 0.5rem;
-
-      margin: $side-margin;
-
-      @include mq((md, lg)) {
-        width: calc(50% - #{$side-margin} * 2);
-      }
-
-      @include mq((xs, sm)) {
-        width: 100%;
       }
     }
   }

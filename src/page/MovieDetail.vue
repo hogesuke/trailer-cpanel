@@ -1,12 +1,19 @@
 <template>
-  <div class="trailer" v-if="item">
-    <iframe
-      :src=movieURL
-      :class="{ 'hide': isHide }"
-      frameborder="0"
-      allow="autoplay; encrypted-media"
-      allowfullscreen>
-    </iframe>
+  <div class="trailer">
+    <header>
+      <router-link to="/" class="logo">
+        TrailerTrailer
+      </router-link>
+    </header>
+    <div class="wrapper" v-if="item">
+      <iframe
+        :src=movieURL
+        :class="{ 'hide': isHide }"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
   </div>
 </template>
 
@@ -61,24 +68,43 @@ export default {
 
 <style scoped lang="scss">
   .trailer {
-    // todo 参考: https://design.webclips.jp/youtube-movie-size/
-    // todo header分幅を狭めるようにする
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    width: calc(100% - 10rem);
-    margin: 0 auto;
-    overflow: hidden;
+    padding: 4rem 4rem 0;
 
-    iframe {
-      position: absolute;
+    header {
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      padding: 1rem 4rem 0;
 
-      &.hide {
-        opacity: 0;
+      .logo {
+        font-family: 'Pacifico', cursive;
+        font-size: 1.6rem;
+        letter-spacing: .02em;
+        color: #444;
+      }
+    }
+
+    .wrapper {
+      // todo 参考: https://design.webclips.jp/youtube-movie-size/
+      // todo header分幅を狭めるようにする
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      width: 100%;
+      margin: 0 auto;
+      overflow: hidden;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        &.hide {
+          opacity: 0;
+        }
       }
     }
   }

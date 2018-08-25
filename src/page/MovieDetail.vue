@@ -3,6 +3,7 @@
     <header>
       <router-link to="/" class="logo">
         <div class="img">
+          EXIT
           <div class="overlay"></div>
         </div>
       </router-link>
@@ -58,7 +59,7 @@ export default {
 
       this.theaterModeTimeout = window.setTimeout(() => {
         this.isHide = false
-      }, 1900)
+      }, 500)
     }, 800)
   },
   beforeDestroy () {
@@ -81,23 +82,30 @@ export default {
 
       .logo {
         position: relative;
-        font-family: 'Pacifico', cursive;
         font-size: 1.6rem;
         letter-spacing: .02em;
         color: #444;
 
         .img {
           $image-size: 3rem;
-
+          position: relative;
           height: $image-size;
-          width: $image-size;
-          background: rgba(255, 255, 255, 0.9) url('../assets/back-man.svg') 0 /#{$image-size};
+          width: 4rem;
+          padding: 0 0.5rem 0 ($image-size + 0.5rem);
+          background: rgba(255, 255, 255, 0.9) url('../assets/back-man.svg') 0 /#{$image-size} no-repeat;
+          text-align: center;
+          line-height: $image-size;
+          font-weight: bold;
+          color: #269463;
           animation: lighting 0.8s ease 1.5s 1 normal both;
 
           .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
             height: 100%;
             width: 100%;
-            background: radial-gradient(circle farthest-corner, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.5));
+            background: radial-gradient(ellipse farthest-corner, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.3));
           }
         }
       }

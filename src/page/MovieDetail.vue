@@ -2,7 +2,9 @@
   <div class="trailer">
     <header>
       <router-link to="/" class="logo">
-        TrailerTrailer
+        <div class="img">
+          <div class="overlay"></div>
+        </div>
       </router-link>
     </header>
     <div class="wrapper" v-if="item">
@@ -56,7 +58,7 @@ export default {
 
       this.theaterModeTimeout = window.setTimeout(() => {
         this.isHide = false
-      }, 800)
+      }, 1900)
     }, 800)
   },
   beforeDestroy () {
@@ -78,10 +80,44 @@ export default {
       padding: 1rem 4rem 0;
 
       .logo {
+        position: relative;
         font-family: 'Pacifico', cursive;
         font-size: 1.6rem;
         letter-spacing: .02em;
         color: #444;
+
+        .img {
+          $image-size: 3rem;
+
+          height: $image-size;
+          width: $image-size;
+          background: rgba(255, 255, 255, 0.9) url('../assets/back-man.svg') 0 /#{$image-size};
+          animation: lighting 0.8s ease 1.5s 1 normal both;
+
+          .overlay {
+            height: 100%;
+            width: 100%;
+            background: radial-gradient(circle farthest-corner, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.5));
+          }
+        }
+      }
+
+      @keyframes lighting {
+        0% {
+          opacity: 0;
+        }
+        20%, 40%, 60%, 80% {
+          opacity: 0.15;
+        }
+        5%, 30%, 50% {
+          opacity: 0.6;
+        }
+        80% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0.9;
+        }
       }
     }
 

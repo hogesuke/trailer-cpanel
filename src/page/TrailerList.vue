@@ -1,12 +1,6 @@
 <template>
   <div>
-    <header>
-      <div class="container">
-        <router-link to="/" class="logo">
-          TrailerTrailer
-        </router-link>
-      </div>
-    </header>
+    <app-header />
     <trailer-tabs ref="trailerTabs" id="trailer-tabs" :style="trailerTabsStyles" />
     <div id="trailer-list">
       <trailer-item v-for="movie in movies" :key=movie.id :movie=movie class="trailer-item" />
@@ -16,11 +10,13 @@
 
 <script>
 import axios from 'axios'
+import AppHeader from '@/components/AppHeader.vue'
 import TrailerTabs from '@/components/TrailerTabs.vue'
 import TrailerItem from '@/components/TrailerItem.vue'
 
 export default {
   components: {
+    AppHeader,
     TrailerItem,
     TrailerTabs
   },
@@ -100,7 +96,7 @@ export default {
       border-bottom: none;
     }
 
-    .container {
+    .header-container {
       .logo {
         font-family: 'Pacifico', cursive;
         letter-spacing: .02em;

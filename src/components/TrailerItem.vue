@@ -124,7 +124,7 @@ export default {
 
         .title {
           margin-bottom: 4px;
-          color: #000;
+          color: #111;
           font-size: 1.3rem;
           font-weight: 600;
           white-space: nowrap;

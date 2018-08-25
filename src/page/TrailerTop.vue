@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div id="trailer-top">
     <app-header />
     <trailer-tabs ref="trailerTabs" id="trailer-tabs" :style="trailerTabsStyles" />
-    <trailer-list id="trailer-list" />
+    <trailer-list />
   </div>
 </template>
 
@@ -62,24 +62,18 @@ export default {
 <style scoped lang="scss">
   @import '../assets/scss/global';
 
-  #trailer-tabs {
-    position: fixed;
-    width: 100%;
-    background-color: #fff;
-    z-index: 1000;
-    transition: top 0.3s ease-in-out;
+  #trailer-top {
+    #trailer-tabs {
+      position: fixed;
+      width: 100%;
+      background-color: #fff;
+      z-index: 1000;
+      transition: top 0.3s ease-in-out;
 
-    @each $bp in (xs, sm, md, lg) {
-      @include mq($bp) {
-        top: #{map-get($header-heights, $bp)};
-      }
-    }
-  }
-
-  #trailer-list {
-    @each $bp in (xs, sm, md, lg) {
-      @include mq($bp) {
-        margin-top: #{map-get($header-heights, $bp)};
+      @each $bp in (xs, sm, md, lg) {
+        @include mq($bp) {
+          top: #{map-get($header-heights, $bp)};
+        }
       }
     }
   }

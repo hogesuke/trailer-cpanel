@@ -36,11 +36,18 @@ export default {
     height: 100%;
     width: 100%;
     margin: 0;
-    padding: 5.1rem 0.3rem 0.3rem;
+    padding: 0.3rem;
     background: #efefef;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-content: flex-start;
+
+    @each $bp in (xs, sm, md, lg) {
+      @include mq($bp) {
+        padding-top: calc(5.3rem + #{map-get($header-heights, $bp)});
+      }
+    }
 
     .trailer-item {
       $side-margin: 0.5rem;

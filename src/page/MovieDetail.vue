@@ -88,11 +88,13 @@ export default {
 
         .img {
           $image-size: 3rem;
+
           position: relative;
           height: $image-size;
           width: 4rem;
           padding: 0 0.5rem 0 ($image-size + 0.5rem);
           background: rgba(255, 255, 255, 0.9) url('../assets/back-man.svg') 0 /#{$image-size} no-repeat;
+          border-radius: 3px;
           text-align: center;
           line-height: $image-size;
           font-weight: bold;

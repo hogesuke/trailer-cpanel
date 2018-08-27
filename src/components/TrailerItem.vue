@@ -44,11 +44,11 @@ export default {
   .trailer {
     overflow: hidden;
     box-sizing: border-box;
+    width: 100%;
     padding: 5px;
     background: #fff;
-
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
     display: flex;
-    width: 100%;
 
     .thumbnail {
       position: relative;

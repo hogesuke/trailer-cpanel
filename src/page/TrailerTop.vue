@@ -63,9 +63,11 @@ export default {
   @import '../assets/scss/global';
 
   #trailer-top {
+    min-height: 100vh;
+
     #trailer-tabs {
       position: fixed;
-      width: 100%;
+      width: 100vw;
       background-color: #fff;
       z-index: 1000;
       transition: top 0.3s ease-in-out;

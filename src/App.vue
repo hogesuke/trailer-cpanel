@@ -38,7 +38,7 @@ export default Vue.extend({
   }
 
   html, body {
-    height: 100%;
+    min-height: 100vh;
   }
 
   a {
@@ -47,7 +47,7 @@ export default Vue.extend({
 
   #root {
     @include theater-mode;
-    height: 100%;
+    min-height: 100vh;
     background-color: #fff;
     font-family: '-apple-system', 'BlinkMacSystemFont','Hiragino Sans','Hiragino Kaku Gothic ProN',
     "segoe ui",'游ゴシック  Medium','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;

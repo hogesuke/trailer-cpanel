@@ -33,8 +33,8 @@ export default {
   .trailer-list {
     position: relative;
     box-sizing: border-box;
-    height: 100%;
-    width: 100%;
+    min-height: 100vh;
+    width: 100vw;
     margin: 0;
     padding: 0.3rem;
     background: #efefef;

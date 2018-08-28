@@ -131,6 +131,7 @@ export default {
           font-size: 1.6rem;
           font-weight: bold;
           color: #269463;
+          box-shadow: 0 0 8px 3px rgba(255, 255, 255, 0.3);
           animation: lighting 0.8s ease 1.5s 1 normal both;
 
           .overlay {

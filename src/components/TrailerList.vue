@@ -34,7 +34,7 @@ export default {
     position: relative;
     box-sizing: border-box;
     min-height: 100vh;
-    width: 100vw;
+    width: 100%; // NOTE: vwはスクロールバーの幅も含んでしまうためここでは%を使う
     margin: 0;
     padding: 0.3rem;
     background: #efefef;

@@ -6,6 +6,10 @@
           <span>EXIT</span>
           <div class="overlay"></div>
         </div>
+        <div class="exit-button reflection">
+          <span>EXIT</span>
+          <div class="overlay"></div>
+        </div>
       </router-link>
     </header>
     <div class="wrapper" v-if="item">
@@ -70,10 +74,10 @@ export default {
       return this.item ? `https://www.youtube.com/embed/${this.item.trailers[0].videoId}?enablejsapi=1&autoplay=1` : ''
     },
     trailerStyle () {
-      return this.isVertical ? { paddingTop: '5rem' } : { padding: '5rem 5rem 0' }
+      return this.isVertical ? { paddingTop: '6.5rem' } : { padding: '5rem 5rem 0' }
     },
     headerStyle () {
-      return this.isVertical ? { paddingLeft: '1rem' } : { paddingLeft: '5rem' }
+      return this.isVertical ? { paddingLeft: '1.5rem' } : { paddingLeft: '5rem' }
     }
   },
   created () {
@@ -111,7 +115,7 @@ export default {
       top: 0;
       left: 0;
       width: 100%;
-      padding: 1rem 0;
+      padding: 1.5rem 0;
 
       .back-link {
         position: relative;
@@ -141,6 +145,16 @@ export default {
             height: 100%;
             width: 100%;
             background: radial-gradient(ellipse farthest-corner, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.3));
+          }
+
+          &.reflection {
+            margin-bottom: 10px;
+            transform: rotate3d(1, 0, 0, 180deg);
+            box-shadow: none;
+
+            .overlay {
+              background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0.6));
+            }
           }
         }
       }

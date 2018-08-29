@@ -126,6 +126,7 @@ export default {
           position: relative;
           height: $image-size;
           width: 4rem;
+          margin-bottom: 2px;
           padding: 0 0.5rem 0 ($image-size + 0.5rem);
           background: rgba(255, 255, 255, 0.9) url('../assets/back-man.svg') 0 /#{$image-size} no-repeat;
           border-radius: 3px;
@@ -134,8 +135,7 @@ export default {
           letter-spacing: 0.05em;
           font-size: 1.6rem;
           font-weight: bold;
-          color: #269463;
-          box-shadow: 0 0 8px 3px rgba(255, 255, 255, 0.3);
+          color: #000;
           animation: lighting 0.8s ease 1.5s 1 normal both;
 
           .overlay {

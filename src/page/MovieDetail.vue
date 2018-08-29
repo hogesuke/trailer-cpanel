@@ -148,9 +148,10 @@ export default {
           }
 
           &.reflection {
-            margin-bottom: 10px;
-            transform: rotate3d(1, 0, 0, 180deg);
+            margin-top: -29px;
             box-shadow: none;
+            transform: perspective(60px) rotateX(25deg) rotateY(180deg) rotateZ(180deg);
+            transform-origin: center bottom;
 
             .overlay {
               background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0.6));

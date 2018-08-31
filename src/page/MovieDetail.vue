@@ -1,11 +1,17 @@
 <template>
-  <div class="trailer" :style="trailerStyle">
-    <header :style="headerStyle">
+  <div
+    :class="{ 'is-mobile': isMobile, 'is-landscape': isLandscape }"
+    class="trailer">
+    <header
+      :class="{ 'is-mobile': isMobile }"
+      v-show="!(isMobile && isLandscape)">
       <router-link to="/">
         <exit-button></exit-button>
       </router-link>
     </header>
-    <div class="wrapper" v-if="item">
+    <div
+      v-if="item"
+      class="wrapper">
       <iframe
         :src=movieURL
         :class="{ 'hide': isHide }"
@@ -32,7 +38,7 @@ export default {
     return {
       item: null,
       isHide: true,
-      isVertical: true,
+      isLandscape: false, // 横向き
       count: 0
     }
   },
@@ -41,25 +47,19 @@ export default {
       setDark: types.SET_DARK
     }),
     addOrientationChangeEventListener () {
-      const ua = navigator.userAgent.toLowerCase()
-      const isiPhone = (ua.indexOf('iphone') > -1) // iPhone
-      const isiPad = (ua.indexOf('ipad') > -1) // iPad
-      const isAndroid = (ua.indexOf('android') > -1) && (ua.indexOf('mobile') > -1) // Android
-      const isAndroidTablet = (ua.indexOf('android') > -1) && (ua.indexOf('mobile') === -1) // Android Tablet
-
       // iOS
-      if (isiPhone || isiPad) {
+      if (typeof window.onorientationchange === 'object') {
         window.onorientationchange = this.handleOrientationChange
+        return
       }
-      // Android
-      if (isAndroid || isAndroidTablet) {
+      // Android, PC
+      if (typeof window.onresize === 'object') {
         window.onresize = this.handleOrientationChange
       }
     },
     handleOrientationChange () {
-      // todo PCではwindow.orientationを使わない判定方法とするように修正する
       const direction = Math.abs(window.orientation)
-      this.isVertical = direction !== 90
+      this.isLandscape = direction === 90
       this.count++
     }
   },
@@ -70,11 +70,12 @@ export default {
     movieURL () {
       return this.item ? `https://www.youtube.com/embed/${this.item.trailers[0].videoId}?enablejsapi=1&autoplay=1` : ''
     },
-    trailerStyle () {
-      return this.isVertical ? { paddingTop: '6.5rem' } : { padding: '5rem 5rem 0' }
+    isMobile () {
+      const ua = navigator.userAgent.toLowerCase()
+      return ['iphone', 'ipad', 'android'].some(a => ua.indexOf(a) > -1)
     },
-    headerStyle () {
-      return this.isVertical ? { paddingLeft: '1.5rem' } : { paddingLeft: '5rem' }
+    trailerStyle () {
+      return this.isMobile && this.isLandscape ? { padding: 0 } : { paddingTop: '6.5rem' }
     }
   },
   created () {
@@ -107,12 +108,20 @@ export default {
 
 <style scoped lang="scss">
   .trailer {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 6.5rem;
+
+    &.is-mobile.is-landscape {
+      padding: 0;
+    }
+
     header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      padding: 1.5rem 0;
+      padding: 1.5rem;
     }
 
     .wrapper {
@@ -122,7 +131,6 @@ export default {
       padding-bottom: 56.25%;
       height: 0;
       width: 100%;
-      margin: 0 auto;
       overflow: hidden;
 
       iframe {

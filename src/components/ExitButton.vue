@@ -24,19 +24,19 @@ export default {
 <style scoped lang="scss">
   .exit-button {
     .mark {
-      $image-size: 3rem;
+      $image-size: 30px;
 
       position: relative;
       height: $image-size;
-      width: 4rem;
+      width: 40px;
       margin-bottom: 2px;
-      padding: 0 0.5rem 0 ($image-size + 0.5rem);
+      padding: 0 5px 0 ($image-size + 5px);
       background: rgba(255, 255, 255, 0.9) url('../assets/back-man.svg') 0 /#{$image-size} no-repeat;
       border-radius: 3px;
       text-align: center;
       line-height: $image-size;
-      letter-spacing: 0.05em;
-      font-size: 1.6rem;
+      letter-spacing: 0.5px;
+      font-size: 16px;
       font-weight: bold;
       color: #000;
       animation: lighting 0.8s ease 1.5s 1 normal both;

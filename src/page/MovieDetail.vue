@@ -11,6 +11,7 @@
     </header>
     <div
       v-if="item"
+      :class="{ 'is-mobile': isMobile, 'is-landscape': isLandscape }"
       class="wrapper">
       <iframe
         :src=movieURL
@@ -110,9 +111,10 @@ export default {
   .trailer {
     max-width: 1400px;
     margin: 0 auto;
-    padding-top: 6.5rem;
+    padding-top: 65px;
 
     &.is-mobile.is-landscape {
+      min-height: 100vh;
       padding: 0;
     }
 
@@ -121,17 +123,23 @@ export default {
       top: 0;
       left: 0;
       width: 100%;
-      padding: 1.5rem;
+      padding: 15px;
     }
 
     .wrapper {
-      // 参考: https://design.webclips.jp/youtube-movie-size/
-      // todo iPhoneXで横にした際に動画が入りきっていない
       position: relative;
       padding-bottom: 56.25%;
       height: 0;
       width: 100%;
-      overflow: hidden;
+
+      &.is-mobile.is-landscape {
+        // heightを基準にwidthを調整させる
+        height: 100vh;
+        width: 0;
+        margin: 0 auto;
+        padding-left: 100vh * 1.77;
+        padding-bottom: 0;
+      }
 
       iframe {
         position: absolute;

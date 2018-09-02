@@ -60,7 +60,7 @@ export default {
         $width: (16 * $height) / 9;
         // todo 繰り返しを解消する
         height: $height;
-        width: $width;
+        min-width: $width;
         background-size: $width $height;
       }
       @include mq(sm) {

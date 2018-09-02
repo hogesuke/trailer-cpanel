@@ -1,9 +1,11 @@
 <template>
   <div class="trailer">
-    <router-link :to="{ name: 'MovieDetail', params: { id: item.id }}" tag="div">
-      <div class="thumbnail" :style="{ backgroundImage: `url(${thumbnailURL})` }">
-        <div class="overlay"></div>
-      </div>
+    <router-link
+      :to="{ name: 'MovieDetail', params: { id: item.id }}"
+      :style="{ backgroundImage: `url(${thumbnailURL})` }"
+      class="thumbnail"
+      tag="div">
+      <div class="overlay"></div>
     </router-link>
     <div class="information">
       <div class="top">
@@ -66,7 +68,7 @@ export default {
         $width: (16 * $height) / 9;
         // todo 繰り返しを解消する
         height: $height;
-        width: $width;
+        min-width: $width;
         background-size: $width $height;
       }
       @include mq(md) {
@@ -74,7 +76,7 @@ export default {
         $width: (16 * $height) / 9;
         // todo 繰り返しを解消する
         height: $height;
-        width: $width;
+        min-width: $width;
         background-size: $width $height;
       }
       @include mq(lg) {
@@ -82,7 +84,7 @@ export default {
         $width: (16 * $height) / 9;
         // todo 繰り返しを解消する
         height: $height;
-        width: $width;
+        min-width: $width;
         background-size: $width $height;
       }
 

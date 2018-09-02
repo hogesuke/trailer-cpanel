@@ -1,6 +1,6 @@
 <template>
   <div class="trailer">
-    <router-link :to="{ name: 'MovieDetail', params: { id: item.id }}">
+    <router-link :to="{ name: 'MovieDetail', params: { id: item.id }}" tag="div">
       <div class="thumbnail" :style="{ backgroundImage: `url(${thumbnailURL})` }">
         <div class="overlay"></div>
       </div>
@@ -52,10 +52,9 @@ export default {
 
     .thumbnail {
       position: relative;
-      flex-grow: 1;
 
       @include mq(xs) {
-        $height: 6.5rem;
+        $height: 65px;
         $width: (16 * $height) / 9;
         // todo 繰り返しを解消する
         height: $height;
@@ -63,7 +62,7 @@ export default {
         background-size: $width $height;
       }
       @include mq(sm) {
-        $height: 8.5rem;
+        $height: 85px;
         $width: (16 * $height) / 9;
         // todo 繰り返しを解消する
         height: $height;
@@ -71,7 +70,7 @@ export default {
         background-size: $width $height;
       }
       @include mq(md) {
-        $height: 10rem;
+        $height: 100px;
         $width: (16 * $height) / 9;
         // todo 繰り返しを解消する
         height: $height;
@@ -79,7 +78,7 @@ export default {
         background-size: $width $height;
       }
       @include mq(lg) {
-        $height: 11rem;
+        $height: 110px;
         $width: (16 * $height) / 9;
         // todo 繰り返しを解消する
         height: $height;
@@ -102,18 +101,8 @@ export default {
       display: flex;
       flex-direction: column;
       box-sizing: border-box;
+      width: 100%;
       padding: 2px 12px;
-
-      @include mq(md) {
-        height: 7.5rem;
-        width: 100%;
-      }
-
-      @include mq((xs, sm)) {
-        flex-grow: 2;
-        align-self: stretch;
-        width: 100%;
-      }
 
       .text {
         text-align: left;

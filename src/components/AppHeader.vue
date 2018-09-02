@@ -46,7 +46,7 @@ export default {
     .header-container {
       .logo {
         font-family: 'Pacifico', cursive;
-        letter-spacing: .02em;
+        letter-spacing: .02rem;
         color: #fff;
       }
     }

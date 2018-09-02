@@ -40,7 +40,8 @@ export default {
       item: null,
       isHide: true,
       isLandscape: false, // 横向き
-      count: 0
+      animation: true,
+      timeout: []
     }
   },
   methods: {
@@ -61,7 +62,6 @@ export default {
     handleOrientationChange () {
       const direction = Math.abs(window.orientation)
       this.isLandscape = direction === 90
-      this.count++
     }
   },
   computed: {
@@ -74,9 +74,6 @@ export default {
     isMobile () {
       const ua = navigator.userAgent.toLowerCase()
       return ['iphone', 'ipad', 'android'].some(a => ua.indexOf(a) > -1)
-    },
-    trailerStyle () {
-      return this.isMobile && this.isLandscape ? { padding: 0 } : { paddingTop: '6.5rem' }
     }
   },
   created () {
@@ -87,19 +84,17 @@ export default {
       })
   },
   mounted () {
-    this.theaterModeTimeout = window.setTimeout(() => {
+    this.timeout.push(window.setTimeout(() => {
       this.setDark(true)
-
-      this.theaterModeTimeout = window.setTimeout(() => {
-        this.isHide = false
-      }, 500)
-    }, 800)
+      this.timeout.push(window.setTimeout(() => { this.isHide = false }, 500))
+    }, 800))
 
     this.addOrientationChangeEventListener()
     this.handleOrientationChange()
   },
   beforeDestroy () {
-    clearTimeout(this.theaterModeTimeout)
+    this.timeout.forEach(a => clearTimeout(a))
+
     window.onorientationchange = null
     window.onresize = null
     this.setDark(false)

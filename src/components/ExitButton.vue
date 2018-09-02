@@ -1,10 +1,10 @@
 <template>
   <div class="exit-button">
-    <div class="mark">
+    <div class="mark" :class="{ animation }">
       <span>EXIT</span>
       <div class="overlay"></div>
     </div>
-    <div class="mark reflection">
+    <div class="mark reflection" :class="{ animation }">
       <span>EXIT</span>
       <div class="overlay"></div>
     </div>
@@ -16,7 +16,12 @@ export default {
   props: [],
   data () {
     return {
+      animation: true
     }
+  },
+  mounted () {
+    // モバイルで縦横を切り替えた際に何度もアニメーションを繰り返さないようにする
+    setTimeout(() => { this.animation = false }, 3000)
   }
 }
 </script>
@@ -39,7 +44,10 @@ export default {
       font-size: 16px;
       font-weight: bold;
       color: #000;
-      animation: lighting 0.8s ease 1.5s 1 normal both;
+
+      &.animation {
+        animation: lighting 0.8s ease 1.5s 1 normal both;
+      }
 
       @keyframes lighting {
         0% {

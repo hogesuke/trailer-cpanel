@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="header-container">
-      <router-link to="/" class="logo">
+      <router-link to="/" class="logo" tag="div">
         TrailerTrailer
       </router-link>
     </div>
@@ -28,7 +28,8 @@ export default {
     box-sizing: border-box;
     width: 100%;
     padding: 15px;
-    background-image: url(../assets/header-background.jpg);
+    border-bottom: solid 1px #e8e8e8;
+    background-color: #fff;
     background-size: auto 100%;
     font-size: 2.2rem;
     z-index: 1001;
@@ -46,8 +47,9 @@ export default {
     .header-container {
       .logo {
         font-family: 'Pacifico', cursive;
+        text-align: center;
         letter-spacing: .02rem;
-        color: #fff;
+        color: #c52f2f;
       }
     }
   }

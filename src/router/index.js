@@ -6,6 +6,7 @@ import MovieDetail from '@/page/MovieDetail.vue'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -17,5 +18,12 @@ export default new Router({
       name: 'MovieDetail',
       component: MovieDetail
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
+  }
 })

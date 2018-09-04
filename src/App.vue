@@ -6,7 +6,7 @@
 
 <script>
 import Vue from 'vue'
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 import 'normalize.css'
 
 export default Vue.extend({
@@ -14,6 +14,14 @@ export default Vue.extend({
   computed: {
     ...mapState([
       'isDark'
+    ])
+  },
+  async created () {
+    await this.fetchTrailers()
+  },
+  methods: {
+    ...mapActions([
+      'fetchTrailers'
     ])
   }
 })

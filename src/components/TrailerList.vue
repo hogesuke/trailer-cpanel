@@ -1,11 +1,15 @@
 <template>
   <div class="trailer-list">
-    <trailer-item v-for="movie in movies" :key=movie.id :movie=movie class="trailer-item" />
+    <trailer-item
+      v-for="trailer in trailers"
+      :key=trailer.id
+      :trailer=trailer
+      class="trailer-item" />
   </div>
 </template>
 
 <script>
-import axios from 'axios'
+import { mapState } from 'vuex'
 import TrailerItem from '@/components/TrailerItem.vue'
 
 export default {
@@ -14,15 +18,12 @@ export default {
   },
   data () {
     return {
-      movies: []
     }
   },
-  created () {
-    axios.get('http://localhost:3000/movies/?_embed=directors&_embed=casts&_embed=trailers&_embed=genres')
-      .then((res) => {
-        // TODO: エラーハンドリング
-        this.movies = res.data
-      })
+  computed: {
+    ...mapState([
+      'trailers'
+    ])
   }
 }
 </script>

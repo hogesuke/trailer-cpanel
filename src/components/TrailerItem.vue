@@ -26,10 +26,10 @@
 
 <script>
 export default {
-  props: [ 'movie' ],
+  props: [ 'trailer' ],
   data () {
     return {
-      item: this.movie
+      item: this.trailer
     }
   },
   computed: {

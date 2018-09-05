@@ -31,6 +31,7 @@ export default {
     border-bottom: solid 1px #e8e8e8;
     background-color: #fff;
     background-size: auto 100%;
+    box-shadow: 0 1px 9px 0 rgba(150, 150, 150, 0.3);
     font-size: 2.2rem;
     z-index: 1001;
 

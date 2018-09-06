@@ -49,7 +49,7 @@ export default {
     width: 100%;
     padding: 5px;
     background: #fff;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.07);
     display: flex;
 
     .thumbnail {

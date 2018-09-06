@@ -39,7 +39,7 @@ export default {
       font-size: 1.3rem;
       font-weight: 300;
       text-align: center;
-      color: rgba(0, 0, 0, .25);
+      color: rgba(0, 0, 0, .5);
 
       &.active {
         $active-color: #c52f2f;

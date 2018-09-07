@@ -23,18 +23,29 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import '../assets/scss/global';
+
   .trailer-tabs {
     display: flex;
     flex-direction: row;
-    padding-top: 10px;
     box-shadow: 0 4px 4px -5px #ddd;
+
+    @include mq((xs, sm)) {
+      padding-top: 8px;
+    }
+    @include mq(md) {
+      padding-top: 10px;
+    }
+    @include mq(lg) {
+      padding-top: 12px;
+    }
 
     .tab {
       flex-grow: 1;
       box-sizing: border-box;
       width: 80px;
       margin: 0;
-      padding: 12px 10px;
+      padding: 10px 10px 14px;
       border: none;
       font-size: 1.3rem;
       font-weight: 300;

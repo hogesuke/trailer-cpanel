@@ -104,7 +104,7 @@ export default {
       flex-direction: column;
       box-sizing: border-box;
       width: 100%;
-      padding: 2px 12px;
+      padding: 5px 12px;
 
       .text {
         text-align: left;
@@ -114,7 +114,7 @@ export default {
         position: relative;
 
         .title {
-          margin-bottom: 4px;
+          margin-bottom: 6px;
           color: #111;
           font-size: 1.3rem;
           font-weight: 600;
@@ -132,11 +132,25 @@ export default {
         .genre {
           margin: 0;
           padding: 0;
+          font-size: 0;
           list-style: none;
 
           > a {
             color: rgba(33, 77, 185, 0.9);
             font-size: 1.2rem;
+            line-height: 1.4em; // NOTE: remの間違いではない
+
+            &:not(:first-child) {
+              @include mq((xs, sm)) {
+                margin-left: 3px;
+              }
+              @include mq(md) {
+                margin-left: 4px;
+              }
+              @include mq(lg) {
+                margin-left: 5px;
+              }
+            }
           }
         }
       }

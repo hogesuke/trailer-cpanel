@@ -36,7 +36,7 @@ export default {
     @include mq(md) {
       padding-top: 10px;
     }
-    @include mq(lg) {
+    @include mq((lg, xl)) {
       padding-top: 12px;
     }
 

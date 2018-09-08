@@ -55,15 +55,19 @@ export default {
         0% {
           opacity: 0;
         }
+
         20%, 40%, 60%, 80% {
           opacity: 0.15;
         }
+
         5%, 30%, 50% {
           opacity: 0.35;
         }
+
         80% {
           opacity: 0;
         }
+
         100% {
           opacity: 0.7;
         }

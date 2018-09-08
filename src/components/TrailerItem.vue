@@ -68,6 +68,7 @@ export default {
         min-width: $width;
         background-size: $width $height;
       }
+
       @include mq(sm) {
         $height: 85px;
         $width: (16 * $height) / 9;
@@ -76,6 +77,7 @@ export default {
         min-width: $width;
         background-size: $width $height;
       }
+
       @include mq(md) {
         $height: 100px;
         $width: (16 * $height) / 9;
@@ -84,6 +86,7 @@ export default {
         min-width: $width;
         background-size: $width $height;
       }
+
       @include mq((lg, xl)) {
         $height: 110px;
         $width: (16 * $height) / 9;
@@ -96,10 +99,10 @@ export default {
       .overlay {
         height: 100%;
         width: 100%;
-        transition: background-color .15s linear;
+        transition: background-color 0.15s linear;
 
         &:hover {
-          background-color: rgba(255, 255, 255, .2);
+          background-color: rgba(255, 255, 255, 0.2);
         }
       }
     }
@@ -149,9 +152,11 @@ export default {
               @include mq((xs, sm)) {
                 margin-left: 3px;
               }
+
               @include mq(md) {
                 margin-left: 4px;
               }
+
               @include mq((lg, xl)) {
                 margin-left: 5px;
               }

@@ -25,6 +25,7 @@ export default {
 
   header {
     @include theater-mode;
+
     position: fixed;
     top: 0;
     overflow: hidden;
@@ -52,7 +53,7 @@ export default {
       .logo {
         font-family: 'Pacifico', cursive;
         text-align: center;
-        letter-spacing: .02rem;
+        letter-spacing: 0.02rem;
         color: #c52f2f;
       }
     }

@@ -54,6 +54,7 @@ export default {
       @include mq(xs) {
         margin: 0.3rem;
       }
+
       @include mq((sm, md, lg, xl)) {
         margin: 0.5rem;
       }
@@ -61,9 +62,11 @@ export default {
       @include mq((xs, sm)) {
         width: 100%;
       }
+
       @include mq((md, lg)) {
         width: calc(50% - 0.5rem * 2);
       }
+
       @include mq(xl) {
         width: calc(33% - 0.5rem * 2);
       }

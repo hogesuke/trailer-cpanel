@@ -36,12 +36,15 @@ export default Vue.extend({
     @include mq(xs) {
       font-size: 55%;
     }
+
     @include mq(sm) {
       font-size: 62.5%;
     }
+
     @include mq(md) {
       font-size: 62.5%;
     }
+
     @include mq((lg, xl)) {
       font-size: 70%;
     }
@@ -57,10 +60,12 @@ export default Vue.extend({
 
   #root {
     @include theater-mode;
+
     min-height: 100vh;
     background-color: #fff;
-    font-family: '-apple-system', 'BlinkMacSystemFont','Hiragino Sans','Hiragino Kaku Gothic ProN',
-    "segoe ui",'游ゴシック  Medium','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+    font-family:
+      '-apple-system', 'BlinkMacSystemFont','Hiragino Sans','Hiragino Kaku Gothic ProN',
+      "segoe ui",'游ゴシック  Medium','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;

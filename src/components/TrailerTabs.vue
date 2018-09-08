@@ -38,9 +38,11 @@ export default {
     @include mq((xs, sm)) {
       padding-top: 8px;
     }
+
     @include mq(md) {
       padding-top: 10px;
     }
+
     @include mq((lg, xl)) {
       padding-top: 12px;
     }
@@ -55,7 +57,7 @@ export default {
       font-size: 1.3rem;
       font-weight: 300;
       text-align: center;
-      color: rgba(0, 0, 0, .5);
+      color: rgba(0, 0, 0, 0.5);
 
       &.active {
         $active-color: #c52f2f;

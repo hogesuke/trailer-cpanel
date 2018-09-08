@@ -44,7 +44,7 @@ export default {
     flex-wrap: wrap;
     align-content: flex-start;
 
-    @each $bp in (xs, sm, md, lg) {
+    @each $bp in (xs, sm, md, lg, xl) {
       @include mq($bp) {
         padding-top: calc(5.3rem + #{map-get($header-heights, $bp)});
       }
@@ -54,7 +54,7 @@ export default {
       @include mq(xs) {
         margin: 0.3rem;
       }
-      @include mq((sm, md, lg)) {
+      @include mq((sm, md, lg, xl)) {
         margin: 0.5rem;
       }
 
@@ -63,6 +63,9 @@ export default {
       }
       @include mq((md, lg)) {
         width: calc(50% - 0.5rem * 2);
+      }
+      @include mq(xl) {
+        width: calc(33% - 0.5rem * 2);
       }
     }
   }

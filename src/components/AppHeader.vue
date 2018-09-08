@@ -35,7 +35,7 @@ export default {
     font-size: 2.2rem;
     z-index: 1001;
 
-    @each $bp in (xs, sm, md, lg) {
+    @each $bp in (xs, sm, md, lg, xl) {
       @include mq($bp) {
         height: #{map-get($header-heights, $bp)};
       }

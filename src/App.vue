@@ -40,7 +40,7 @@ export default Vue.extend({
     @include mq(md) {
       font-size: 62.5%;
     }
-    @include mq(lg) {
+    @include mq((lg, xl)) {
       font-size: 70%;
     }
   }

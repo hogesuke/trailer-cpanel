@@ -79,7 +79,7 @@ export default {
         min-width: $width;
         background-size: $width $height;
       }
-      @include mq(lg) {
+      @include mq((lg, xl)) {
         $height: 110px;
         $width: (16 * $height) / 9;
         // todo 繰り返しを解消する

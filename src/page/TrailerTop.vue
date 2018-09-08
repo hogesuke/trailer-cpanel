@@ -72,7 +72,7 @@ export default {
       z-index: 1000;
       transition: top 0.3s ease-in-out;
 
-      @each $bp in (xs, sm, md, lg) {
+      @each $bp in (xs, sm, md, lg, xl) {
         @include mq($bp) {
           top: #{map-get($header-heights, $bp)};
         }

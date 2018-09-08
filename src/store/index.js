@@ -22,7 +22,7 @@ const mutations = {
 const actions = {
   fetchTrailers ({ commit }) {
     // TODO: エラーハンドリング
-    return axios.get('http://localhost:3000/movies/?_embed=directors&_embed=casts&_embed=trailers&_embed=genres')
+    return axios.get('http://localhost:7777/movies/?_embed=directors&_embed=casts&_embed=trailers&_embed=genres')
       .then((res) => {
         commit(types.SET_TRAILERS, res.data)
       })

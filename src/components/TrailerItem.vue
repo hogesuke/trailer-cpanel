@@ -147,7 +147,7 @@ export default {
               @include mq(md) {
                 margin-left: 4px;
               }
-              @include mq(lg) {
+              @include mq((lg, xl)) {
                 margin-left: 5px;
               }
             }

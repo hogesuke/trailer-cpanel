@@ -31,6 +31,8 @@ export default {
 
 <style scoped lang="scss">
   .exit-button {
+    display: inline-block;
+
     .mark {
       $image-size: 25px;
 
@@ -52,20 +54,16 @@ export default {
       }
 
       @keyframes lighting {
-        0% {
+        0%, 80% {
           opacity: 0;
         }
 
-        20%, 40%, 60%, 80% {
+        20%, 40%, 60% {
           opacity: 0.15;
         }
 
         5%, 30%, 50% {
           opacity: 0.35;
-        }
-
-        80% {
-          opacity: 0;
         }
 
         100% {

@@ -38,7 +38,7 @@ export default {
     width: 100%; // NOTE: vwはスクロールバーの幅も含んでしまうためここでは%を使う
     margin: 0;
     padding: 0.3rem;
-    background: #efefef;
+    background: #eaebef;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

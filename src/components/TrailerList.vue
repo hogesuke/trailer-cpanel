@@ -2,8 +2,8 @@
   <div class="trailer-list">
     <trailer-item
       v-for="trailer in trailers"
-      :key=trailer.id
-      :trailer=trailer
+      :key="trailer.id"
+      :trailer="trailer"
       class="trailer-item" />
   </div>
 </template>

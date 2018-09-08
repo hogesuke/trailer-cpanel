@@ -1,7 +1,10 @@
 <template>
   <div id="trailer-top">
     <app-header />
-    <trailer-tabs ref="trailerTabs" id="trailer-tabs" :style="trailerTabsStyles" />
+    <trailer-tabs
+      id="trailer-tabs"
+      ref="trailerTabs"
+      :style="trailerTabsStyles" />
     <trailer-list />
   </div>
 </template>
@@ -23,6 +26,11 @@ export default {
       trailerTabsTop: 0
     }
   },
+  computed: {
+    trailerTabsStyles () {
+      return this.trailerTabsTop ? { top: this.trailerTabsTop + 'px' } : {}
+    }
+  },
   mounted () {
     // todo throttlingする
     // todo 勢いよく上にスクロールした場合に背景色の白が見えてしまう
@@ -30,11 +38,6 @@ export default {
   },
   beforeDestroy () {
     window.removeEventListener('scroll', this.onScroll)
-  },
-  computed: {
-    trailerTabsStyles () {
-      return this.trailerTabsTop ? { top: this.trailerTabsTop + 'px' } : {}
-    }
   },
   methods: {
     onScroll () {

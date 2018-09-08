@@ -1,5 +1,7 @@
 <template>
-  <div id="root" :class="{ 'theater-mode': isDark }">
+  <div
+    id="root"
+    :class="{ 'theater-mode': isDark }">
     <router-view/>
   </div>
 </template>

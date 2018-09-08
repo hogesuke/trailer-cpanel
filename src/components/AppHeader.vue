@@ -1,7 +1,10 @@
 <template>
   <header>
     <div class="header-container">
-      <router-link to="/" class="logo" tag="div">
+      <router-link
+        to="/"
+        class="logo"
+        tag="div">
         TrailerTrailer
       </router-link>
     </div>

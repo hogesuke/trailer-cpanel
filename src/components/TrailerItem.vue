@@ -5,19 +5,19 @@
       :style="{ backgroundImage: `url(${thumbnailURL})` }"
       class="thumbnail"
       tag="div">
-      <div class="overlay"></div>
+      <div class="overlay"/>
     </router-link>
     <div class="information">
       <div class="top">
         <router-link :to="{ name: 'MovieDetail', params: { id: item.id }}">
-          <div class="title text">{{item.title}}</div>
+          <div class="title text">{{ item.title }}</div>
         </router-link>
       </div>
       <div class="bottom">
         <p class="genre text">
-          <a>#{{item.genres[0].nameJa}}</a>
-          <a>#{{item.genres[0].nameJa}}</a>
-          <a>#{{item.genres[0].nameJa}}</a>
+          <a>#{{ item.genres[0].nameJa }}</a>
+          <a>#{{ item.genres[0].nameJa }}</a>
+          <a>#{{ item.genres[0].nameJa }}</a>
         </p>
       </div>
     </div>
@@ -26,7 +26,12 @@
 
 <script>
 export default {
-  props: [ 'trailer' ],
+  props: {
+    trailer: {
+      type: Object,
+      required: true
+    }
+  },
   data () {
     return {
       item: this.trailer

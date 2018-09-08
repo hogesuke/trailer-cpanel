@@ -1,19 +1,22 @@
 <template>
   <div class="exit-button">
-    <div class="mark" :class="{ animation }">
+    <div
+      :class="{ animation }"
+      class="mark">
       <span>EXIT</span>
-      <div class="overlay"></div>
+      <div class="overlay" />
     </div>
-    <div class="mark reflection" :class="{ animation }">
+    <div
+      :class="{ animation }"
+      class="mark reflection">
       <span>EXIT</span>
-      <div class="overlay"></div>
+      <div class="overlay" />
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: [],
   data () {
     return {
       animation: true

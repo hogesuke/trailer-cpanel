@@ -8,7 +8,12 @@
 
 <script>
 export default {
-  props: [ 'movie' ],
+  props: {
+    movie: {
+      type: Object,
+      required: true
+    }
+  },
   data () {
     return {
       item: this.movie

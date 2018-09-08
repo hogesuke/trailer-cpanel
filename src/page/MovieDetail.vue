@@ -3,10 +3,10 @@
     :class="{ 'is-mobile': isMobile, 'is-landscape': isLandscape }"
     class="trailer">
     <header
-      :class="{ 'is-mobile': isMobile }"
-      v-show="!(isMobile && isLandscape)">
+      v-show="!(isMobile && isLandscape)"
+      :class="{ 'is-mobile': isMobile }">
       <router-link to="/">
-        <exit-button></exit-button>
+        <exit-button/>
       </router-link>
     </header>
     <div
@@ -14,12 +14,11 @@
       :class="{ 'is-mobile': isMobile, 'is-landscape': isLandscape }"
       class="wrapper">
       <iframe
-        :src=movieURL
+        :src="movieURL"
         :class="{ 'hide': isHide }"
         frameborder="0"
         allow="autoplay; encrypted-media"
-        allowfullscreen>
-      </iframe>
+        allowfullscreen/>
     </div>
   </div>
 </template>
@@ -31,7 +30,6 @@ import * as types from '../store/mutation-types'
 import ExitButton from '../components/ExitButton'
 
 export default {
-  props: [],
   components: {
     ExitButton
   },
@@ -42,26 +40,6 @@ export default {
       isLandscape: false, // 横向き
       animation: true,
       timeout: []
-    }
-  },
-  methods: {
-    ...mapMutations({
-      setDark: types.SET_DARK
-    }),
-    addOrientationChangeEventListener () {
-      // iOS
-      if (typeof window.onorientationchange === 'object') {
-        window.onorientationchange = this.handleOrientationChange
-        return
-      }
-      // Android, PC
-      if (typeof window.onresize === 'object') {
-        window.onresize = this.handleOrientationChange
-      }
-    },
-    handleOrientationChange () {
-      const direction = Math.abs(window.orientation)
-      this.isLandscape = direction === 90
     }
   },
   computed: {
@@ -98,6 +76,26 @@ export default {
     window.onorientationchange = null
     window.onresize = null
     this.setDark(false)
+  },
+  methods: {
+    ...mapMutations({
+      setDark: types.SET_DARK
+    }),
+    addOrientationChangeEventListener () {
+      // iOS
+      if (typeof window.onorientationchange === 'object') {
+        window.onorientationchange = this.handleOrientationChange
+        return
+      }
+      // Android, PC
+      if (typeof window.onresize === 'object') {
+        window.onresize = this.handleOrientationChange
+      }
+    },
+    handleOrientationChange () {
+      const direction = Math.abs(window.orientation)
+      this.isLandscape = direction === 90
+    }
   }
 }
 </script>

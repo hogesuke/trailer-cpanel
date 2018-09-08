@@ -29,19 +29,18 @@ export default {
 <style scoped lang="scss">
   .exit-button {
     .mark {
-      $image-size: 30px;
+      $image-size: 25px;
 
       position: relative;
       height: $image-size;
-      width: 40px;
+      width: 35px;
       margin-bottom: 2px;
-      padding: 0 5px 0 ($image-size + 5px);
-      background: rgba(255, 255, 255, 0.9) url('../assets/back-man.svg') 0 /#{$image-size} no-repeat;
-      border-radius: 3px;
+      padding: 0 3px 0 ($image-size + 3px);
+      background: rgba(255, 255, 255, 0.7) url('../assets/back-man.svg') 0 /#{$image-size} no-repeat;
+      border-radius: 2px;
       text-align: center;
       line-height: $image-size;
-      letter-spacing: 0.5px;
-      font-size: 16px;
+      font-size: 12px;
       font-weight: bold;
       color: #000;
 
@@ -63,7 +62,7 @@ export default {
           opacity: 0;
         }
         100% {
-          opacity: 0.9;
+          opacity: 0.7;
         }
       }
 
@@ -77,7 +76,7 @@ export default {
       }
 
       &.reflection {
-        margin-top: -29px;
+        margin-top: -25px;
         box-shadow: none;
         transform: perspective(60px) rotateX(25deg) rotateY(180deg) rotateZ(180deg);
         transform-origin: center bottom;

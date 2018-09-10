@@ -21,6 +21,7 @@ $header-heights: (
         @content
       }
     }
+
   } @else {
     @media #{map-get($breakpoints, $breakpoint)} {
       @content
@@ -29,9 +30,10 @@ $header-heights: (
 }
 
 @mixin theater-mode {
-  transition: background-color .7s linear;
-
-  &.theater-mode {
-    background-color: #000;
-  }
+  // todo あとで消す
+  //transition: background-color .7s linear;
+  //
+  //&.theater-mode {
+  //  background-color: #000;
+  //}
 }

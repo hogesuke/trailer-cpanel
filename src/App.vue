@@ -3,16 +3,21 @@
     id="root"
     :class="{ 'theater-mode': isDark }">
     <router-view/>
+    <app-lighting />
   </div>
 </template>
 
 <script>
 import Vue from 'vue'
+import AppLighting from './components/AppLighting'
 import { mapState, mapActions } from 'vuex'
 import 'normalize.css'
 
 export default Vue.extend({
   name: 'App',
+  components: {
+    AppLighting
+  },
   computed: {
     ...mapState([
       'isDark'

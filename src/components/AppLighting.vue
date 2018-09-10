@@ -1,5 +1,5 @@
 <template>
-  <transition name="router">
+  <transition name="dark">
     <div
       v-if="isDark"
       class="overlay" />
@@ -24,5 +24,19 @@ export default {
 
 <style scoped lang="scss">
   .overlay {
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+    background: #000;
+  }
+
+  .dark-enter-active {
+    transition: opacity 1.5s;
+  }
+
+  .dark-enter, .dark-leave-to {
+    opacity: 0;
   }
 </style>

@@ -15,7 +15,6 @@
       class="wrapper">
       <iframe
         :src="movieURL"
-        :class="{ 'hide': isHide }"
         frameborder="0"
         allow="autoplay; encrypted-media"
         allowfullscreen/>
@@ -36,7 +35,6 @@ export default {
   data () {
     return {
       item: null,
-      isHide: true,
       isLandscape: false, // 横向き
       animation: true,
       timeout: []
@@ -63,9 +61,8 @@ export default {
   },
   mounted () {
     this.timeout.push(window.setTimeout(() => {
-      this.setDark(true)
-      this.timeout.push(window.setTimeout(() => { this.isHide = false }, 500))
-    }, 800))
+      this.setDark(false)
+    }, 500))
 
     this.addOrientationChangeEventListener()
     this.handleOrientationChange()
@@ -102,12 +99,15 @@ export default {
 
 <style scoped lang="scss">
   .trailer {
+    box-sizing: border-box;
+    height: 100%;
     max-width: 1400px;
     margin: 0 auto;
     padding-top: 65px;
+    background: #000;
 
     &.is-mobile.is-landscape {
-      min-height: 100vh;
+      height: 100%;
       padding: 0;
     }
 
@@ -127,10 +127,10 @@ export default {
 
       &.is-mobile.is-landscape {
         // heightを基準にwidthを調整させる
-        height: 100vh;
+        height: 100%;
         width: 0;
         margin: 0 auto;
-        padding-left: 100vh * 1.77;
+        padding-left: 100% * 1.77;
         padding-bottom: 0;
       }
 
@@ -140,10 +140,6 @@ export default {
         left: 0;
         width: 100%;
         height: 100%;
-
-        &.hide {
-          opacity: 0;
-        }
       }
     }
   }

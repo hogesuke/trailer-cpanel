@@ -33,7 +33,7 @@ export default {
   }
 
   .dark-enter-active {
-    transition: opacity 1.5s;
+    transition: opacity 0.6s;
   }
 
   .dark-enter, .dark-leave-to {

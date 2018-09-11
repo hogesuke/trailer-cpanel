@@ -34,7 +34,7 @@ export default {
   .trailer-list {
     position: relative;
     box-sizing: border-box;
-    min-height: 100vh;
+    min-height: 100%; // NOTE: 背景色がスクロールで切れてしまう問題の対処のためmin-heightを使用
     width: 100%; // NOTE: vwはスクロールバーの幅も含んでしまうためここでは%を使う
     margin: 0;
     padding: 0.3rem;

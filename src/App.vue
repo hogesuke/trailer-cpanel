@@ -56,7 +56,7 @@ export default Vue.extend({
   }
 
   html, body {
-    min-height: 100vh;
+    height: 100%;
   }
 
   a {
@@ -66,7 +66,7 @@ export default Vue.extend({
   #root {
     @include theater-mode;
 
-    min-height: 100vh;
+    height: 100%;
     background-color: #fff;
     font-family:
       '-apple-system', 'BlinkMacSystemFont','Hiragino Sans','Hiragino Kaku Gothic ProN',

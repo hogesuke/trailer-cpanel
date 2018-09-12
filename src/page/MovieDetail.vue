@@ -2,13 +2,11 @@
   <div
     :class="{ 'is-mobile': isMobile, 'is-landscape': isLandscape }"
     class="trailer">
-    <header
-      v-show="!(isMobile && isLandscape)"
-      :class="{ 'is-mobile': isMobile }">
+    <template v-show="!(isMobile && isLandscape)">
       <router-link to="/">
-        <exit-button/>
+        <exit-button />
       </router-link>
-    </header>
+    </template>
     <div
       v-if="item"
       :class="{ 'is-mobile': isMobile, 'is-landscape': isLandscape }"
@@ -103,20 +101,12 @@ export default {
     height: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    padding-top: 65px;
+    padding-top: 45px;
     background: #000;
 
     &.is-mobile.is-landscape {
       height: 100%;
       padding: 0;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 15px;
     }
 
     .wrapper {

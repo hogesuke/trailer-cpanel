@@ -52,8 +52,8 @@ export default {
     overflow: hidden;
     box-sizing: border-box;
     width: 100%;
-    padding: 5px;
     background: #fff;
+    border-radius: 3px;
     box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.07);
     display: flex;
 
@@ -112,7 +112,7 @@ export default {
       flex-direction: column;
       box-sizing: border-box;
       width: 100%;
-      padding: 5px 12px;
+      padding: 10px 12px;
 
       .text {
         text-align: left;

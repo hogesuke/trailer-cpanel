@@ -64,7 +64,7 @@ export default {
 
     &.is- {
       &now {
-        border-color: #e65f5b;
+        border-color: #ec524e;
       }
 
       &before {

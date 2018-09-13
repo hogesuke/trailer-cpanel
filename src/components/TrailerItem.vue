@@ -1,5 +1,7 @@
 <template>
-  <div class="trailer">
+  <div
+    :class="statusClassName"
+    class="trailer">
     <router-link
       :to="{ name: 'MovieDetail', params: { id: item.id }}"
       :style="{ backgroundImage: `url(${thumbnailURL})` }"
@@ -38,6 +40,9 @@ export default {
     }
   },
   computed: {
+    statusClassName () {
+      return 'is-' + this.item.status
+    },
     thumbnailURL () {
       return `https://i.ytimg.com/vi/${this.item.trailers[0].videoId}/mqdefault.jpg`
     }
@@ -53,9 +58,23 @@ export default {
     box-sizing: border-box;
     width: 100%;
     background: #fff;
-    border-radius: 3px;
+    border-right: solid 2px;
     box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.07);
     display: flex;
+
+    &.is- {
+      &now {
+        border-color: #e65f5b;
+      }
+
+      &before {
+        border-color: #18a9ea;
+      }
+
+      &closed {
+        border-color: #aaaeb3;
+      }
+    }
 
     .thumbnail {
       position: relative;

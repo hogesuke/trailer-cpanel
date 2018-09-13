@@ -25,18 +25,18 @@
     { "id": 13, "nameJa": "アメコミ", "nameEn": "Comic", "movieId": 12 }
   ],
   "movies": [
-    { "id": 1, "title": "猿の惑星 聖戦記" },
-    { "id": 2, "title": "キングコング 髑髏島の巨神" },
-    { "id": 3, "title": "パディントン２" },
-    { "id": 4, "title": "アルゴ" },
-    { "id": 5, "title": "アルマゲドン" },
-    { "id": 6, "title": "ランナーランナー" },
-    { "id": 7, "title": "ミックス" },
-    { "id": 8, "title": "ラ・ラ・ランド" },
-    { "id": 9, "title": "グレイテスト・ショーマン" },
-    { "id": 10, "title": "アメリカン・スナイパー" },
-    { "id": 11, "title": "沈黙－サイレンス－" },
-    { "id": 12, "title": "ローガン" }
+    { "id": 1, "status": "now", "title": "猿の惑星 聖戦記" },
+    { "id": 2, "status": "now", "title": "キングコング 髑髏島の巨神" },
+    { "id": 3, "status": "before", "title": "パディントン２" },
+    { "id": 4, "status": "closed", "title": "アルゴ" },
+    { "id": 5, "status": "closed", "title": "アルマゲドン" },
+    { "id": 6, "status": "closed", "title": "ランナーランナー" },
+    { "id": 7, "status": "before", "title": "ミックス" },
+    { "id": 8, "status": "now", "title": "ラ・ラ・ランド" },
+    { "id": 9, "status": "now", "title": "グレイテスト・ショーマン" },
+    { "id": 10, "status": "closed", "title": "アメリカン・スナイパー" },
+    { "id": 11, "status": "before", "title": "沈黙－サイレンス－" },
+    { "id": 12, "status": "now", "title": "ローガン" }
   ],
   "trailers": [
     { "id": 1, "videoId": "_facqBILO28", "movieId": 1, "isTop": true },

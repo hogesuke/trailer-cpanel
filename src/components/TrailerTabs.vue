@@ -54,7 +54,7 @@ export default {
       margin: 0;
       padding: 10px 10px 14px;
       border: none;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-weight: 300;
       text-align: center;
       color: rgba(0, 0, 0, 0.5);

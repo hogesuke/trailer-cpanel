@@ -58,23 +58,8 @@ export default {
     box-sizing: border-box;
     width: 100%;
     background: #fff;
-    border-right: solid 2px;
     box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.07);
     display: flex;
-
-    &.is- {
-      &now {
-        border-color: #ec524e;
-      }
-
-      &before {
-        border-color: #18a9ea;
-      }
-
-      &closed {
-        border-color: #aaaeb3;
-      }
-    }
 
     .thumbnail {
       position: relative;
@@ -163,7 +148,7 @@ export default {
           list-style: none;
 
           > a {
-            color: rgba(87, 129, 230, 0.95);
+            color: rgba(157, 160, 169, 0.95);
             font-size: 1.1rem;
             line-height: 1.4em; // NOTE: remの間違いではない
 

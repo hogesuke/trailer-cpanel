@@ -31,7 +31,6 @@ export default {
     overflow: hidden;
     box-sizing: border-box;
     width: 100%;
-    padding: 15px;
     border-bottom: solid 1px #e8e8e8;
     background-color: #fff;
     background-size: auto 100%;
@@ -51,9 +50,18 @@ export default {
 
     .header-container {
       .logo {
+        padding: 0 1.5rem;
         font-family: 'Comfortaa', cursive;
+        font-size: 1.9rem;
         letter-spacing: 0.02rem;
         color: #cb1d20;
+
+        @each $bp in (xs, sm, md, lg, xl) {
+          @include mq($bp) {
+            height: #{map-get($header-heights, $bp)};
+            line-height: #{map-get($header-heights, $bp)};
+          }
+        }
       }
     }
   }

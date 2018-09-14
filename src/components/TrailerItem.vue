@@ -142,8 +142,9 @@ export default {
 
         .title {
           margin-bottom: 6px;
-          color: #3a3a3a;
-          font-size: 1.3rem;
+          color: #333;
+          font-size: 1.2rem;
+          font-weight: 500;
           white-space: nowrap;
           text-overflow: ellipsis;
           text-decoration: none;
@@ -163,7 +164,7 @@ export default {
 
           > a {
             color: rgba(87, 129, 230, 0.95);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             line-height: 1.4em; // NOTE: remの間違いではない
 
             &:not(:first-child) {

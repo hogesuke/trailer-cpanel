@@ -63,6 +63,7 @@ export default {
         $active-color: #cb1d20;
 
         border-bottom: solid 2px $active-color;
+        font-weight: 500;
         color: $active-color;
       }
 

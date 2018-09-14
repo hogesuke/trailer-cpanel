@@ -142,9 +142,8 @@ export default {
 
         .title {
           margin-bottom: 6px;
-          color: #111;
+          color: #3a3a3a;
           font-size: 1.3rem;
-          font-weight: 600;
           white-space: nowrap;
           text-overflow: ellipsis;
           text-decoration: none;
@@ -163,7 +162,7 @@ export default {
           list-style: none;
 
           > a {
-            color: rgba(33, 77, 185, 0.9);
+            color: rgba(87, 129, 230, 0.95);
             font-size: 1.2rem;
             line-height: 1.4em; // NOTE: remの間違いではない
 

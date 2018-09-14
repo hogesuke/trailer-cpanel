@@ -60,10 +60,9 @@ export default {
       color: rgba(0, 0, 0, 0.5);
 
       &.active {
-        $active-color: #e22621;
+        $active-color: #cb1d20;
 
         border-bottom: solid 2px $active-color;
-        font-weight: 600;
         color: $active-color;
       }
 

@@ -54,7 +54,7 @@ export default {
         font-family: 'Pacifico', cursive;
         text-align: center;
         letter-spacing: 0.02rem;
-        color: #e22621;
+        color: #cb1d20;
       }
     }
   }

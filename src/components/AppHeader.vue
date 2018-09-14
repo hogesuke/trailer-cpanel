@@ -5,7 +5,7 @@
         to="/"
         class="logo"
         tag="div">
-        TrailerTrailer
+        movies.tokyo
       </router-link>
     </div>
   </header>
@@ -51,8 +51,7 @@ export default {
 
     .header-container {
       .logo {
-        font-family: 'Pacifico', cursive;
-        text-align: center;
+        font-family: 'Comfortaa', cursive;
         letter-spacing: 0.02rem;
         color: #cb1d20;
       }

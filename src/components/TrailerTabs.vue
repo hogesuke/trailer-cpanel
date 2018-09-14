@@ -57,12 +57,12 @@ export default {
       font-size: 1.2rem;
       font-weight: 300;
       text-align: center;
-      color: rgba(0, 0, 0, 0.5);
+      color: rgba(0, 0, 0, 0.4);
 
       &.active {
         $active-color: #cb1d20;
 
-        border-bottom: solid 2px $active-color;
+        border-bottom: solid 1px $active-color;
         font-weight: 500;
         color: $active-color;
       }

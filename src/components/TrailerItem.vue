@@ -145,6 +145,7 @@ export default {
           margin: 0;
           padding: 0;
           font-size: 0;
+          font-weight: 500;
           list-style: none;
 
           > a {

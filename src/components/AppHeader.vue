@@ -31,10 +31,8 @@ export default {
     overflow: hidden;
     box-sizing: border-box;
     width: 100%;
-    border-bottom: solid 1px #e8e8e8;
     background-color: #fff;
     background-size: auto 100%;
-    box-shadow: 0 1px 9px 0 rgba(193, 193, 193, 0.4);
     font-size: 2.2rem;
     z-index: 1001;
 

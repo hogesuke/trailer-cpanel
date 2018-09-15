@@ -15,6 +15,7 @@
     "json-server": "json-server --port 7777 --watch json-server/db.json"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1"
   },

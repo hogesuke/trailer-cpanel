@@ -11,6 +11,7 @@
 import Vue from 'vue'
 import AppLighting from './components/AppLighting'
 import { mapState, mapActions } from 'vuex'
+import '@fortawesome/fontawesome-free'
 import 'normalize.css'
 
 export default Vue.extend({

@@ -1,12 +1,12 @@
 <template>
   <header>
     <div class="header-container">
-      <router-link
-        to="/"
-        class="logo"
-        tag="div">
+      <div class="logo">
         movies.tokyo
-      </router-link>
+      </div>
+      <button class="search-button">
+        <i class="fas fa-search" />
+      </button>
     </div>
   </header>
 </template>
@@ -47,7 +47,11 @@ export default {
     }
 
     .header-container {
+      display: flex;
+      justify-content: flex-end;
+
       .logo {
+        margin-right: auto;
         padding: 0 1.5rem;
         font-family: 'Comfortaa', cursive;
         font-size: 1.9rem;
@@ -60,6 +64,18 @@ export default {
             line-height: #{map-get($header-heights, $bp)};
           }
         }
+      }
+
+      .search-button {
+        height: 25px;
+        margin: auto 10px auto 0;
+        padding: 0 10px 0 120px;
+        border: none;
+        border-radius: 3px;
+        background: #f2f3f6;
+        font-size: 1.5rem;
+        color: #888;
+        outline: none;
       }
     }
   }

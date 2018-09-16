@@ -109,7 +109,7 @@ export default {
   .trailer {
     box-sizing: border-box;
     height: 100%;
-    max-width: 1400px;
+    max-width: 1300px;
     margin: 0 auto;
     padding-top: 45px;
     background: #000;

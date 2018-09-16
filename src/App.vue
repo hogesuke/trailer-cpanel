@@ -68,7 +68,7 @@ export default Vue.extend({
     @include theater-mode;
 
     height: 100%;
-    background-color: #fff;
+    background-color: #000;
     font-family:
       '-apple-system', 'BlinkMacSystemFont','Hiragino Sans','Hiragino Kaku Gothic ProN',
       "segoe ui",'游ゴシック  Medium','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;

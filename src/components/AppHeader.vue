@@ -5,7 +5,8 @@
         movies.tokyo
       </div>
       <button class="search-button">
-        <i class="fas fa-search" />
+        <span class="placeholder">Search</span>
+        <i class="search-icon fas fa-search" />
       </button>
     </div>
   </header>
@@ -67,17 +68,18 @@ export default {
 
       .search-button {
         $search-height: 2.3rem;
+        $search-font-size: 1.3rem;
 
+        position: relative;
         box-sizing: border-box;
         height: 2.3rem;
         width: 15rem;
-        text-align: right;
         margin: auto 10px auto auto;
         padding: 0 10px;
         border: none;
         border-radius: 3px;
         background: #f2f3f6;
-        font-size: 1.3rem;
+        font-size: $search-font-size;
         color: #888;
         cursor: pointer;
         outline: none;
@@ -99,6 +101,17 @@ export default {
           @include mq($bp) {
             top: calc((#{map-get($header-heights, $bp)} / 2) - (#{$search-height} / 2));
           }
+        }
+
+        .fa-search {
+          position: absolute;
+          top: calc(50% - (#{$search-font-size} / 2));
+          right: 8px;
+        }
+
+        .placeholder {
+          text-align: left;
+          line-height: $search-height;
         }
       }
     }

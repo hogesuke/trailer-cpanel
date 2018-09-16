@@ -15,14 +15,11 @@
 
 <script>
 export default {
-  data () {
-    return {
-      animation: true
+  props: {
+    animation: {
+      type: Boolean,
+      default: true
     }
-  },
-  mounted () {
-    // モバイルで縦横を切り替えた際に何度もアニメーションを繰り返さないようにする
-    setTimeout(() => { this.animation = false }, 3000)
   }
 }
 </script>

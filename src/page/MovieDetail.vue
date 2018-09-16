@@ -4,7 +4,7 @@
     class="trailer">
     <template v-if="!(isMobile && isLandscape)">
       <router-link to="/">
-        <exit-button />
+        <exit-button :animation="exitAnimation" />
       </router-link>
     </template>
     <div
@@ -35,7 +35,7 @@ export default {
     return {
       item: null,
       isLandscape: false, // 横向き
-      animation: true,
+      exitAnimation: true,
       paddingRight: 0,
       timeout: []
     }
@@ -60,9 +60,14 @@ export default {
       })
   },
   mounted () {
-    this.timeout.push(window.setTimeout(() => {
+    this.timeout.push(setTimeout(() => {
       this.setDark(false)
     }, 500))
+
+    this.timeout.push(setTimeout(() => {
+      // モバイルで縦横を切り替えた際に何度もアニメーションを繰り返さないようにする
+      this.exitAnimation = false
+    }, 3000))
 
     this.addOrientationChangeEventListener()
     this.handleOrientationChange()

@@ -48,10 +48,9 @@ export default {
 
     .header-container {
       display: flex;
-      justify-content: flex-end;
+      justify-content: flex-start;
 
       .logo {
-        margin-right: auto;
         padding: 0 1.5rem;
         font-family: 'Comfortaa', cursive;
         font-size: 1.9rem;
@@ -67,15 +66,40 @@ export default {
       }
 
       .search-button {
-        height: 25px;
-        margin: auto 10px auto 0;
-        padding: 0 10px 0 120px;
+        $search-height: 2.3rem;
+
+        box-sizing: border-box;
+        height: 2.3rem;
+        width: 15rem;
+        text-align: right;
+        margin: auto 10px auto auto;
+        padding: 0 10px;
         border: none;
         border-radius: 3px;
         background: #f2f3f6;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: #888;
+        cursor: pointer;
         outline: none;
+
+        @include mq((xs, sm)) {
+          margin-left: auto;
+        }
+
+        @include mq((md, lg, xl)) {
+          $search-width: 25rem;
+
+          position: absolute;
+          left: calc(50% - (#{$search-width} / 2));
+          width: $search-width;
+          margin: 0;
+        }
+
+        @each $bp in (md, lg, xl) {
+          @include mq($bp) {
+            top: calc((#{map-get($header-heights, $bp)} / 2) - (#{$search-height} / 2));
+          }
+        }
       }
     }
   }

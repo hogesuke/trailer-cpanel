@@ -63,6 +63,7 @@ export default {
 
     .thumbnail {
       position: relative;
+      cursor: pointer;
 
       @include mq(xs) {
         $height: 65px;

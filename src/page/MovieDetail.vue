@@ -2,13 +2,14 @@
   <div
     :class="{ 'is-mobile': isMobile, 'is-landscape': isLandscape }"
     class="trailer">
-    <template v-show="!(isMobile && isLandscape)">
+    <template v-if="!(isMobile && isLandscape)">
       <router-link to="/">
         <exit-button />
       </router-link>
     </template>
     <div
       v-if="item"
+      :style="{ 'padding-right': paddingRight + 'px' }"
       :class="{ 'is-mobile': isMobile, 'is-landscape': isLandscape }"
       class="wrapper">
       <iframe
@@ -35,6 +36,7 @@ export default {
       item: null,
       isLandscape: false, // 横向き
       animation: true,
+      paddingRight: 0,
       timeout: []
     }
   },
@@ -90,6 +92,9 @@ export default {
     handleOrientationChange () {
       const direction = Math.abs(window.orientation)
       this.isLandscape = direction === 90
+      setTimeout(() => {
+        this.paddingRight = this.isMobile && this.isLandscape ? this.$el.clientHeight * 1.77 : 0
+      }, 100)
     }
   }
 }
@@ -120,8 +125,7 @@ export default {
         height: 100%;
         width: 0;
         margin: 0 auto;
-        padding-left: 100% * 1.77;
-        padding-bottom: 0;
+        padding: 0;
       }
 
       iframe {

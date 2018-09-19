@@ -103,6 +103,10 @@ export default {
           }
         }
 
+        &:hover {
+          background: #f8f9fc;
+        }
+
         .fa-search {
           position: absolute;
           top: calc(50% - (#{$search-font-size} / 2));

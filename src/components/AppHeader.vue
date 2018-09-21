@@ -1,6 +1,7 @@
 <template>
   <header>
     <div class="header-container">
+      <app-logo />
       <div class="logo">
         movies.tokyo
       </div>
@@ -13,7 +14,12 @@
 </template>
 
 <script>
+import AppLogo from './AppLogo'
+
 export default {
+  components: {
+    AppLogo
+  },
   data () {
     return {
     }

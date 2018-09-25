@@ -9,19 +9,19 @@
 <style scoped lang="scss">
   .app-logo {
     position: relative;
-    width: 60px;
+    width: 40px;
 
     .film- {
       &svg {
         position: absolute;
-        width: 50px;
-        height: 40px;
+        width: 35px;
+        height: 30px;
         margin-left: 10px;
-        background-size: 50px 40px;
+        background-size: 35px 30px;
       }
 
-      $top-offset: 5px;
-      $top-interval: 8px;
+      $top-offset: 12px;
+      $top-interval: 6px;
 
       &1 {
         top: $top-offset;

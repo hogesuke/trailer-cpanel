@@ -23,21 +23,21 @@
       &1 {
         top: 0;
         z-index: 10;
-        background: url('../assets/film.svg') no-repeat;
+        background: url('../assets/film_simple1.svg') no-repeat;
       }
 
       &2 {
         top: 8px;
-        left: 6px;
+        left: 0px;
         z-index: 9;
-        background: url('../assets/film-flat.svg') no-repeat;
+        background: url('../assets/film_simple2.svg') no-repeat;
       }
 
       &3 {
         top: 16px;
         left: 0;
         z-index: 8;
-        background: url('../assets/film-flat.svg') no-repeat;
+        background: url('../assets/film_simple3.svg') no-repeat;
       }
     }
   }

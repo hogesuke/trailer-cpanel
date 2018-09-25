@@ -20,21 +20,23 @@
         background-size: 50px 40px;
       }
 
+      $top-offset: 5px;
+      $top-interval: 8px;
+
       &1 {
-        top: 0;
+        top: $top-offset;
         z-index: 10;
         background: url('../assets/film_simple1.svg') no-repeat;
       }
 
       &2 {
-        top: 8px;
-        left: 0px;
+        top: $top-offset + $top-interval;
         z-index: 9;
         background: url('../assets/film_simple2.svg') no-repeat;
       }
 
       &3 {
-        top: 16px;
+        top: $top-offset + $top-interval * 2;
         left: 0;
         z-index: 8;
         background: url('../assets/film_simple3.svg') no-repeat;

@@ -61,8 +61,9 @@ export default {
         padding: 0 1.5rem;
         font-family: 'Comfortaa', cursive;
         font-size: 1.9rem;
+        font-weight: bold;
         letter-spacing: 0.02rem;
-        color: #cb1d20;
+        color: $color-red;
 
         @each $bp in (xs, sm, md, lg, xl) {
           @include mq($bp) {

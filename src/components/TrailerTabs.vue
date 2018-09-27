@@ -60,11 +60,9 @@ export default {
       color: rgba(0, 0, 0, 0.4);
 
       &.active {
-        $active-color: #cb1d20;
-
-        border-bottom: solid 1px $active-color;
+        border-bottom: solid 3px $color-red;
         font-weight: 500;
-        color: $active-color;
+        color: $color-red;
       }
 
       &:hover {

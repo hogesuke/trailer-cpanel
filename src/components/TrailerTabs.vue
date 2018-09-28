@@ -55,13 +55,13 @@ export default {
       padding: 10px 10px 14px;
       border: none;
       font-size: 1.2rem;
-      font-weight: 300;
+      font-weight: 500;
       text-align: center;
       color: rgba(0, 0, 0, 0.4);
 
       &.active {
         border-bottom: solid 3px $color-red;
-        font-weight: 500;
+        font-weight: 600;
         color: $color-red;
       }
 

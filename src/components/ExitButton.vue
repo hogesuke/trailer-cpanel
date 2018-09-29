@@ -44,7 +44,7 @@ export default {
       color: #000;
       opacity: 0.8;
 
-      &:hover {
+      &:hover, &:active {
         opacity: 1;
       }
 

@@ -42,14 +42,18 @@ export default {
       font-size: 12px;
       font-weight: bold;
       color: #000;
-      border-radius: 50%;
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
 
       &.animation {
         animation: lighting 0.8s ease 1.5s 1 normal both;
       }
 
       @keyframes lighting {
-        0%, 80% {
+        from, 80% {
           opacity: 0;
         }
 
@@ -61,8 +65,8 @@ export default {
           opacity: 0.35;
         }
 
-        100% {
-          opacity: 0.7;
+        to {
+          opacity: 0.8;
         }
       }
 

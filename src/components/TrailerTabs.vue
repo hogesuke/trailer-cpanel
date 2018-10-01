@@ -60,9 +60,8 @@ export default {
       color: rgba(0, 0, 0, 0.4);
 
       &.active {
-        border-bottom: solid 3px $color-red;
-        font-weight: 600;
-        color: $color-red;
+        border-bottom: solid 2px $bright-red;
+        color: $bright-red;
       }
 
       &:hover {

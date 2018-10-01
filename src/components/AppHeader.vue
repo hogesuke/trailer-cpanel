@@ -40,6 +40,7 @@ export default {
     width: 100%;
     background-color: #fff;
     background-size: auto 100%;
+    border-bottom: solid 1px #e8e8e8;
     font-size: 2.2rem;
     z-index: 1001;
 
@@ -63,7 +64,7 @@ export default {
         font-size: 1.9rem;
         font-weight: bold;
         letter-spacing: 0.02rem;
-        color: $color-red;
+        color: rgba(100, 100, 100, 0.9);
 
         @each $bp in (xs, sm, md, lg, xl) {
           @include mq($bp) {

@@ -53,7 +53,7 @@ export default {
     }
   },
   created () {
-    axios.get(`http://localhost:7777/movies/${this.$route.params.id}?_embed=directors&_embed=casts&_embed=trailers&_embed=genres`)
+    axios.get(`http://localhost:7777/movies/${this.$route.params.id}`)
       .then((res) => {
         // TODO: エラーハンドリング
         this.item = res.data

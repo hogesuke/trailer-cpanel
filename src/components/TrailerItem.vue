@@ -16,10 +16,12 @@
         </router-link>
       </div>
       <div class="bottom">
-        <p class="genre text">
-          <a>#{{ item.genres[0].nameJa }}</a>
-          <a>#{{ item.genres[0].nameJa }}</a>
-          <a>#{{ item.genres[0].nameJa }}</a>
+        <p class="tag text">
+          <a
+            v-for="tag in item.tags"
+            :key="tag">
+            #{{ tag }}
+          </a>
         </p>
       </div>
     </div>
@@ -142,7 +144,7 @@ export default {
         justify-content: flex-start;
         width: 100%;
 
-        .genre {
+        .tag {
           margin: 0;
           padding: 0;
           font-size: 0;

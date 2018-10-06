@@ -1,56 +1,211 @@
 {
-  "directors": [
-    { "id": 1, "nameJa": "マット・リーヴス", "nameEn": "Matt Reeves", "movieId": 1 },
-    { "id": 2, "nameJa": "ジョーダン・ヴォート＝ロバーツ", "nameEn": "Jordan Vogt-Roberts", "movieId": 2 },
-    { "id": 3, "nameJa": "ポール・キング", "nameEn": "Paul king", "movieId": 3 }
-  ],
-  "casts": [
-    { "id": 1, "nameJa": "アンディー・サーキス", "nameEn": "Andy Serkis", "movieId": 1 },
-    { "id": 2, "nameJa": "サミュエル・L・ジャクソン", "nameEn": "Samuel L. Jackson", "movieId": 2 },
-    { "id": 3, "nameJa": "ヒュー・グラント", "nameEn": "Hugh Grant", "movieId": 3 }
-  ],
-  "genres": [
-    { "id": 1, "nameJa": "アクション", "nameEn": "Action", "movieId": 1 },
-    { "id": 2, "nameJa": "SF", "nameEn": "SF", "movieId": 1 },
-    { "id": 3, "nameJa": "コメディ", "nameEn": "Comedy", "movieId": 3 },
-    { "id": 4, "nameJa": "サスペンス", "nameEn": "Suspense", "movieId": 2 },
-    { "id": 5, "nameJa": "サスペンス", "nameEn": "Suspense", "movieId": 4 },
-    { "id": 6, "nameJa": "SF", "nameEn": "SF", "movieId": 5 },
-    { "id": 7, "nameJa": "クライムサスペンス", "nameEn": "Crime suspense", "movieId": 6 },
-    { "id": 8, "nameJa": "コメディ", "nameEn": "Comedy", "movieId": 7 },
-    { "id": 9, "nameJa": "ミュージカル", "nameEn": "Musical", "movieId": 8 },
-    { "id": 10, "nameJa": "ミュージカル", "nameEn": "Musical", "movieId": 9 },
-    { "id": 11, "nameJa": "戦争", "nameEn": "War", "movieId": 10 },
-    { "id": 12, "nameJa": "歴史", "nameEn": "History", "movieId": 11 },
-    { "id": 13, "nameJa": "アメコミ", "nameEn": "Comic", "movieId": 12 }
-  ],
   "movies": [
-    { "id": 1, "status": "now", "title": "猿の惑星 聖戦記" },
-    { "id": 2, "status": "now", "title": "キングコング 髑髏島の巨神" },
-    { "id": 3, "status": "before", "title": "パディントン２" },
-    { "id": 4, "status": "closed", "title": "アルゴ" },
-    { "id": 5, "status": "closed", "title": "アルマゲドン" },
-    { "id": 6, "status": "closed", "title": "ランナーランナー" },
-    { "id": 7, "status": "before", "title": "ミックス" },
-    { "id": 8, "status": "now", "title": "ラ・ラ・ランド" },
-    { "id": 9, "status": "now", "title": "グレイテスト・ショーマン" },
-    { "id": 10, "status": "closed", "title": "アメリカン・スナイパー" },
-    { "id": 11, "status": "before", "title": "沈黙－サイレンス－" },
-    { "id": 12, "status": "now", "title": "ローガン" }
-  ],
-  "trailers": [
-    { "id": 1, "videoId": "_facqBILO28", "movieId": 1, "isTop": true },
-    { "id": 2, "videoId": "rIItwZJQqoE", "movieId": 2, "isTop": true },
-    { "id": 3, "videoId": "5jAq0jpxIbU", "movieId": 3, "isTop": true },
-    { "id": 4, "videoId": "Sa7zjStS5-Y", "movieId": 3, "isTop": false },
-    { "id": 5, "videoId": "4nnXOfc1-zo", "movieId": 4, "isTop": true },
-    { "id": 6, "videoId": "C8TN_hilQGY", "movieId": 5, "isTop": true },
-    { "id": 7, "videoId": "fbV8yndDzYE", "movieId": 6, "isTop": true },
-    { "id": 8, "videoId": "oEMqDA_BRVM", "movieId": 7, "isTop": true },
-    { "id": 9, "videoId": "ctauZyEAQpI", "movieId": 8, "isTop": true },
-    { "id": 10, "videoId": "GuadtzQB2hk", "movieId": 9, "isTop": true },
-    { "id": 11, "videoId": "Av1UW0myxiA", "movieId": 10, "isTop": true },
-    { "id": 12, "videoId": "ncXm4ugms3k", "movieId": 11, "isTop": true },
-    { "id": 13, "videoId": "Vuh8n7AbT_o", "movieId": 12, "isTop": true }
+    {
+      "id": 1,
+      "status": "now",
+      "title": "猿の惑星 聖戦記",
+      "trailers": [
+        {
+          "id": 1,
+          "videoId": "_facqBILO28",
+          "movieId": 1,
+          "isTop": true
+        }
+      ],
+      "tags": [
+        "SF",
+        "猿"
+      ]
+    },
+    {
+      "id": 2,
+      "status": "now",
+      "title": "キングコング 髑髏島の巨神",
+      "trailers": [
+        {
+          "id": 2,
+          "videoId": "rIItwZJQqoE",
+          "movieId": 2,
+          "isTop": true
+        }
+      ],
+      "tags": [
+        "SF",
+        "猿"
+      ]
+    },
+    {
+      "id": 3,
+      "status": "before",
+      "title": "パディントン２",
+      "trailers": [
+        {
+          "id": 3,
+          "videoId": "5jAq0jpxIbU",
+          "movieId": 3,
+          "isTop": true
+        },
+        {
+          "id": 4,
+          "videoId": "Sa7zjStS5-Y",
+          "movieId": 3,
+          "isTop": false
+        }
+      ],
+      "tags": [
+        "コメディ",
+        "クマ"
+      ]
+    },
+    {
+      "id": 4,
+      "status": "closed",
+      "title": "アルゴ",
+      "trailers": [
+        {
+          "id": 5,
+          "videoId": "4nnXOfc1-zo",
+          "movieId": 4,
+          "isTop": true
+        }
+      ],
+      "tags": [
+        "サスペンス"
+      ]
+    },
+    {
+      "id": 5,
+      "status": "closed",
+      "title": "アルマゲドン",
+      "trailers": [
+        {
+          "id": 6,
+          "videoId": "C8TN_hilQGY",
+          "movieId": 5,
+          "isTop": true
+        }
+      ],
+      "tags": [
+        "SF"
+      ]
+    },
+    {
+      "id": 6,
+      "status": "closed",
+      "title": "ランナーランナー",
+      "trailers": [
+        {
+          "id": 7,
+          "videoId": "fbV8yndDzYE",
+          "movieId": 6,
+          "isTop": true
+        }
+      ],
+      "tags": [
+        "サスペンス"
+      ]
+    },
+    {
+      "id": 7,
+      "status": "before",
+      "title": "ミックス",
+      "trailers": [
+        {
+          "id": 8,
+          "videoId": "oEMqDA_BRVM",
+          "movieId": 7,
+          "isTop": true
+        }
+      ],
+      "tags": [
+        "コメディ",
+        "卓球"
+      ]
+    },
+    {
+      "id": 8,
+      "status": "now",
+      "title": "ラ・ラ・ランド",
+      "trailers": [
+        {
+          "id": 9,
+          "videoId": "ctauZyEAQpI",
+          "movieId": 8,
+          "isTop": true
+        }
+      ],
+      "tags": [
+        "ミュージカル",
+        "コメディ"
+      ]
+    },
+    {
+      "id": 9,
+      "status": "now",
+      "title": "グレイテスト・ショーマン",
+      "trailers": [
+        {
+          "id": 10,
+          "videoId": "GuadtzQB2hk",
+          "movieId": 9,
+          "isTop": true
+        }
+      ],
+      "tags": [
+        "ミュージカル",
+        "ドラマ"
+      ]
+    },
+    {
+      "id": 10,
+      "status": "closed",
+      "title": "アメリカン・スナイパー",
+      "trailers": [
+        {
+          "id": 11,
+          "videoId": "Av1UW0myxiA",
+          "movieId": 10,
+          "isTop": true
+        }
+      ],
+      "tags": [
+        "戦争",
+        "ドラマ"
+      ]
+    },
+    {
+      "id": 11,
+      "status": "before",
+      "title": "沈黙－サイレンス－",
+      "trailers": [
+        {
+          "id": 12,
+          "videoId": "ncXm4ugms3k",
+          "movieId": 11,
+          "isTop": true
+        }
+      ],
+      "tags": [
+        "歴史",
+        "ドラマ"
+      ]
+    },
+    {
+      "id": 12,
+      "status": "now",
+      "title": "ローガン",
+      "trailers": [
+        {
+          "id": 13,
+          "videoId": "Vuh8n7AbT_o",
+          "movieId": 12,
+          "isTop": true
+        }
+      ],
+      "tags": [
+        "ヒーロー",
+        "アクション"
+      ]
+    }
   ]
 }

@@ -1,14 +1,12 @@
 {
   "movies": [
     {
-      "id": 1,
+      "id": "MOVIE01",
       "status": "now",
       "title": "猿の惑星 聖戦記",
       "trailers": [
         {
-          "id": 1,
           "videoId": "_facqBILO28",
-          "movieId": 1,
           "isTop": true
         }
       ],
@@ -18,14 +16,12 @@
       ]
     },
     {
-      "id": 2,
+      "id": "MOVIE02",
       "status": "now",
       "title": "キングコング 髑髏島の巨神",
       "trailers": [
         {
-          "id": 2,
           "videoId": "rIItwZJQqoE",
-          "movieId": 2,
           "isTop": true
         }
       ],
@@ -35,20 +31,16 @@
       ]
     },
     {
-      "id": 3,
+      "id": "MOVIE03",
       "status": "before",
       "title": "パディントン２",
       "trailers": [
         {
-          "id": 3,
           "videoId": "5jAq0jpxIbU",
-          "movieId": 3,
           "isTop": true
         },
         {
-          "id": 4,
           "videoId": "Sa7zjStS5-Y",
-          "movieId": 3,
           "isTop": false
         }
       ],
@@ -58,14 +50,12 @@
       ]
     },
     {
-      "id": 4,
+      "id": "MOVIE04",
       "status": "closed",
       "title": "アルゴ",
       "trailers": [
         {
-          "id": 5,
           "videoId": "4nnXOfc1-zo",
-          "movieId": 4,
           "isTop": true
         }
       ],
@@ -74,14 +64,12 @@
       ]
     },
     {
-      "id": 5,
+      "id": "MOVIE05",
       "status": "closed",
       "title": "アルマゲドン",
       "trailers": [
         {
-          "id": 6,
           "videoId": "C8TN_hilQGY",
-          "movieId": 5,
           "isTop": true
         }
       ],
@@ -90,14 +78,12 @@
       ]
     },
     {
-      "id": 6,
+      "id": "MOVIE06",
       "status": "closed",
       "title": "ランナーランナー",
       "trailers": [
         {
-          "id": 7,
           "videoId": "fbV8yndDzYE",
-          "movieId": 6,
           "isTop": true
         }
       ],
@@ -106,14 +92,12 @@
       ]
     },
     {
-      "id": 7,
+      "id": "MOVIE07",
       "status": "before",
       "title": "ミックス",
       "trailers": [
         {
-          "id": 8,
           "videoId": "oEMqDA_BRVM",
-          "movieId": 7,
           "isTop": true
         }
       ],
@@ -123,14 +107,12 @@
       ]
     },
     {
-      "id": 8,
+      "id": "MOVIE08",
       "status": "now",
       "title": "ラ・ラ・ランド",
       "trailers": [
         {
-          "id": 9,
           "videoId": "ctauZyEAQpI",
-          "movieId": 8,
           "isTop": true
         }
       ],
@@ -140,14 +122,12 @@
       ]
     },
     {
-      "id": 9,
+      "id": "MOVIE09",
       "status": "now",
       "title": "グレイテスト・ショーマン",
       "trailers": [
         {
-          "id": 10,
           "videoId": "GuadtzQB2hk",
-          "movieId": 9,
           "isTop": true
         }
       ],
@@ -157,14 +137,12 @@
       ]
     },
     {
-      "id": 10,
+      "id": "MOVIE10",
       "status": "closed",
       "title": "アメリカン・スナイパー",
       "trailers": [
         {
-          "id": 11,
           "videoId": "Av1UW0myxiA",
-          "movieId": 10,
           "isTop": true
         }
       ],
@@ -174,14 +152,12 @@
       ]
     },
     {
-      "id": 11,
+      "id": "MOVIE11",
       "status": "before",
       "title": "沈黙－サイレンス－",
       "trailers": [
         {
-          "id": 12,
           "videoId": "ncXm4ugms3k",
-          "movieId": 11,
           "isTop": true
         }
       ],
@@ -191,14 +167,12 @@
       ]
     },
     {
-      "id": 12,
+      "id": "MOVIE12",
       "status": "now",
       "title": "ローガン",
       "trailers": [
         {
-          "id": 13,
           "videoId": "Vuh8n7AbT_o",
-          "movieId": 12,
           "isTop": true
         }
       ],

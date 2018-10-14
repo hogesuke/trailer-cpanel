@@ -1,17 +1,22 @@
 <template>
   <div class="app-logo">
-    <logo-film-unit
-      class="film-unit film-1"
-      main-color="#ff4d4d"
-      sub-color="#fff" />
-    <logo-film-unit
-      class="film-unit film-2"
-      main-color="#ff8364"
-      sub-color="#ff8364" />
-    <logo-film-unit
-      class="film-unit film-3"
-      main-color="#fdb87d"
-      sub-color="#fdb87d" />
+    <div class="logo-wrapper">
+      <logo-film-unit
+        class="film-unit"
+        main-color="#ff4d4d"
+        sub-color="#fff"
+        style="z-index: 3;" />
+      <logo-film-unit
+        class="film-unit film-2"
+        main-color="#ff8364"
+        sub-color="#ff8364"
+        style="z-index: 2;" />
+      <logo-film-unit
+        class="film-unit film-3"
+        main-color="#fdb87d"
+        sub-color="#fdb87d"
+        style="z-index: 1;" />
+    </div>
   </div>
 </template>
 
@@ -29,34 +34,28 @@ export default {
 <style scoped lang="scss">
   .app-logo {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 40px;
 
-    .film- {
-      &unit {
-        position: absolute;
-        width: 35px;
-        height: 30px;
-        margin-left: 10px;
-        background-size: 35px 30px;
-      }
+    .logo-wrapper {
+      display: flex;
+      flex-direction: column;
 
-      $top-offset: 8px;
-      $top-interval: 6px;
+      .film- {
+        $film-interval: 14px;
 
-      &1 {
-        top: $top-offset;
-        z-index: 10;
-      }
+        &unit {
+          width: 35px;
+          height: 20px;
+          margin-left: 10px;
+          background-size: 35px 30px;
 
-      &2 {
-        top: $top-offset + $top-interval;
-        z-index: 9;
-      }
-
-      &3 {
-        top: $top-offset + $top-interval * 2;
-        left: 0;
-        z-index: 8;
+          &:not(:first-child) {
+            margin-top: $film-interval * -1;
+          }
+        }
       }
     }
   }

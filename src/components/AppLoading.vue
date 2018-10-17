@@ -1,9 +1,9 @@
 <template>
   <div class="app-loading">
     <logo-film-unit
-      v-for="index in 10"
+      v-for="index in 20"
       :key="index"
-      :style="{ bottom: (index * intervalPx) + 'px' }"
+      :class="'index-' + index"
       class="film-unit"
       main-color="#ff4d4d"
       sub-color="#fff" />
@@ -29,25 +29,30 @@ export default {
 <style scoped lang="scss">
   .app-loading {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     height: 100%;
     background: #fff;
 
     .film-unit {
+      position: fixed;
       width: 80px;
       height: 40px;
-    }
+      opacity: 0;
 
-    @for $i from 1 through 10 {
-      @keyframes fall_#{$i} {
-        from {
-          top: -100px;
+      @for $i from 1 through 20 {
+        @keyframes fall-#{$i} {
+          from {
+            opacity: 0.2;
+            bottom: 100%;
+          }
+
+          to {
+            opacity: 1;
+            bottom: 14px * $i;
+          }
         }
 
-        to {
-          bottom: 14px * $i;
+        &.index-#{$i} {
+          animation: 0.8s ease-in #{1 + 0.12 * $i}s fall-#{$i} forwards;
         }
       }
     }

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import TrailerTop from '@/page/TrailerTop.vue'
 import MovieDetail from '@/page/MovieDetail.vue'
+import AppLoading from '@/components/AppLoading'
 import store from '../store'
 import { SET_DARK } from '../store/mutation-types'
 
@@ -25,6 +26,11 @@ export default new Router({
           next()
         }, 600)
       }
+    },
+    {
+      path: '/loading',
+      name: 'AppLoading',
+      component: AppLoading
     }
   ],
   scrollBehavior (to, from, savedPosition) {

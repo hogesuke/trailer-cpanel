@@ -32,10 +32,24 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    height: 100%;
+    background: #fff;
 
     .film-unit {
-      width: 35px;
-      height: 20px;
+      width: 80px;
+      height: 40px;
+    }
+
+    @for $i from 1 through 10 {
+      @keyframes fall_#{$i} {
+        from {
+          top: -100px;
+        }
+
+        to {
+          bottom: 14px * $i;
+        }
+      }
     }
   }
 </style>

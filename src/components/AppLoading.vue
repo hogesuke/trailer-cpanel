@@ -1,11 +1,11 @@
 <template>
   <div class="app-loading">
     <logo-film-unit
-      v-for="index in 20"
+      v-for="index in 50"
       :key="index"
+      :main-color="getColor(index)"
       :class="'index-' + index"
       class="film-unit"
-      main-color="#ff4d4d"
       sub-color="#fff" />
   </div>
 </template>
@@ -20,7 +20,25 @@ export default {
   },
   data () {
     return {
-      intervalPx: 14
+      randomLeftPx: 0
+    }
+  },
+  methods: {
+    getColor (index) {
+      const color = [
+        '#ff4d4d',
+        '#ff6859',
+        '#ff8364',
+        '#fe9e71',
+        '#fdb87d'
+      ]
+      return color[index % color.length]
+    },
+    getLeftPx (index) {
+      const max = 5
+      const min = -5
+      const random = Math.floor(Math.random() * (max + 1 - min) + min)
+      return random
     }
   }
 }
@@ -33,12 +51,15 @@ export default {
     background: #fff;
 
     .film-unit {
+      $film-width: 80px;
+
       position: fixed;
-      width: 80px;
+      left: calc(50% - #{$film-width / 2});
+      width: $film-width;
       height: 40px;
       opacity: 0;
 
-      @for $i from 1 through 20 {
+      @for $i from 1 through 50 {
         @keyframes fall-#{$i} {
           from {
             opacity: 0.2;
@@ -47,12 +68,12 @@ export default {
 
           to {
             opacity: 1;
-            bottom: 14px * $i;
+            bottom: 10px * $i;
           }
         }
 
         &.index-#{$i} {
-          animation: 0.8s ease-in #{1 + 0.12 * $i}s fall-#{$i} forwards;
+          animation: 0.4s ease-in #{1 + 0.05 * $i}s fall-#{$i} forwards;
         }
       }
     }

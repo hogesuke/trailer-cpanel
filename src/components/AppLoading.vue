@@ -1,9 +1,9 @@
 <template>
   <div class="app-loading">
     <logo-film-unit
-      v-for="index in 50"
+      v-for="index in 5"
       :key="index"
-      :main-color="getColor(index)"
+      :main-color="getColor(index - 1)"
       :class="'index-' + index"
       class="film-unit"
       sub-color="#fff" />
@@ -26,11 +26,11 @@ export default {
   methods: {
     getColor (index) {
       const color = [
-        '#ff4d4d',
-        '#ff6859',
-        '#ff8364',
+        '#fdb87d',
         '#fe9e71',
-        '#fdb87d'
+        '#ff8364',
+        '#ff6859',
+        '#ff4d4d'
       ]
       return color[index % color.length]
     },
@@ -52,6 +52,8 @@ export default {
 
     .film-unit {
       $film-width: 80px;
+      $film-interval: 10px;
+      $film-count: 5;
 
       position: fixed;
       left: calc(50% - #{$film-width / 2});
@@ -59,21 +61,26 @@ export default {
       height: 40px;
       opacity: 0;
 
-      @for $i from 1 through 50 {
-        @keyframes fall-#{$i} {
+      @for $i from 1 through $film-count {
+        @keyframes fadein-fadeout-#{$i} {
           from {
             opacity: 0.2;
             bottom: 100%;
           }
 
-          to {
+          20%, 80% {
             opacity: 1;
-            bottom: 10px * $i;
+            bottom: calc(50% - #{$film-interval * $film-count} + #{$film-interval * $i});
+          }
+
+          to {
+            opacity: 0;
+            bottom: 0;
           }
         }
 
         &.index-#{$i} {
-          animation: 0.4s ease-in #{1 + 0.05 * $i}s fall-#{$i} forwards;
+          animation: 2.4s ease-in #{1 + 0.1 * $i}s fadein-fadeout-#{$i} forwards infinite;
         }
       }
     }

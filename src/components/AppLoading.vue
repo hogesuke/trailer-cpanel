@@ -68,7 +68,7 @@ export default {
             bottom: 100%;
           }
 
-          20%, 80% {
+          30%, 80% {
             opacity: 1;
             bottom: calc(50% - #{$film-interval * $film-count} + #{$film-interval * $i});
           }

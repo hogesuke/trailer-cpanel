@@ -23,7 +23,7 @@
 
 <script>
 import axios from 'axios'
-import { mapMutations, mapState } from 'vuex'
+import { mapState } from 'vuex'
 import * as types from '../store/mutation-types'
 import ExitButton from '../components/ExitButton'
 
@@ -61,7 +61,7 @@ export default {
   },
   mounted () {
     this.timeout.push(setTimeout(() => {
-      this.setDark(false)
+      this.$store.commit(types.SET_DARK_STATE, false)
     }, 500))
 
     this.timeout.push(setTimeout(() => {
@@ -80,9 +80,6 @@ export default {
     this.setDark(false)
   },
   methods: {
-    ...mapMutations({
-      setDark: types.SET_DARK
-    }),
     addOrientationChangeEventListener () {
       // iOS
       if (typeof window.onorientationchange === 'object') {

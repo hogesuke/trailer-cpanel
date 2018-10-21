@@ -2,6 +2,9 @@
   <div
     id="root"
     :class="{ 'theater-mode': isDark }">
+    <transition name="fade">
+      <app-loading v-if="isLoading" />
+    </transition>
     <router-view/>
     <app-lighting />
   </div>
@@ -9,6 +12,7 @@
 
 <script>
 import Vue from 'vue'
+import AppLoading from './components/AppLoading'
 import AppLighting from './components/AppLighting'
 import { mapState, mapActions } from 'vuex'
 import '@fortawesome/fontawesome-free'
@@ -17,11 +21,13 @@ import 'normalize.css'
 export default Vue.extend({
   name: 'App',
   components: {
+    AppLoading,
     AppLighting
   },
   computed: {
     ...mapState([
-      'isDark'
+      'isDark',
+      'isLoading'
     ])
   },
   async created () {
@@ -75,5 +81,13 @@ export default Vue.extend({
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
+  }
+
+  .fade-leave-active {
+    transition: opacity 0.3s;
+  }
+
+  .fade-leave-to {
+    opacity: 0;
   }
 </style>

@@ -1,2 +1,3 @@
-export const SET_DARK = 'SET_DARK'
+export const SET_LOADING_STATE = 'SET_LOADING_STATE'
+export const SET_DARK_STATE = 'SET_DARK_STATE'
 export const SET_TRAILERS = 'SET_TRAILERS'

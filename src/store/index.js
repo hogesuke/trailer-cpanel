@@ -7,11 +7,15 @@ Vue.use(Vuex)
 
 const state = {
   isDark: false,
+  isLoading: false,
   trailers: []
 }
 
 const mutations = {
-  [types.SET_DARK] (state, isDark) {
+  [types.SET_LOADING_STATE] (state, isLoading) {
+    state.isLoading = isLoading
+  },
+  [types.SET_DARK_STATE] (state, isDark) {
     state.isDark = isDark
   },
   [types.SET_TRAILERS] (state, trailers) {

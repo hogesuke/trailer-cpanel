@@ -46,8 +46,12 @@ export default {
 
 <style scoped lang="scss">
   .app-loading {
-    position: relative;
-    height: 100%;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background: #fff;
 
     .film-unit {
@@ -80,7 +84,7 @@ export default {
         }
 
         &.index-#{$i} {
-          animation: 2.4s ease-in #{1 + 0.1 * $i}s fadein-fadeout-#{$i} forwards infinite;
+          animation: 2s ease-in #{0.3 + 0.1 * $i}s fadein-fadeout-#{$i} forwards infinite;
         }
       }
     }

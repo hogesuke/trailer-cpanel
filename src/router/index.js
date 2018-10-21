@@ -4,7 +4,7 @@ import TrailerTop from '@/page/TrailerTop.vue'
 import MovieDetail from '@/page/MovieDetail.vue'
 import AppLoading from '@/components/AppLoading'
 import store from '../store'
-import { SET_DARK } from '../store/mutation-types'
+import { SET_DARK_STATE, SET_LOADING_STATE } from '../store/mutation-types'
 
 Vue.use(Router)
 
@@ -14,14 +14,22 @@ export default new Router({
     {
       path: '/',
       name: 'TrailerTop',
-      component: TrailerTop
+      component: TrailerTop,
+      async beforeEnter (to, from, next) {
+        store.commit(SET_LOADING_STATE, true)
+        await store.dispatch('fetchTrailers')
+        setTimeout(() => {
+          store.commit(SET_LOADING_STATE, false)
+          next()
+        }, 2500)
+      }
     },
     {
       path: '/movie/:id',
       name: 'MovieDetail',
       component: MovieDetail,
       beforeEnter: (to, from, next) => {
-        store.commit(SET_DARK, true)
+        store.commit(SET_DARK_STATE, true)
         setTimeout(() => {
           next()
         }, 600)

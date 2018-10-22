@@ -77,7 +77,7 @@ export default {
 
     window.onorientationchange = null
     window.onresize = null
-    this.setDark(false)
+    this.$store.commit(types.SET_DARK_STATE, false)
   },
   methods: {
     addOrientationChangeEventListener () {

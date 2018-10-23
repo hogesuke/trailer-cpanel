@@ -46,7 +46,7 @@ export default {
 
     @each $bp in (xs, sm, md, lg, xl) {
       @include mq($bp) {
-        padding-top: calc(5.3rem + #{map-get($header-heights, $bp)});
+        padding-top: 5.3rem;
       }
     }
 

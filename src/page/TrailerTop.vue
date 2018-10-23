@@ -1,11 +1,13 @@
 <template>
   <div id="trailer-top">
-    <app-header />
-    <trailer-tabs
-      id="trailer-tabs"
-      ref="trailerTabs"
-      :style="trailerTabsStyles" />
-    <trailer-list />
+    <app-header id="app-header" />
+    <div id="top-container">
+      <trailer-tabs
+        id="trailer-tabs"
+        ref="trailerTabs"
+        :style="trailerTabsStyles" />
+      <trailer-list />
+    </div>
   </div>
 </template>
 
@@ -66,18 +68,35 @@ export default {
   @import '../assets/scss/global';
 
   #trailer-top {
+    display: grid;
     height: 100%;
 
-    #trailer-tabs {
-      position: fixed;
-      width: 100vw;
-      background-color: #fff;
-      z-index: 1000;
-      transition: top 0.3s ease-in-out;
+    @each $bp in (xs, sm, md, lg, xl) {
+      @include mq($bp) {
+        grid-template-rows: map-get($header-heights, $bp) 1fr;
+      }
+    }
 
-      @each $bp in (xs, sm, md, lg, xl) {
-        @include mq($bp) {
-          top: #{map-get($header-heights, $bp)};
+    #app-header {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    #top-container {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+
+      #trailer-tabs {
+        position: fixed;
+        width: 100vw;
+        background-color: #fff;
+        z-index: 1000;
+        transition: top 0.3s ease-in-out;
+
+        @each $bp in (xs, sm, md, lg, xl) {
+          @include mq($bp) {
+            top: #{map-get($header-heights, $bp)};
+          }
         }
       }
     }

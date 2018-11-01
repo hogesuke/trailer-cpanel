@@ -5,10 +5,12 @@
       <div class="logo">
         movies.tokyo
       </div>
-      <button class="search-button">
-        <span class="placeholder">Search</span>
+      <div class="search-button">
+        <input
+          type="text"
+          placeholder="Search">
         <i class="search-icon fas fa-search" />
-      </button>
+      </div>
     </div>
   </header>
 </template>
@@ -79,18 +81,6 @@ export default {
         $search-font-size: 1.3rem;
 
         position: relative;
-        box-sizing: border-box;
-        height: 2.3rem;
-        width: 15rem;
-        margin: auto 10px auto auto;
-        padding: 0 10px;
-        border: none;
-        border-radius: 3px;
-        background: #f2f3f6;
-        font-size: $search-font-size;
-        color: #888;
-        cursor: pointer;
-        outline: none;
 
         @include mq((xs, sm)) {
           margin-left: auto;
@@ -111,19 +101,32 @@ export default {
           }
         }
 
-        &:hover {
-          background: #f8f9fc;
+        input {
+          position: relative;
+          box-sizing: border-box;
+          height: 2.3rem;
+          width: 100%;
+          margin: auto 10px auto auto;
+          padding: 0 10px;
+          border: none;
+          border-radius: 3px;
+          background: #f2f3f6;
+          font-size: $search-font-size;
+          color: #888;
+          cursor: pointer;
+          outline: none;
+
+          &:hover {
+            background: #f8f9fc;
+          }
         }
 
         .fa-search {
           position: absolute;
           top: calc(50% - (#{$search-font-size} / 2));
           right: 8px;
-        }
-
-        .placeholder {
-          text-align: left;
-          line-height: $search-height;
+          font-size: $search-font-size;
+          color: #888;
         }
       }
     }

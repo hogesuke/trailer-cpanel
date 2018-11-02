@@ -104,10 +104,11 @@ export default {
         input {
           position: relative;
           box-sizing: border-box;
-          height: 2.3rem;
+          // todo いる？
+          // height: 2.3rem;
           width: 100%;
           margin: auto 10px auto auto;
-          padding: 0 10px;
+          padding: 5px 10px;
           border: none;
           border-radius: 3px;
           background: #f2f3f6;
